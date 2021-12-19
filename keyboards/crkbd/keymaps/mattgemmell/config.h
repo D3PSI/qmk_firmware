@@ -29,6 +29,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #undef LOCKING_SUPPORT_ENABLE
 #undef LOCKING_RESYNC_ENABLE
 
+#define SPLIT_LAYER_STATE_ENABLE
+
 #define NO_ACTION_ONESHOT
 #define NO_MUSIC_MODE
 #define NO_ACTION_MACRO

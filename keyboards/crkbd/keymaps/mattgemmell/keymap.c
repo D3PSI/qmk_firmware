@@ -172,12 +172,12 @@ void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
           //rgb_matrix_set_color( 26, 0x00, 0xff, 0xff );
 
           RGB_MATRIX_INDICATOR_SET_COLOR(ledindex, 255, 0, 0);
-          /*RGB_MATRIX_INDICATOR_SET_COLOR(41, 0, 255, 0);
+          RGB_MATRIX_INDICATOR_SET_COLOR(41, 0, 255, 0);
           RGB_MATRIX_INDICATOR_SET_COLOR(40, 0, 0, 255);
           RGB_MATRIX_INDICATOR_SET_COLOR(33, 255, 255, 255);
           RGB_MATRIX_INDICATOR_SET_COLOR(44, 255, 255, 0);
           RGB_MATRIX_INDICATOR_SET_COLOR(8, 255, 0, 255);
-          RGB_MATRIX_INDICATOR_SET_COLOR(26, 0, 255, 255);*/
+          RGB_MATRIX_INDICATOR_SET_COLOR(26, 0, 255, 255);
           break;
         case 2:
           //rgb_matrix_set_color( ledindex, 0x00, 0xff, 0x00 );
