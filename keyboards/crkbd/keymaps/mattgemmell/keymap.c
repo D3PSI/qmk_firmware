@@ -29,6 +29,16 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define KC_MAC_SCRN_SHOT LGUI(LSFT(KC_3))
 #define KC_MAC_SCRN_MRKP LGUI(LSFT(KC_4))
 
+#define ___off___	{RGB_OFF}
+#define MG__WHITE	{RGB_WHITE}
+#define	MG____RED	{RGB_RED}
+#define MG__GREEN	{RGB_GREEN}
+#define MG___BLUE	{RGB_BLUE}
+#define MG_YELLOW	{RGB_YELLOW}
+#define MG_ORANGE	{RGB_ORANGE}
+#define MG___PINK	{RGB_PINK}
+#define MG_PURPLE	{RGB_PURPLE}
+
 enum my_keycodes {
   RGB_SET_SOLID = SAFE_RANGE,
   RGB_SET_WHITE,
@@ -77,18 +87,28 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   )
 };
 
-const uint8_t PROGMEM ledmap[][DRIVER_LED_TOTAL][3] = {
-    [1] = { {0,0,0}, {35,255,255}, {35,255,255}, {35,255,255}, {35,255,255}, {146,224,255}, {35,255,255}, {35,255,255}, {35,255,255}, {35,255,255}, {146,224,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {249,228,255}, {85,203,158}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {249,228,255}, {249,228,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0} },
-
-    [2] = { {0,0,0}, {85,203,158}, {85,203,158}, {85,203,158}, {85,203,158}, {146,224,255}, {85,203,158}, {85,203,158}, {85,203,158}, {85,203,158}, {146,224,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {249,228,255}, {85,203,158}, {169,120,255}, {169,120,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {14,255,255}, {14,255,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0} },
-
-    [3] = { {14,255,255}, {0,0,0}, {0,0,0}, {189,179,255}, {189,179,255}, {0,0,0}, {0,0,0}, {14,255,255}, {0,0,255}, {0,0,255}, {0,0,0}, {249,228,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {146,224,255}, {0,0,0}, {0,0,255}, {243,222,234}, {31,255,255}, {31,255,255}, {0,0,0}, {0,0,0}, {146,224,255}, {146,224,255}, {146,224,255}, {0,0,0}, {146,224,255}, {0,0,0}, {180,255,233}, {31,255,255}, {31,255,255}, {31,255,255}, {0,0,0}, {146,224,255}, {169,120,255}, {169,120,255}, {169,120,255}, {205,255,255}, {0,0,0}, {0,0,0}, {0,0,0}, {85,203,158}, {0,0,0}, {0,0,0}, {0,0,0} },
-
-    [4] = { {0,0,0}, {0,0,0}, {169,120,255}, {146,224,255}, {12,225,241}, {249,228,255}, {0,0,0}, {85,203,158}, {85,203,158}, {85,203,158}, {35,255,255}, {243,222,234}, {134,255,213}, {169,120,255}, {169,120,255}, {169,120,255}, {12,225,241}, {35,255,255}, {0,0,0}, {85,203,158}, {85,203,158}, {85,203,158}, {35,255,255}, {35,255,255}, {0,0,0}, {0,0,0}, {0,0,0}, {146,224,255}, {146,224,255}, {105,255,255}, {0,0,0}, {85,203,158}, {85,203,158}, {85,203,158}, {35,255,255}, {134,255,213}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {35,255,255}, {85,203,158}, {35,255,255}, {35,255,255}, {0,0,0} },
-
-    [5] = { {0,0,0}, {0,0,0}, {0,0,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {154,255,255}, {0,0,0}, {0,0,0}, {134,255,213}, {0,0,255}, {0,0,255}, {0,0,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {85,203,158}, {0,0,0}, {0,255,255}, {0,0,0}, {14,255,255}, {0,0,0}, {0,0,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {35,255,255}, {0,0,0}, {14,255,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0}, {189,179,255}, {0,0,0}, {189,179,255}, {0,0,0}, {0,0,0}, {0,0,0}, {0,0,0} },
-
+const uint8_t PROGMEM ledmap[][42][3] = {
+/* Starts at layer 1; we don't apply lights to Base (layer 0). */
+[_NAV] = {
+___off___, MG_ORANGE, ___off___, MG__WHITE, ___off___, ___off___, 				MG__GREEN, ___off___, MG__WHITE, ___off___, MG_ORANGE, ___off___,
+MG_PURPLE, MG_ORANGE, MG__WHITE, MG__WHITE, MG__WHITE, ___off___, 				MG_YELLOW, MG__WHITE, MG__WHITE, MG__WHITE, MG_ORANGE, ___off___,
+___off___, ___off___, ___off___, ___off___, ___off___, MG___BLUE, 				MG____RED, ___off___, ___off___, ___off___, ___off___, ___off___,
+								 MG_ORANGE, MG___BLUE, ___off___, 				___off___, ___off___, ___off___
+			},
+[_NUM] = {
+___off___, ___off___, ___off___, MG_YELLOW, MG_YELLOW, MG___PINK, 				MG___PINK, MG__GREEN, MG__GREEN, MG__GREEN, ___off___, MG____RED,
+MG_PURPLE, MG____RED, MG__GREEN, MG_ORANGE, MG_ORANGE, ___off___, 				___off___, MG__GREEN, MG__GREEN, MG__GREEN, ___off___, ___off___,
+___off___, ___off___, ___off___, ___off___, ___off___, ___off___, 				___off___, MG__GREEN, MG__GREEN, MG__GREEN, ___off___, MG___BLUE,
+						   		 MG__GREEN, ___off___, ___off___, 				___off___, ___off___, MG__GREEN
+			},
+[_ADJUST] = {
+___off___, ___off___, ___off___, MG_ORANGE, MG_ORANGE, ___off___, 				___off___, MG_ORANGE, MG__WHITE, MG__WHITE, ___off___, MG____RED,
+MG_PURPLE, ___off___, MG___BLUE, MG___BLUE, MG___BLUE, ___off___, 				MG_PURPLE, MG___PINK, MG_YELLOW, MG_YELLOW, MG_YELLOW, ___off___,
+___off___, ___off___, MG_PURPLE, MG_PURPLE, MG_PURPLE, ___off___, 				MG__WHITE, ___off___, ___off___, ___off___, ___off___, ___off___,
+						   		 MG_PURPLE, ___off___, ___off___, 				___off___, ___off___, ___off___
+			},
 };
+
 
 extern bool g_suspend_state;
 extern rgb_config_t rgb_matrix_config;
@@ -99,99 +119,57 @@ void keyboard_post_init_user(void) {
     rgb_matrix_mode_noeeprom(1);
 }
 
-void set_layer_color(int layer) {
-  /*for (int i = 0; i < DRIVER_LED_TOTAL; i++) {
-    HSV hsv = {
-      .h = pgm_read_byte(&ledmap[layer][i][0]),
-      .s = pgm_read_byte(&ledmap[layer][i][1]),
-      .v = pgm_read_byte(&ledmap[layer][i][2]),
-    };
-    if (!hsv.h && !hsv.s && !hsv.v) {
-        rgb_matrix_set_color( i, 0, 0, 0 );
-    } else {
-        RGB rgb = hsv_to_rgb( hsv );
-        float f = (float)rgb_matrix_config.hsv.v / UINT8_MAX;
-        rgb_matrix_set_color( i, f * rgb.r, f * rgb.g, f * rgb.b );
-    }*/
+uint8_t ledIndexForKeymapIndex(uint8_t keyIndex) {
+	// Turn keyIndex into a row and column within g_led_config.
+	// Reference: https://github.com/qmk/qmk_firmware/blob/master/keyboards/crkbd/r2g/r2g.c
+	uint8_t row = 0;
+	uint8_t col = 0;
+	uint8_t keysPerRow = 12; // Specific to crkdb!
+	uint8_t keysPerHalf = keysPerRow / 2; // Assumes equal split!
 
-    //int ledindex = 14;
-    switch (layer) {
-        case 1:
-          //rgb_matrix_set_color( ledindex, 0xff, 0x00, 0x00 );
-          //rgb_matrix_set_color( 41, 0xff, 0x00, 0x00 );
-          //rgb_matrix_set_color( 40, 0xff, 0x00, 0x00 );
-          //rgb_matrix_set_color( 33, 0xff, 0x00, 0x00 );
-          //rgb_matrix_set_color( 44, 0xff, 0xff, 0x00 );
-          //rgb_matrix_set_color( 8, 0xff, 0x00, 0xff );
-          //rgb_matrix_set_color( 26, 0x00, 0xff, 0xff );
-          break;
-        case 2:
-          //rgb_matrix_set_color( ledindex, 0x00, 0xff, 0x00 );
-          break;
-        case 3:
-          //rgb_matrix_set_color( ledindex, 0x00, 0x00, 0xff );
-          break;
-       default:
-        if (rgb_matrix_get_flags() == LED_FLAG_NONE)
-          rgb_matrix_set_color_all(0, 0, 0);
-        break;
-      }
+	row = keyIndex / keysPerRow;
+	col = keyIndex % keysPerRow;
+	if (row == 3) { // Specific to crkbd!
+		col += 3; // Compensate for leading three NO_LED entries in g_led_config.
+	}
 
+	bool mirror = (col >= keysPerHalf);
+	if (mirror) {
+		// Normalise row and col per g_led_config structure.
+		row += 4;
+		col -= keysPerHalf;
+		// Mirror column position.
+		col = (keysPerHalf - 1) - col;
+	}
+
+	return g_led_config.matrix_co[row][col];
 }
-/*
-void rgb_matrix_indicators_user(void) {
-  switch (biton32(layer_state)) {
-    case 1:
-      set_layer_color(1);
-      break;
-    case 2:
-      set_layer_color(2);
-      break;
-    case 3:
-      set_layer_color(3);
-      break;
-   default:
-    if (rgb_matrix_get_flags() == LED_FLAG_NONE)
-      rgb_matrix_set_color_all(0, 0, 0);
-    break;
-  }
-}
-*/
+
 void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
 
-    int layerNum = biton32(layer_state);
-    int ledindex = 14;
-    switch (layerNum) {
-        case 1:
-          //rgb_matrix_set_color( ledindex, 0xff, 0x00, 0x00 );
-          //rgb_matrix_set_color( 41, 0xff, 0x00, 0x00 );
-          //rgb_matrix_set_color( 40, 0xff, 0x00, 0x00 );
-          //rgb_matrix_set_color( 33, 0xff, 0x00, 0x00 );
-          //rgb_matrix_set_color( 44, 0xff, 0xff, 0x00 );
-          //rgb_matrix_set_color( 8, 0xff, 0x00, 0xff );
-          //rgb_matrix_set_color( 26, 0x00, 0xff, 0xff );
+    uint8_t layerNum = get_highest_layer(layer_state);
+    if (layerNum == 0) {
+        rgb_matrix_set_color_all(0, 0, 0);
+        return;
+    }
 
-          RGB_MATRIX_INDICATOR_SET_COLOR(ledindex, 255, 0, 0);
-          RGB_MATRIX_INDICATOR_SET_COLOR(41, 0, 255, 0);
-          RGB_MATRIX_INDICATOR_SET_COLOR(40, 0, 0, 255);
-          RGB_MATRIX_INDICATOR_SET_COLOR(33, 255, 255, 255);
-          RGB_MATRIX_INDICATOR_SET_COLOR(44, 255, 255, 0);
-          RGB_MATRIX_INDICATOR_SET_COLOR(8, 255, 0, 255);
-          RGB_MATRIX_INDICATOR_SET_COLOR(26, 0, 255, 255);
-          break;
-        case 2:
-          //rgb_matrix_set_color( ledindex, 0x00, 0xff, 0x00 );
-          RGB_MATRIX_INDICATOR_SET_COLOR(ledindex, 0, 255, 0);
-          break;
-        case 3:
-          //rgb_matrix_set_color( ledindex, 0x00, 0x00, 0xff );
-          RGB_MATRIX_INDICATOR_SET_COLOR(ledindex, 0, 0, 255);
-          break;
-       default:
-        if (rgb_matrix_get_flags() == LED_FLAG_NONE)
-          rgb_matrix_set_color_all(0, 0, 0);
-        break;
-      }
+    uint8_t ledIndex = 0;
+    uint8_t r, g, b;
+    for (uint8_t keyIndex = 0; keyIndex < 42; keyIndex++) { // 0 to 42
+        ledIndex = ledIndexForKeymapIndex(keyIndex);
+
+        if (ledIndex >= led_min && ledIndex <= led_max) {
+            r = pgm_read_byte(&ledmap[layerNum][keyIndex][0]);
+            g = pgm_read_byte(&ledmap[layerNum][keyIndex][1]);
+            b = pgm_read_byte(&ledmap[layerNum][keyIndex][2]);
+
+            if (!r && !g && !b) {
+                RGB_MATRIX_INDICATOR_SET_COLOR(ledIndex, 0, 0, 0);
+            } else {
+                RGB_MATRIX_INDICATOR_SET_COLOR(ledIndex, r, g, b);
+            }
+        }
+    }
 }
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
