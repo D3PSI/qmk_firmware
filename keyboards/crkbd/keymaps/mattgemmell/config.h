@@ -41,7 +41,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define AUTO_SHIFT_TIMEOUT 150
 #define NO_AUTO_SHIFT_TAB
 #define NO_AUTO_SHIFT_ALPHA
-#undef RGB_DISABLE_WHEN_USB_SUSPENDED
+// #undef RGB_DISABLE_WHEN_USB_SUSPENDED
+#define RGB_DISABLE_WHEN_USB_SUSPENDED
 #define RGB_MATRIX_STARTUP_SPD 60
 
 #undef RGBLIGHT_ANIMATIONS
