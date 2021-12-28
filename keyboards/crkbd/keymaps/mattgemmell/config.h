@@ -44,6 +44,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 // #undef RGB_DISABLE_WHEN_USB_SUSPENDED
 #define RGB_DISABLE_WHEN_USB_SUSPENDED
 #define RGB_MATRIX_STARTUP_SPD 60
+#define TAPPING_TERM 250 // default 200
 
 #undef RGBLIGHT_ANIMATIONS
 #undef RGBLIGHT_EFFECT_BREATHING
