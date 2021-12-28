@@ -75,28 +75,28 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        KC_TAB,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                         KC_Y,    KC_U,    KC_I,    TD(TD_O_MINUS),   TD(TD_P_EQUALS),  KC_BSPC,
        KC_ESC,    KC_A,    TD(TD_S_NAV),    TD(TD_D_NUM),    TD(TD_F_ADJUST),    KC_G,                         KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN, KC_QUOT,
       KC_LSFT,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,    TD(TD_M_MUTE), KC_COMM,  KC_DOT, KC_SLSH, KC_LCTL,
-                                          TO(1),  KC_ENT,  TD(TD_CMD_CAPS),     KC_LALT,  KC_SPC, KC_BSPC
+                                          NAV,  KC_ENT,  TD(TD_CMD_CAPS),     KC_LALT,  KC_SPC, KC_BSPC
   ),
 
   [_NAV] = LAYOUT_split_3x6_3(
       XXXXXXX, KC_MS_WH_DOWN,    XXXXXXX,   KC_MS_UP,     XXXXXXX,    XXXXXXX,             KC_MS_ACCEL2, XXXXXXX,   KC_UP, XXXXXXX,    KC_PGUP, KC_MAC_HOME,
-        TO(0), KC_MS_WH_UP,   KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT,    XXXXXXX,             KC_MS_ACCEL1, KC_LEFT, KC_DOWN, KC_RIGHT, KC_PGDOWN, KC_MAC_END,
+        BASE, KC_MS_WH_UP,   KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT,    XXXXXXX,              KC_MS_ACCEL1, KC_LEFT, KC_DOWN, KC_RIGHT, KC_PGDOWN, KC_MAC_END,
       _______, XXXXXXX,          XXXXXXX,    XXXXXXX,     XXXXXXX, KC_MS_BTN2,             KC_MS_ACCEL0, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, _______,
-                                                      TO(2), KC_MS_BTN1,  _______,     _______, _______, _______
+                                                      NUM, KC_MS_BTN1,  _______,     _______, _______, _______
   ),
 
   [_NUM] = LAYOUT_split_3x6_3(
-     KC_GRAVE, KC_DELETE,      XXXXXXX,     KC_LPRN,     KC_RPRN,    KC_BSLASH,             KC_SLSH,  KC_7, KC_8, KC_9, KC_KP_MINUS,  _______,
-        TO(0), KC_MINUS,      KC_EQUAL, KC_LBRACKET, KC_RBRACKET,      XXXXXXX,             KC_ASTR, KC_4, KC_5, KC_6,  KC_KP_PLUS, KC_EQUAL,
-      _______, KC_MAC_UNDO, KC_MAC_CUT, KC_MAC_COPY, KC_MAC_PASTE, KC_MAC_REDO,             KC_COMM, KC_1, KC_2, KC_3,      KC_DOT,   TD(TD_ENT_CTRL),
-                                                       TO(3), _______,  _______,     _______, _______, KC_0
+     KC_GRAVE, KC_DELETE,      XXXXXXX,     KC_LPRN,     KC_RPRN,    KC_BSLASH,            KC_SLSH,  KC_7, KC_8, KC_9, KC_KP_MINUS,  _______,
+        BASE, KC_MINUS,      KC_EQUAL, KC_LBRACKET, KC_RBRACKET,      XXXXXXX,             KC_ASTR, KC_4, KC_5, KC_6,  KC_KP_PLUS, KC_EQUAL,
+      _______, KC_MAC_UNDO, KC_MAC_CUT, KC_MAC_COPY, KC_MAC_PASTE, KC_MAC_REDO,            KC_COMM, KC_1, KC_2, KC_3,      KC_DOT,   TD(TD_ENT_CTRL),
+                                                       ADJUST, _______,  _______,     _______, _______, KC_0
   ),
 
   [_ADJUST] = LAYOUT_split_3x6_3(
       XXXXXXX, XXXXXXX, XXXXXXX, KC_MAC_SCRN_SHOT, KC_MAC_SCRN_MRKP, XXXXXXX,                      XXXXXXX, KC_MAC_LOCK_SCRN, KC_BRIGHTNESS_DOWN, KC_BRIGHTNESS_UP, XXXXXXX, RESET,
-        TO(0), XXXXXXX, KC_MEDIA_PREV_TRACK, KC_MEDIA_PLAY_PAUSE, KC_MEDIA_NEXT_TRACK, XXXXXXX,                      RGB_SET_PURPLE, RGB_TOG, RGB_MOD, RGB_HUD, RGB_HUI, XXXXXXX,
-      _______, XXXXXXX, KC_AUDIO_VOL_DOWN, KC_AUDIO_MUTE, KC_AUDIO_VOL_UP, XXXXXXX,                      RGB_SET_WHITE, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
-                                          TO(0), _______,  _______,     _______, _______, _______
+        BASE, XXXXXXX, KC_MEDIA_PREV_TRACK, KC_MEDIA_PLAY_PAUSE, KC_MEDIA_NEXT_TRACK, XXXXXXX,     RGB_SET_PURPLE, RGB_TOG, RGB_MOD, RGB_HUD, RGB_HUI, XXXXXXX,
+      _______, XXXXXXX, KC_AUDIO_VOL_DOWN, KC_AUDIO_MUTE, KC_AUDIO_VOL_UP, XXXXXXX,                RGB_SET_WHITE, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
+                                          BASE, _______,  _______,     _______, _______, _______
   )
 };
 
