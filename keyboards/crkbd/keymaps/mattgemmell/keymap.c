@@ -188,7 +188,7 @@ void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
             }
         }
     }
-
+    /*
     // Underglow layer indicators
     uint8_t keyIndex = 36; // layer-switch key
     r = pgm_read_byte(&ledmap[layerNum][keyIndex][0]);
@@ -198,6 +198,7 @@ void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
         ledIndex = (i < 6) ? i : i + 21;
         RGB_MATRIX_INDICATOR_SET_COLOR(ledIndex, r, g, b);
     }
+    */
 }
 
 // ====================================================
