@@ -205,11 +205,9 @@ void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
 // ====================================================
 
 // NOTE: Update COMBO_COUNT in config.h with number of combos.
-const uint16_t PROGMEM combo_hyphen[] = {KC_U, KC_I, COMBO_END};
-const uint16_t PROGMEM combo_endash[] = {KC_U, KC_I, KC_O, COMBO_END};
-const uint16_t PROGMEM combo_emdash[] = {KC_U, KC_I, KC_O, KC_P, COMBO_END};
+const uint16_t PROGMEM combo_endash[] = {KC_J, KC_K, COMBO_END};
+const uint16_t PROGMEM combo_emdash[] = {KC_J, KC_K, KC_L, COMBO_END};
 combo_t key_combos[COMBO_COUNT] = {
-    COMBO(combo_hyphen, KC_MINUS),
     COMBO(combo_endash, LALT(KC_MINUS)),
     COMBO(combo_emdash, LSFT(LALT(KC_MINUS))),
 };

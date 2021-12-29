@@ -56,7 +56,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MOUSEKEY_WHEEL_MAX_SPEED    MOUSEKEY_MAX_SPEED
 #define MOUSEKEY_WHEEL_TIME_TO_MAX  MOUSEKEY_TIME_TO_MAX
 
-#define COMBO_COUNT 3
+#define COMBO_COUNT 2
 #define COMBO_TERM 50
 #define EXTRA_SHORT_COMBOS // up to 6 keys per combo instead of 8
 
