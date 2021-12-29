@@ -170,6 +170,7 @@ void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
         return;
     }
 
+    // Per-key indicators
     uint8_t ledIndex = 0;
     uint8_t r, g, b;
     for (uint8_t keyIndex = 0; keyIndex < 42; keyIndex++) { // 0 to 42
@@ -187,7 +188,31 @@ void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
             }
         }
     }
+
+    // Underglow layer indicators
+    uint8_t keyIndex = 36; // layer-switch key
+    r = pgm_read_byte(&ledmap[layerNum][keyIndex][0]);
+    g = pgm_read_byte(&ledmap[layerNum][keyIndex][1]);
+    b = pgm_read_byte(&ledmap[layerNum][keyIndex][2]);
+    for (uint8_t  i = 0; i < 12; i++) {
+        ledIndex = (i < 6) ? i : i + 21;
+        RGB_MATRIX_INDICATOR_SET_COLOR(ledIndex, r, g, b);
+    }
 }
+
+// ====================================================
+// Combos
+// ====================================================
+
+// NOTE: Update COMBO_COUNT in config.h with number of combos.
+const uint16_t PROGMEM combo_hyphen[] = {KC_U, KC_I, COMBO_END};
+const uint16_t PROGMEM combo_endash[] = {KC_U, KC_I, KC_O, COMBO_END};
+const uint16_t PROGMEM combo_emdash[] = {KC_U, KC_I, KC_O, KC_P, COMBO_END};
+combo_t key_combos[COMBO_COUNT] = {
+    COMBO(combo_hyphen, KC_MINUS),
+    COMBO(combo_endash, LALT(KC_MINUS)),
+    COMBO(combo_emdash, LSFT(LALT(KC_MINUS))),
+};
 
 // ====================================================
 // Custom keycodes handling, not including Tap Dance
