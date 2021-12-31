@@ -589,3 +589,44 @@ qk_tap_dance_action_t tap_dance_actions[] = {
     [TD_D_NUM] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_d_num, dance_d_num_finished, dance_d_num_reset),
     [TD_F_ADJUST] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_f_adjust, dance_f_adjust_finished, dance_f_adjust_reset),
 };
+
+// ====================================================
+// Keep-alive code via Dasky on MBUK Discord
+// ====================================================
+
+#include <avr/wdt.h>
+#include "transactions.h"
+
+static bool watchdog_ping_done = false;
+static uint32_t watchdog_timer = 0;
+
+void watchdog_slave_handler(uint8_t in_buflen, const void* in_data, uint8_t out_buflen, void* out_data) { watchdog_ping_done = true; }
+
+void keyboard_post_init_kb(void) {
+    wdt_disable();
+    keyboard_post_init_user();
+    transaction_register_rpc(WATCHDOG_SYNC, watchdog_slave_handler);
+    watchdog_timer = timer_read32();
+}
+
+void housekeeping_task_kb(void) {
+    if (!watchdog_ping_done) {
+        if (is_keyboard_master()) {
+            if (timer_elapsed32(watchdog_timer) > 100) {
+                uint8_t any_data = 1;
+                if (transaction_rpc_send(WATCHDOG_SYNC, sizeof(any_data), &any_data)) {
+                    watchdog_ping_done = true;  // successful ping
+                } else {
+                    dprint("Watchdog ping failed!\n");
+                }
+                watchdog_timer = timer_read32();
+            }
+        } else {
+            if (timer_elapsed32(watchdog_timer) > SPLIT_USB_TIMEOUT + 1000) {
+                wdt_enable(WDTO_250MS);
+                while (1) {
+                }
+            }
+        }
+    }
+}

@@ -37,12 +37,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define NO_ACTION_FUNCTION
 #define LAYER_STATE_8BIT // limit to fewer than 8 layers
 
+#define SPLIT_TRANSACTION_IDS_KB WATCHDOG_SYNC
+#define SPLIT_USB_TIMEOUT 2000
+
 #define USB_SUSPEND_WAKEUP_DELAY 0
 #define AUTO_SHIFT_TIMEOUT 150
 #define NO_AUTO_SHIFT_TAB
 #define NO_AUTO_SHIFT_ALPHA
-// #undef RGB_DISABLE_WHEN_USB_SUSPENDED
-#define RGB_DISABLE_WHEN_USB_SUSPENDED
 #define RGB_MATRIX_STARTUP_SPD 60
 #define TAPPING_TERM 250 // default 200
 #define IGNORE_MOD_TAP_INTERRUPT
@@ -55,6 +56,19 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MOUSEKEY_WHEEL_INTERVAL     MOUSEKEY_INTERVAL
 #define MOUSEKEY_WHEEL_MAX_SPEED    MOUSEKEY_MAX_SPEED
 #define MOUSEKEY_WHEEL_TIME_TO_MAX  MOUSEKEY_TIME_TO_MAX
+
+#define IOS_DEVICE_ENABLE // not a built-in QMK thing; just to conditionally define other stuff
+#ifdef IOS_DEVICE_ENABLE
+  // Fix iPhone and iPad power adapter issue
+  // iOS devices need less than 100 mA
+  #define USB_MAX_POWER_CONSUMPTION 100
+#endif
+#ifdef RGBLIGHT_ENABLE
+  #ifdef IOS_DEVICE_ENABLE
+    #define RGBLIGHT_LIMIT_VAL 35
+    #define RGBLIGHT_VAL_STEP 4
+  #endif
+#endif
 
 #define COMBO_COUNT 2
 #define COMBO_TERM 50
