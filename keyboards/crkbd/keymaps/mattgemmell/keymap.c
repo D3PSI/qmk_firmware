@@ -73,8 +73,8 @@ enum my_layers {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_BASE] = LAYOUT_split_3x6_3(
        KC_TAB,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                         KC_Y,    KC_U,    KC_I,    TD(TD_O_MINUS),   TD(TD_P_EQUALS),  KC_BSPC,
-       KC_ESC,    KC_A,    LT(_NAV, KC_S),   LT(_NUM, KC_D),  LT(_ADJUST, KC_F),    KC_G,                         KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN, KC_QUOT,
-      KC_LALT,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,    TD(TD_M_MUTE), KC_COMM,  KC_DOT, KC_SLSH, KC_LCTL,
+       KC_ESC,    KC_A,    KC_S,   KC_D,  KC_F,    KC_G,                         KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN, KC_QUOT,
+      KC_LALT,    KC_Z,    LT(_NAV, KC_X),   LT(_NUM, KC_C),  LT(_ADJUST, KC_V),    KC_B,                         KC_N,    TD(TD_M_MUTE), KC_COMM,  KC_DOT, KC_SLSH, KC_LCTL,
                                           NAV,  KC_ENT,  TD(TD_CMD_CAPS),     KC_LSFT,  KC_SPC, KC_BSPC
   ),
 
@@ -93,9 +93,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [_ADJUST] = LAYOUT_split_3x6_3(
-      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                                       XXXXXXX, KC_MAC_LOCK_SCRN, KC_BRIGHTNESS_DOWN, KC_BRIGHTNESS_UP, XXXXXXX, RESET,
+      XXXXXXX, XXXXXXX, KC_AUDIO_VOL_DOWN, KC_AUDIO_MUTE, KC_AUDIO_VOL_UP, XXXXXXX,                                       XXXXXXX, KC_MAC_LOCK_SCRN, KC_BRIGHTNESS_DOWN, KC_BRIGHTNESS_UP, XXXXXXX, RESET,
         BASE, XXXXXXX, KC_MEDIA_PREV_TRACK, KC_MEDIA_PLAY_PAUSE, KC_MEDIA_NEXT_TRACK, XXXXXXX,     XXXXXXX, XXXXXXX, KC_MAC_SCRN_SHOT, KC_MAC_SCRN_MRKP, XXXXXXX, XXXXXXX,
-      _______, XXXXXXX, KC_AUDIO_VOL_DOWN, KC_AUDIO_MUTE, KC_AUDIO_VOL_UP, XXXXXXX,                XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
+      _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
                                           BASE, _______,  _______,     _______, _______, _______
   )
 };
@@ -115,9 +115,9 @@ ___off___, MG___PINK, ___off___, ___off___, ___off___, ___off___, 				___off___,
 						   		 MG__GREEN, ___off___, ___off___, 				___off___, ___off___, MG__GREEN
 			},
 [_ADJUST] = {
-___off___, ___off___, ___off___, ___off___, ___off___, ___off___, 				___off___, MG_ORANGE, MG__WHITE, MG__WHITE, ___off___, MG____RED,
+___off___, ___off___, MG_PURPLE, MG_PURPLE, MG_PURPLE, ___off___, 				___off___, MG_ORANGE, MG__WHITE, MG__WHITE, ___off___, MG____RED,
 MG_PURPLE, ___off___, MG___BLUE, MG___BLUE, MG___BLUE, ___off___, 				___off___, ___off___, MG___PINK, MG___PINK, ___off___, ___off___,
-___off___, ___off___, MG_PURPLE, MG_PURPLE, MG_PURPLE, ___off___, 				___off___, ___off___, ___off___, ___off___, ___off___, ___off___,
+___off___, ___off___, ___off___, ___off___, ___off___, ___off___, 				___off___, ___off___, ___off___, ___off___, ___off___, ___off___,
 						   		 MG_PURPLE, ___off___, ___off___, 				___off___, ___off___, ___off___
 			},
 };
