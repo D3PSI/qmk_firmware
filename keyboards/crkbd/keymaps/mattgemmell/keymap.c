@@ -73,7 +73,7 @@ enum my_layers {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_BASE] = LAYOUT_split_3x6_3(
        KC_TAB,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                         KC_Y,    KC_U,    KC_I,    TD(TD_O_MINUS),   TD(TD_P_EQUALS),  KC_BSPC,
-       KC_ESC,    KC_A,    TD(TD_S_NAV),    TD(TD_D_NUM),    TD(TD_F_ADJUST),    KC_G,                         KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN, KC_QUOT,
+       KC_ESC,    KC_A,    LT(_NAV, KC_S),   LT(_NUM, KC_D),  LT(_ADJUST, KC_F),    KC_G,                         KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN, KC_QUOT,
       KC_LALT,    KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                         KC_N,    TD(TD_M_MUTE), KC_COMM,  KC_DOT, KC_SLSH, KC_LCTL,
                                           NAV,  KC_ENT,  TD(TD_CMD_CAPS),     KC_LSFT,  KC_SPC, KC_BSPC
   ),
@@ -593,7 +593,7 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 // ====================================================
 // Keep-alive code via Dasky on MBUK Discord
 // ====================================================
-
+/*
 #include <avr/wdt.h>
 #include "transactions.h"
 
@@ -630,3 +630,4 @@ void housekeeping_task_kb(void) {
         }
     }
 }
+*/

@@ -37,10 +37,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define NO_ACTION_FUNCTION
 #define LAYER_STATE_8BIT // limit to fewer than 8 layers
 
-#define SPLIT_TRANSACTION_IDS_KB WATCHDOG_SYNC
-#define SPLIT_USB_TIMEOUT 2000
+//#define SPLIT_TRANSACTION_IDS_KB WATCHDOG_SYNC
+//#define SPLIT_USB_TIMEOUT 2000
 
-#define USB_SUSPEND_WAKEUP_DELAY 0
+#define USB_SUSPEND_WAKEUP_DELAY 200
 #define AUTO_SHIFT_TIMEOUT 150
 #define NO_AUTO_SHIFT_TAB
 #define NO_AUTO_SHIFT_ALPHA
@@ -61,7 +61,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #ifdef IOS_DEVICE_ENABLE
   // Fix iPhone and iPad power adapter issue
   // iOS devices need less than 100 mA
-  #define USB_MAX_POWER_CONSUMPTION 100
+  //#define USB_MAX_POWER_CONSUMPTION 100
 #endif
 #ifdef RGBLIGHT_ENABLE
   #ifdef IOS_DEVICE_ENABLE
@@ -74,7 +74,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define COMBO_TERM 50
 #define EXTRA_SHORT_COMBOS // up to 6 keys per combo instead of 8
 
-#define RGB_DISABLE_WHEN_USB_SUSPENDED // turn off effects when suspended
+//#define RGB_DISABLE_WHEN_USB_SUSPENDED // turn off effects when suspended
+#undef RGB_DISABLE_WHEN_USB_SUSPENDED
 #define RGB_MATRIX_LED_PROCESS_LIMIT DRIVER_LED_TOTAL / 6 // limits the number of LEDs to process in an animation per task run (increases keyboard responsiveness)
 #define RGB_MATRIX_LED_FLUSH_LIMIT 16 // limits in milliseconds how frequently an animation will update the LEDs. 16 (16ms) is equivalent to limiting to 60fps (increases keyboard responsiveness)
 
