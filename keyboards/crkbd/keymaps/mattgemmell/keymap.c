@@ -48,7 +48,8 @@ enum my_keycodes {
 };
 
 enum tap_dance_keycodes {
-  TD_M_MUTE,
+  //TD_M_MUTE,
+  TD_BASE_ESC,
   TD_ENT_CTRL,
   TD_CMD_CAPS,
   TD_O_MINUS,
@@ -72,29 +73,29 @@ enum my_layers {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_BASE] = LAYOUT_split_3x6_3(
-       KC_TAB,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                         KC_Y,    KC_U,    KC_I,    TD(TD_O_MINUS),   TD(TD_P_EQUALS),  KC_BSPC,
+       KC_TAB,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                         KC_Y,    KC_U,    KC_I,    TD(TD_O_MINUS),   TD(TD_P_EQUALS),  KC_AUDIO_MUTE,
        KC_ESC,    KC_A,    KC_S,   KC_D,  KC_F,    KC_G,                         KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN, KC_QUOT,
-      KC_LALT,    KC_Z,    LT(_NAV, KC_X),   LT(_NUM, KC_C),  LT(_ADJUST, KC_V),    KC_B,                         KC_N,    TD(TD_M_MUTE), KC_COMM,  KC_DOT, KC_SLSH, KC_LCTL,
+      KC_LALT,    KC_Z,    LT(_NAV, KC_X),   LT(_NUM, KC_C),  LT(_ADJUST, KC_V),    KC_B,                         KC_N,    KC_M, KC_COMM,  KC_DOT, KC_SLSH, KC_LCTL,
                                           NAV,  KC_ENT,  TD(TD_CMD_CAPS),     KC_LSFT,  KC_SPC, KC_BSPC
   ),
 
   [_NAV] = LAYOUT_split_3x6_3(
-      XXXXXXX, KC_MS_WH_DOWN,    XXXXXXX,   KC_MS_UP,     XXXXXXX,    XXXXXXX,             KC_MS_ACCEL2, XXXXXXX,   KC_UP, XXXXXXX,    KC_PGUP, KC_MAC_HOME,
-        BASE, KC_MS_WH_UP,   KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT,    XXXXXXX,              KC_MS_ACCEL1, KC_LEFT, KC_DOWN, KC_RIGHT, KC_PGDOWN, KC_MAC_END,
+      _______, KC_MS_WH_DOWN,    XXXXXXX,   KC_MS_UP,     XXXXXXX,    XXXXXXX,             KC_MS_ACCEL2, XXXXXXX,   KC_UP, XXXXXXX,    KC_PGUP, KC_MAC_HOME,
+        TD(TD_BASE_ESC), KC_MS_WH_UP,   KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT,    XXXXXXX,              KC_MS_ACCEL1, KC_LEFT, KC_DOWN, KC_RIGHT, KC_PGDOWN, KC_MAC_END,
       _______, XXXXXXX,          XXXXXXX,    XXXXXXX,     XXXXXXX, KC_MS_BTN2,             KC_MS_ACCEL0, XXXXXXX, XXXXXXX, XXXXXXX,    XXXXXXX, _______,
                                                       NUM, KC_MS_BTN1,  _______,     _______, _______, _______
   ),
 
   [_NUM] = LAYOUT_split_3x6_3(
-     KC_GRAVE, KC_DELETE,      XXXXXXX,     KC_LPRN,     KC_RPRN,    KC_BSLASH,            KC_SLSH,  KC_7, KC_8, KC_9, KC_KP_MINUS,  _______,
-        BASE, KC_MINUS,      KC_EQUAL, KC_LBRACKET, KC_RBRACKET,      XXXXXXX,             KC_ASTR, KC_4, KC_5, KC_6,  KC_KP_PLUS, KC_EQUAL,
+     KC_GRAVE, KC_DELETE,      XXXXXXX,     KC_LPRN,     KC_RPRN,    KC_BSLASH,            KC_SLSH,  KC_7, KC_8, KC_9, KC_MINUS,  _______,
+        TD(TD_BASE_ESC), KC_MINUS,      KC_EQUAL, KC_LBRACKET, KC_RBRACKET,      XXXXXXX,             KC_ASTR, KC_4, KC_5, KC_6,  KC_KP_PLUS, KC_EQUAL,
       _______, KC_MAC_UNDO, KC_MAC_CUT, KC_MAC_COPY, KC_MAC_PASTE, KC_MAC_REDO,            KC_COMM, KC_1, KC_2, KC_3,      KC_DOT,   TD(TD_ENT_CTRL),
                                                        ADJUST, _______,  _______,     _______, _______, KC_0
   ),
 
   [_ADJUST] = LAYOUT_split_3x6_3(
       XXXXXXX, XXXXXXX, KC_AUDIO_VOL_DOWN, KC_AUDIO_MUTE, KC_AUDIO_VOL_UP, XXXXXXX,                                       XXXXXXX, KC_MAC_LOCK_SCRN, KC_BRIGHTNESS_DOWN, KC_BRIGHTNESS_UP, XXXXXXX, RESET,
-        BASE, XXXXXXX, KC_MEDIA_PREV_TRACK, KC_MEDIA_PLAY_PAUSE, KC_MEDIA_NEXT_TRACK, XXXXXXX,     XXXXXXX, XXXXXXX, KC_MAC_SCRN_SHOT, KC_MAC_SCRN_MRKP, XXXXXXX, XXXXXXX,
+        TD(TD_BASE_ESC), XXXXXXX, KC_MEDIA_PREV_TRACK, KC_MEDIA_PLAY_PAUSE, KC_MEDIA_NEXT_TRACK, XXXXXXX,     XXXXXXX, XXXXXXX, KC_MAC_SCRN_SHOT, KC_MAC_SCRN_MRKP, XXXXXXX, XXXXXXX,
       _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, _______,
                                           BASE, _______,  _______,     _______, _______, _______
   )
@@ -204,7 +205,7 @@ void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
 // ====================================================
 // Combos
 // ====================================================
-
+/*
 // NOTE: Update COMBO_COUNT in config.h with number of combos.
 const uint16_t PROGMEM combo_endash[] = {KC_J, KC_K, COMBO_END};
 const uint16_t PROGMEM combo_emdash[] = {KC_J, KC_K, KC_L, COMBO_END};
@@ -212,7 +213,7 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(combo_endash, LALT(KC_MINUS)),
     COMBO(combo_emdash, LSFT(LALT(KC_MINUS))),
 };
-
+*/
 // ====================================================
 // Custom keycodes handling, not including Tap Dance
 // ====================================================
@@ -274,7 +275,7 @@ uint8_t dance_step(qk_tap_dance_state_t *state) {
 }
 
 // End Tap Dance top boilerplate
-
+/*
 void on_dance_m_mute(qk_tap_dance_state_t *state, void *user_data);
 void dance_m_mute_finished(qk_tap_dance_state_t *state, void *user_data);
 void dance_m_mute_reset(qk_tap_dance_state_t *state, void *user_data);
@@ -309,6 +310,38 @@ void dance_m_mute_reset(qk_tap_dance_state_t *state, void *user_data) {
         case DOUBLE_TAP: unregister_code16(KC_M); break;
         case DOUBLE_HOLD: unregister_code16(KC_M); break;
         case DOUBLE_SINGLE_TAP: unregister_code16(KC_M); break;
+    }
+    dance_state[0].step = 0;
+}
+*/
+void on_dance_base_esc(qk_tap_dance_state_t *state, void *user_data);
+void dance_base_esc_finished(qk_tap_dance_state_t *state, void *user_data);
+void dance_base_esc_reset(qk_tap_dance_state_t *state, void *user_data);
+
+void on_dance_base_esc(qk_tap_dance_state_t *state, void *user_data) {
+    if(state->count == 3) {
+        layer_move(_BASE);
+    }
+    if(state->count > 3) {
+        layer_move(_BASE);
+    }
+}
+
+void dance_base_esc_finished(qk_tap_dance_state_t *state, void *user_data) {
+    dance_state[0].step = dance_step(state);
+    switch (dance_state[0].step) {
+        case SINGLE_TAP: layer_move(_BASE); break;
+        case SINGLE_HOLD: register_code16(KC_ESC); break;
+        case DOUBLE_TAP: layer_move(_BASE); break;
+        case DOUBLE_HOLD: layer_move(_BASE); break;
+        case DOUBLE_SINGLE_TAP: layer_move(_BASE);
+    }
+}
+
+void dance_base_esc_reset(qk_tap_dance_state_t *state, void *user_data) {
+    wait_ms(10);
+    switch (dance_state[0].step) {
+        case SINGLE_HOLD: unregister_code16(KC_ESC); break;
     }
     dance_state[0].step = 0;
 }
@@ -580,7 +613,8 @@ void dance_f_adjust_reset(qk_tap_dance_state_t *state, void *user_data) {
 
 qk_tap_dance_action_t tap_dance_actions[] = {
     /* Keys should match the Tap Dance keycodes */
-    [TD_M_MUTE] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_m_mute, dance_m_mute_finished, dance_m_mute_reset),
+    //[TD_M_MUTE] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_m_mute, dance_m_mute_finished, dance_m_mute_reset),
+    [TD_BASE_ESC] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_base_esc, dance_base_esc_finished, dance_base_esc_reset),
     [TD_ENT_CTRL] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_ent_ctrl, dance_ent_ctrl_finished, dance_ent_ctrl_reset),
     [TD_CMD_CAPS] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_cmd_caps, dance_cmd_caps_finished, dance_cmd_caps_reset),
     [TD_O_MINUS] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_o_minus, dance_o_minus_finished, dance_o_minus_reset),

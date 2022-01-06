@@ -52,7 +52,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MOUSEKEY_DELAY              0
 #define MOUSEKEY_TIME_TO_MAX        60
 #define MOUSEKEY_MAX_SPEED          7
-#define MOUSEKEY_WHEEL_DELAY        400
+#define MOUSEKEY_WHEEL_DELAY        0 // was 400
 #define MOUSEKEY_WHEEL_INTERVAL     MOUSEKEY_INTERVAL
 #define MOUSEKEY_WHEEL_MAX_SPEED    MOUSEKEY_MAX_SPEED
 #define MOUSEKEY_WHEEL_TIME_TO_MAX  MOUSEKEY_TIME_TO_MAX
@@ -70,9 +70,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   #endif
 #endif
 
-#define COMBO_COUNT 2
-#define COMBO_TERM 50
-#define EXTRA_SHORT_COMBOS // up to 6 keys per combo instead of 8
+//#define COMBO_COUNT 2
+//#define COMBO_TERM 50
+//#define EXTRA_SHORT_COMBOS // up to 6 keys per combo instead of 8
 
 //#define RGB_DISABLE_WHEN_USB_SUSPENDED // turn off effects when suspended
 #undef RGB_DISABLE_WHEN_USB_SUSPENDED
