@@ -87,7 +87,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [_NUM] = LAYOUT_split_3x6_3(
-     KC_GRAVE, KC_DELETE,      XXXXXXX,     KC_LPRN,     KC_RPRN,    KC_BSLASH,            KC_SLSH,  KC_7, KC_8, KC_9, KC_MINUS,  _______,
+     KC_GRAVE, KC_DELETE,      XXXXXXX,     KC_LPRN,     KC_RPRN,    KC_BSLASH,            KC_SLSH,  KC_7, KC_8, KC_9, KC_MINUS,  KC_BSPC,
         TD(TD_BASE_ESC), KC_MINUS,      KC_EQUAL, KC_LBRACKET, KC_RBRACKET,      XXXXXXX,             KC_ASTR, KC_4, KC_5, KC_6,  KC_KP_PLUS, KC_EQUAL,
       _______, KC_MAC_UNDO, KC_MAC_CUT, KC_MAC_COPY, KC_MAC_PASTE, KC_MAC_REDO,            KC_COMM, KC_1, KC_2, KC_3,      KC_DOT,   TD(TD_ENT_CTRL),
                                                        ADJUST, _______,  _______,     _______, _______, KC_0
