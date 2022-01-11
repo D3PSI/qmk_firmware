@@ -31,11 +31,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define SPLIT_LAYER_STATE_ENABLE
 
-#define NO_ACTION_ONESHOT
+#undef NO_ACTION_ONESHOT
 #define NO_MUSIC_MODE
 #define NO_ACTION_MACRO
 #define NO_ACTION_FUNCTION
 #define LAYER_STATE_8BIT // limit to fewer than 8 layers
+
+#define ONESHOT_TAP_TOGGLE 5 // num presses to lock key until pressed again
+#define ONESHOT_TIMEOUT 3000 // ms
 
 //#define SPLIT_TRANSACTION_IDS_KB WATCHDOG_SYNC
 //#define SPLIT_USB_TIMEOUT 2000
