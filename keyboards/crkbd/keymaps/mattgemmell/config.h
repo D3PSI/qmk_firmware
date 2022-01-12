@@ -41,7 +41,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define ONESHOT_TIMEOUT 3000 // ms
 
 //#define SPLIT_TRANSACTION_IDS_KB WATCHDOG_SYNC
-//#define SPLIT_USB_TIMEOUT 2000
+#define SPLIT_USB_TIMEOUT 5000
 
 #define USB_SUSPEND_WAKEUP_DELAY 200
 #define AUTO_SHIFT_TIMEOUT 150
