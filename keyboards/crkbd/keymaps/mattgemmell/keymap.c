@@ -19,7 +19,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
 #include QMK_KEYBOARD_H
-#include "oneshot.c"
+#include "oneshot.h"
+#include "swapper.h"
 
 #define KC_MAC_UNDO LGUI(KC_Z)
 #define KC_MAC_REDO LSFT(LGUI(KC_Z))
@@ -59,6 +60,8 @@ enum my_keycodes {
     OS_ALT,
     OS_CMD,
     OS_CAPS, // for use as Globe on iPadOS, via remapping in Settings.app
+
+    APP_SWITCH_FRWD, // cmd-tab but holds cmd between invocations
 };
 
 #define NAV MO(_NAV)
@@ -73,9 +76,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [_NAV] = LAYOUT_split_3x6_3(
-      XXXXXXX, KC_ESC,      XXXXXXX,    KC_MAC_SCRN_SHOT,  KC_MAC_SCRN_MRKP,  XXXXXXX,            KC_PGUP,   KC_MAC_PREV_TAB,  KC_UP,   KC_MAC_NEXT_TAB, KC_BSPC, XXXXXXX,
-      XXXXXXX, KC_TAB,      OS_CTRL,    OS_ALT,           OS_CMD,           OS_CAPS,            KC_PGDOWN, KC_LEFT,          KC_DOWN, KC_RIGHT,        XXXXXXX, XXXXXXX,
-      XXXXXXX, KC_MAC_UNDO, KC_MAC_CUT, KC_MAC_COPY,       KC_MAC_PASTE,      KC_MAC_REDO,        XXXXXXX,   KC_MAC_SPOTLIGHT, XXXXXXX, XXXXXXX,         KC_ENT,  XXXXXXX,
+      XXXXXXX, KC_ESC,      XXXXXXX,    KC_MAC_SCRN_SHOT,  KC_MAC_SCRN_MRKP,  XXXXXXX,            KC_PGUP,   KC_MAC_PREV_TAB,  KC_UP,           KC_MAC_NEXT_TAB, KC_BSPC, XXXXXXX,
+      XXXXXXX, KC_TAB,      OS_CTRL,    OS_ALT,            OS_CMD,            OS_CAPS,            KC_PGDOWN, KC_LEFT,          KC_DOWN,         KC_RIGHT,        XXXXXXX, XXXXXXX,
+      XXXXXXX, KC_MAC_UNDO, KC_MAC_CUT, KC_MAC_COPY,       KC_MAC_PASTE,      KC_MAC_REDO,        XXXXXXX,   KC_MAC_SPOTLIGHT, APP_SWITCH_FRWD, XXXXXXX,         KC_ENT,  XXXXXXX,
                                                          _______, _______, _______,             _______, _______, _______
   ),
 
@@ -99,7 +102,7 @@ const uint8_t PROGMEM ledmap[][42][3] = {
 [_NAV] = {
 ___off___, MG____RED, ___off___, MG___PINK, MG___PINK, ___off___, 				MG_ORANGE, MG___PINK, MG__WHITE, MG___PINK, MG____RED, ___off___,
 ___off___, ___off___, MG___BLUE, MG___BLUE, MG___BLUE, ___off___, 				MG_ORANGE, MG__WHITE, MG__WHITE, MG__WHITE, ___off___, ___off___,
-___off___, MG___PINK, ___off___, ___off___, ___off___, ___off___, 				___off___, MG_YELLOW, ___off___, ___off___, MG___BLUE, ___off___,
+___off___, MG___PINK, ___off___, ___off___, ___off___, ___off___, 				___off___, MG_YELLOW, MG_PURPLE, ___off___, MG___BLUE, ___off___,
 								 ___off___, ___off___, ___off___, 				___off___, MG_ORANGE, ___off___
 			},
 [_NUM] = {
@@ -231,7 +234,14 @@ oneshot_state os_alt_state = os_up_unqueued;
 oneshot_state os_cmd_state = os_up_unqueued;
 oneshot_state os_caps_state = os_up_unqueued;
 
+bool app_switch_frwd_active = false;
+
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    update_swapper(
+        &app_switch_frwd_active, KC_LGUI, KC_TAB, APP_SWITCH_FRWD,
+        keycode, record
+    );
+
     update_oneshot(
         &os_shft_state, KC_LSFT, OS_SHFT,
         keycode, record

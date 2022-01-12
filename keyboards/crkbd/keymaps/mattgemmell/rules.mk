@@ -15,3 +15,6 @@ RGBLIGHT_ENABLE = no
 RGB_MATRIX_ENABLE = yes
 TAP_DANCE_ENABLE = no
 COMBO_ENABLE = no
+
+SRC += oneshot.c
+SRC += swapper.c
