@@ -23,19 +23,35 @@
 keymap_filename = "keymap.c"
 svg_filename = "keymap_diagram.svg"
 
-# SVG Appearance
+# SVG Geometry
 diagram_inset = 30 # horizontal and vertical, around entire diagram
+layer_spacing = 20 # vertical spacing between each layer
 layout_keys_per_row = 12 # last row (only) can have fewer keys
 layout_num_edge_keys_ignored = 1 # first and last x keys per row won't be displayed in diagram
+# Note: layout_keys_per_row is the actual, real number of keys per row in the keymap structure. It includes ignored edge keys.
 key_width = 55
 key_height = 45
-key_radius = 6 # corner radius
-key_spacing = 4 # horizontal and vertical
+key_radius = 6 # corner radius (rx and ry in SVG; doesn't seem to be compatible with CSS as of Jan 2022)
+key_spacing = 4 # horizontal and vertical, interior to layout only (not around outer edges; see diagram_inset instead)
 last_row_pad = 10 # additional vertical spacing (added to key_spacing) for final row
-layout_split = True
-split_spacing = 20 # horizontal spacing between halves of a split layout
+
+# Split layout
+layout_split = True # expects an equal number of keys per half, and thus an even number of keys per row
+split_spacing = 20 # horizontal spacing between halves of a split layout (used instead of horizontal key_spacing if layout_split is True)
+
+# RGB LED colours
 show_led_colours = True
-led_colours_opacity = 0.3
+led_colours_opacity = 0.3 # 0.0 to 1.0
+
+# Layers
+show_layer_titles = True
+layer_title_height = 20 # text box height; set font attributes in CSS below
+layer_title_spacing = 10 # vertical spacing between layer title and its layer diagram
+layer_held_keycodes = { # keycodes whose keys are implicitly held down on a given layer, gaining the CSS ".held" class
+  "_NAV": ["NAV"],
+  "_NUM": ["NUM"],
+  "_ADJUST": ["NUM", "NAV"]
+}
 
 # SVG template segments
 svg_header = '''<svg width="${svg_width}" height="${svg_height}" viewBox="0 0 ${svg_width} ${svg_height}" xmlns="http://www.w3.org/2000/svg">
@@ -57,6 +73,8 @@ svg_header = '''<svg width="${svg_width}" height="${svg_height}" viewBox="0 0 ${
 
     .held {
         fill: #ccf;
+        stroke-width: 2px;
+        stroke: #666;
     }
 
     text {
@@ -64,6 +82,11 @@ svg_header = '''<svg width="${svg_width}" height="${svg_height}" viewBox="0 0 ${
     	dominant-baseline: middle;
     }
 
+    .layer_title {
+		font-size: 16px;
+		font-weight: bold;
+		fill: #777;
+    }
 ${extra_css}
 </style>
 '''
@@ -72,7 +95,11 @@ svg_footer = '''
 </svg>
 '''
 
-svg_row = '''
+svg_layer_title = '''
+<text x="${layer_title_x}" y="${layer_title_y}" class="layer_title">${layer_title}</text>
+'''
+
+svg_key = '''
 <rect rx="${key_radius}" x="${key_x}" y="${key_y}" class="${key_classes}" />
 <text x="${key_text_x}" y="${key_text_y}">${key_label}</text>
 '''
@@ -206,8 +233,69 @@ colours_matches = colours_regexp.finditer(keymap_contents)
 for colour_match in colours_matches:
     led_colours.update({colour_match.group(1): [x.strip() for x in colour_match.group(2).split(",")]});
 
-# Prepare output
+# Ensure we have at least layout_keys_per_row keys on our base layer.
+num_keys = len(key_layers[layer_order[0]])
+if num_keys < layout_keys_per_row:
+    layout_keys_per_row = num_keys
+
+# Calculate overall viewbox dimensions, paying attention to layout_num_edge_keys_ignored.
+import math
+num_rows = int(math.ceil(float(num_keys) / float(layout_keys_per_row)))
+num_real_cols = layout_keys_per_row
+num_cols = num_real_cols
+if layout_num_edge_keys_ignored > 0:
+    num_cols -= (2 * layout_num_edge_keys_ignored)
+
+svg_width = (2 * diagram_inset) + (num_cols * key_width) + ((num_cols - 2) * key_spacing)
+if layout_split:
+    svg_width += split_spacing
+else:
+    svg_width += key_spacing
+
+num_layers = len(layer_order)
+layer_height = (num_rows * key_height) + ((num_rows - 1) * key_spacing) + last_row_pad
+if show_layer_titles:
+    layer_height += (layer_title_height + layer_title_spacing)
+svg_height = (2 * diagram_inset) + (num_layers * layer_height) + ((num_layers - 1) * layer_spacing)
+
+extra_css = ""
 from string import Template
 
-#t = Template("This is an $ex with $vars")
-#print t.substitute({ 'ex': "example", 'vars': "variables"})
+if show_led_colours:
+    colour_css_template = Template('''
+    .${colour_class} {
+		fill: rgba(${colour_rgb}, ${led_colours_opacity});
+    }
+''')
+    for colour in led_colours:
+        colour_class = colour.lower()
+        colour_rgb_vals = led_colours[colour]
+        if not (colour_rgb_vals[0] == "0" and colour_rgb_vals[1] == "0" and colour_rgb_vals[2] == "0"):
+            colour_rgb = ", ".join(colour_rgb_vals)
+            extra_css += colour_css_template.substitute({'colour_class': colour_class,
+                                                         'colour_rgb': colour_rgb,
+                                                         'led_colours_opacity': led_colours_opacity})
+
+layer_title_x = float(svg_width) / 2.0; # SVG text boxes are positioned at their centre point
+
+# Generate output
+svg_raw = ""
+
+# Header
+header_template = Template(svg_header)
+svg_raw += header_template.substitute({'svg_width': svg_width,
+                                       'svg_height': svg_height,
+                                       'key_width': key_width,
+                                       'key_height': key_height,
+                                       'extra_css': extra_css})
+
+# TODO: Finish!
+
+
+# Footer
+svg_raw += svg_footer
+
+# Write out SVG file.
+svg_file = open(svg_filename, "w")
+svg_file.write(svg_raw)
+svg_file.close()

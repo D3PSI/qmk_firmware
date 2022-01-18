@@ -1,0 +1,69 @@
+<svg width="662" height="1048" viewBox="0 0 662 1048" xmlns="http://www.w3.org/2000/svg">
+<style>
+    svg {
+        font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+        font-size: 14px;
+        font-kerning: normal;
+        text-rendering: optimizeLegibility;
+        fill: #333;
+        background-color: white;
+    }
+
+    rect {
+        fill: #f0f0f0;
+        width: 55px;
+        height: 45px;
+    }
+
+    .held {
+        fill: #ccf;
+        stroke-width: 2px;
+        stroke: #666;
+    }
+
+    text {
+    	text-anchor: middle;
+    	dominant-baseline: middle;
+    }
+
+    .layer_title {
+		font-size: 16px;
+		font-weight: bold;
+		fill: #777;
+    }
+
+    .mg____red {
+		fill: rgba(255, 0, 0, 0.3);
+    }
+
+    .mg__white {
+		fill: rgba(255, 255, 255, 0.3);
+    }
+
+    .mg__green {
+		fill: rgba(32, 159, 33, 0.3);
+    }
+
+    .mg_purple {
+		fill: rgba(50, 0, 232, 0.3);
+    }
+
+    .mg___pink {
+		fill: rgba(208, 0, 255, 0.3);
+    }
+
+    .mg___blue {
+		fill: rgba(0, 181, 213, 0.3);
+    }
+
+    .mg_yellow {
+		fill: rgba(255, 208, 0, 0.3);
+    }
+
+    .mg_orange {
+		fill: rgba(255, 85, 0, 0.3);
+    }
+
+</style>
+
+</svg>
