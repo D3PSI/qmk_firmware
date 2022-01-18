@@ -47,39 +47,57 @@ led_colours_opacity = 0.3 # 0.0 to 1.0
 show_layer_titles = True
 layer_title_height = 20 # text box height; set font attributes in CSS below
 layer_title_spacing = 10 # vertical spacing between layer title and its layer diagram
-layer_held_keycodes = { # keycodes whose keys are implicitly held down on a given layer, gaining the CSS ".held" class
+layer_held_keycodes = { # keycodes whose keys are implicitly held down on a given layer, gaining the CSS "held" class specified below
   "_NAV": ["NAV"],
   "_NUM": ["NUM"],
   "_ADJUST": ["NUM", "NAV"]
 }
+held_css_class = "held" # edit the actual CSS below
+blank_css_class = "blank" # as above, for keys with no function
+transparent_css_class = "transparent" # as above, for transparent keys (falling through to base layer)
 
 # SVG template segments
 svg_header = '''<svg width="${svg_width}" height="${svg_height}" viewBox="0 0 ${svg_width} ${svg_height}" xmlns="http://www.w3.org/2000/svg">
 <style>
     svg {
         font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
-        font-size: 14px;
+        font-size: 13px;
         font-kerning: normal;
         text-rendering: optimizeLegibility;
         fill: #333;
         background-color: white;
     }
 
-    rect {
-        fill: #f0f0f0;
-        width: ${key_width}px;
-        height: ${key_height}px;
-    }
-
-    .held {
-        fill: #ccf;
-        stroke-width: 2px;
-        stroke: #666;
-    }
-
     text {
     	text-anchor: middle;
     	dominant-baseline: middle;
+    }
+
+    .text-container > div {
+        background-color: #f0f0f0;
+        text-align: center;
+        width: ${key_width}px;
+        height: ${key_height}px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        hyphens: auto;
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        border-radius: ${key_radius}px;
+    }
+
+    .text-container > div.${held_css_class} {
+        background-color: #ccf;
+    }
+
+    .text-container > div.${blank_css_class} {
+
+    }
+
+    .text-container > div.${transparent_css_class} {
+
     }
 
     .layer_title {
@@ -100,8 +118,9 @@ svg_layer_title = '''
 '''
 
 svg_key = '''
-<rect rx="${key_radius}" x="${key_x}" y="${key_y}" class="${key_classes}" />
-<text x="${key_text_x}" y="${key_text_y}">${key_label}</text>
+<foreignObject x="${key_x}" y="${key_y}" width="${key_width}" height="${key_height}" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="${key_classes}">${key_label}</div>
+</foreignObject>
 '''
 
 # ============================================
@@ -263,8 +282,8 @@ from string import Template
 
 if show_led_colours:
     colour_css_template = Template('''
-    .${colour_class} {
-		fill: rgba(${colour_rgb}, ${led_colours_opacity});
+    .text-container > div.${colour_class} {
+		background-color: rgba(${colour_rgb}, ${led_colours_opacity});
     }
 ''')
     for colour in led_colours:
@@ -276,8 +295,6 @@ if show_led_colours:
                                                          'colour_rgb': colour_rgb,
                                                          'led_colours_opacity': led_colours_opacity})
 
-layer_title_x = float(svg_width) / 2.0; # SVG text boxes are positioned at their centre point
-
 # Generate output
 svg_raw = ""
 
@@ -287,13 +304,85 @@ svg_raw += header_template.substitute({'svg_width': svg_width,
                                        'svg_height': svg_height,
                                        'key_width': key_width,
                                        'key_height': key_height,
+                                       'key_radius': key_radius,
+                                       'held_css_class': held_css_class,
+                                       'blank_css_class': blank_css_class,
+                                       'transparent_css_class': transparent_css_class,
                                        'extra_css': extra_css})
 
-# TODO: Finish!
+if show_layer_titles:
+    layer_title_template = Template(svg_layer_title)
+    layer_title_x = float(svg_width) / 2.0; # SVG text boxes are positioned at their centre point
 
+key_template = Template(svg_key)
+
+cur_x = diagram_inset
+cur_y = diagram_inset
+
+for layer_id in layer_order:
+    # Layer title
+    if show_layer_titles:
+        layer_title = layer_names[layer_id]
+        layer_title_y = float(cur_y) + (float(layer_title_height) / 2.0)
+        svg_raw += layer_title_template.substitute({'layer_title_x': layer_title_x,
+                                                    'layer_title_y': layer_title_y,
+                                                    'layer_title': layer_title})
+        cur_x = diagram_inset
+        cur_y += (layer_title_height + layer_title_spacing)
+
+    # Keys
+    key_index = 0 # Zero-based
+    key_text_x = 0
+    key_text_y = 0
+    key_classes = []
+    key_label = ""
+    layer_keys = key_layers[layer_id]
+    for key in layer_keys:
+        key_label = key
+        key_classes = []
+
+        # Text box position (coords are the centre of the box)
+        key_text_x = float(cur_x) + (float(key_width) / 2.0)
+        key_text_y = float(cur_y) + (float(key_height) / 2.0)
+
+        # Key's human-readable label
+        if key == keycode_transparent:
+            key_classes.append(transparent_css_class)
+            if layer_id != layer_order[0]:
+                key = key_layers[layer_order[0]][key_index]
+
+        if key in key_names:
+            key_label = key_names[key]
+        elif key.startswith(keycode_prefix):
+            key_label = key[len(keycode_prefix):]
+        elif key == keycode_blank:
+            key_classes.append(blank_css_class)
+            key_label = ""
+
+        # CSS classes to apply to the key rect shape
+        if layer_id in layer_held_keycodes and key in layer_held_keycodes[layer_id]:
+            key_classes.append(held_css_class)
+        if show_led_colours and layer_id in led_layers:
+            key_classes.append(led_layers[layer_id][key_index].lower())
+
+        svg_raw += key_template.substitute({'key_radius': key_radius,
+                                            'key_x': cur_x,
+                                            'key_y': cur_y,
+                                            'key_classes': " ".join(key_classes),
+                                            'key_width': key_width,
+                                            'key_height': key_height,
+                                            'key_label': key_label})
+
+        # Adjust variables appropriately.
+        key_index += 1
+        if key_index % num_real_cols == 0:
+            cur_x = diagram_inset
+            cur_y += (key_spacing + key_height)
+        else:
+            cur_x += (key_spacing + key_width)
 
 # Footer
-svg_raw += svg_footer
+svg_raw += svg_footer # no vars in this, so it can be included literally
 
 # Write out SVG file.
 svg_file = open(svg_filename, "w")

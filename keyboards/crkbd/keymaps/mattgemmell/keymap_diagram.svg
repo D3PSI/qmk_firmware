@@ -2,28 +2,43 @@
 <style>
     svg {
         font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
-        font-size: 14px;
+        font-size: 13px;
         font-kerning: normal;
         text-rendering: optimizeLegibility;
         fill: #333;
         background-color: white;
     }
 
-    rect {
-        fill: #f0f0f0;
-        width: 55px;
-        height: 45px;
-    }
-
-    .held {
-        fill: #ccf;
-        stroke-width: 2px;
-        stroke: #666;
-    }
-
     text {
     	text-anchor: middle;
     	dominant-baseline: middle;
+    }
+
+    .text-container > div {
+        background-color: #f0f0f0;
+        text-align: center;
+        width: 55px;
+        height: 45px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        hyphens: auto;
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        border-radius: 6px;
+    }
+
+    .text-container > div.held {
+        background-color: #ccf;
+    }
+
+    .text-container > div.blank {
+
+    }
+
+    .text-container > div.transparent {
+
     }
 
     .layer_title {
@@ -32,38 +47,718 @@
 		fill: #777;
     }
 
-    .mg____red {
-		fill: rgba(255, 0, 0, 0.3);
+    .text-container > div.mg____red {
+		background-color: rgba(255, 0, 0, 0.3);
     }
 
-    .mg__white {
-		fill: rgba(255, 255, 255, 0.3);
+    .text-container > div.mg__white {
+		background-color: rgba(255, 255, 255, 0.3);
     }
 
-    .mg__green {
-		fill: rgba(32, 159, 33, 0.3);
+    .text-container > div.mg__green {
+		background-color: rgba(32, 159, 33, 0.3);
     }
 
-    .mg_purple {
-		fill: rgba(50, 0, 232, 0.3);
+    .text-container > div.mg_purple {
+		background-color: rgba(50, 0, 232, 0.3);
     }
 
-    .mg___pink {
-		fill: rgba(208, 0, 255, 0.3);
+    .text-container > div.mg___pink {
+		background-color: rgba(208, 0, 255, 0.3);
     }
 
-    .mg___blue {
-		fill: rgba(0, 181, 213, 0.3);
+    .text-container > div.mg___blue {
+		background-color: rgba(0, 181, 213, 0.3);
     }
 
-    .mg_yellow {
-		fill: rgba(255, 208, 0, 0.3);
+    .text-container > div.mg_yellow {
+		background-color: rgba(255, 208, 0, 0.3);
     }
 
-    .mg_orange {
-		fill: rgba(255, 85, 0, 0.3);
+    .text-container > div.mg_orange {
+		background-color: rgba(255, 85, 0, 0.3);
     }
 
 </style>
+
+<text x="331.0" y="40.0" class="layer_title">Base</text>
+
+<foreignObject x="30" y="60" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank"></div>
+</foreignObject>
+
+<foreignObject x="89" y="60" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">Q</div>
+</foreignObject>
+
+<foreignObject x="148" y="60" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">W</div>
+</foreignObject>
+
+<foreignObject x="207" y="60" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">E</div>
+</foreignObject>
+
+<foreignObject x="266" y="60" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">R</div>
+</foreignObject>
+
+<foreignObject x="325" y="60" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">T</div>
+</foreignObject>
+
+<foreignObject x="384" y="60" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">Y</div>
+</foreignObject>
+
+<foreignObject x="443" y="60" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">U</div>
+</foreignObject>
+
+<foreignObject x="502" y="60" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">I</div>
+</foreignObject>
+
+<foreignObject x="561" y="60" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">O</div>
+</foreignObject>
+
+<foreignObject x="620" y="60" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">P</div>
+</foreignObject>
+
+<foreignObject x="679" y="60" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank"></div>
+</foreignObject>
+
+<foreignObject x="30" y="109" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank"></div>
+</foreignObject>
+
+<foreignObject x="89" y="109" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">A</div>
+</foreignObject>
+
+<foreignObject x="148" y="109" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">S</div>
+</foreignObject>
+
+<foreignObject x="207" y="109" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">D</div>
+</foreignObject>
+
+<foreignObject x="266" y="109" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">F</div>
+</foreignObject>
+
+<foreignObject x="325" y="109" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">G</div>
+</foreignObject>
+
+<foreignObject x="384" y="109" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">H</div>
+</foreignObject>
+
+<foreignObject x="443" y="109" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">J</div>
+</foreignObject>
+
+<foreignObject x="502" y="109" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">K</div>
+</foreignObject>
+
+<foreignObject x="561" y="109" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">L</div>
+</foreignObject>
+
+<foreignObject x="620" y="109" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">'</div>
+</foreignObject>
+
+<foreignObject x="679" y="109" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank"></div>
+</foreignObject>
+
+<foreignObject x="30" y="158" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank"></div>
+</foreignObject>
+
+<foreignObject x="89" y="158" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">Z</div>
+</foreignObject>
+
+<foreignObject x="148" y="158" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">X</div>
+</foreignObject>
+
+<foreignObject x="207" y="158" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">C</div>
+</foreignObject>
+
+<foreignObject x="266" y="158" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">V</div>
+</foreignObject>
+
+<foreignObject x="325" y="158" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">B</div>
+</foreignObject>
+
+<foreignObject x="384" y="158" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">N</div>
+</foreignObject>
+
+<foreignObject x="443" y="158" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">M</div>
+</foreignObject>
+
+<foreignObject x="502" y="158" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">,</div>
+</foreignObject>
+
+<foreignObject x="561" y="158" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">.</div>
+</foreignObject>
+
+<foreignObject x="620" y="158" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">/</div>
+</foreignObject>
+
+<foreignObject x="679" y="158" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank"></div>
+</foreignObject>
+
+<foreignObject x="30" y="207" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank"></div>
+</foreignObject>
+
+<foreignObject x="89" y="207" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">Num</div>
+</foreignObject>
+
+<foreignObject x="148" y="207" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">Shift</div>
+</foreignObject>
+
+<foreignObject x="207" y="207" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">Space</div>
+</foreignObject>
+
+<foreignObject x="266" y="207" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">Nav</div>
+</foreignObject>
+
+<foreignObject x="325" y="207" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank"></div>
+</foreignObject>
+
+<text x="331.0" y="217.0" class="layer_title">Navigation</text>
+
+<foreignObject x="30" y="237" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
+</foreignObject>
+
+<foreignObject x="89" y="237" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg____red">Esc</div>
+</foreignObject>
+
+<foreignObject x="148" y="237" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
+</foreignObject>
+
+<foreignObject x="207" y="237" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg___pink">Screen Shot</div>
+</foreignObject>
+
+<foreignObject x="266" y="237" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg___pink">Markup Screen</div>
+</foreignObject>
+
+<foreignObject x="325" y="237" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
+</foreignObject>
+
+<foreignObject x="384" y="237" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg_orange">Page Up</div>
+</foreignObject>
+
+<foreignObject x="443" y="237" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg___pink">Prev Tab</div>
+</foreignObject>
+
+<foreignObject x="502" y="237" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg__white">Up</div>
+</foreignObject>
+
+<foreignObject x="561" y="237" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg___pink">Next Tab</div>
+</foreignObject>
+
+<foreignObject x="620" y="237" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg____red">Backspace</div>
+</foreignObject>
+
+<foreignObject x="679" y="237" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
+</foreignObject>
+
+<foreignObject x="30" y="286" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
+</foreignObject>
+
+<foreignObject x="89" y="286" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="___off___">Tab</div>
+</foreignObject>
+
+<foreignObject x="148" y="286" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg___blue">Control</div>
+</foreignObject>
+
+<foreignObject x="207" y="286" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg___blue">Option</div>
+</foreignObject>
+
+<foreignObject x="266" y="286" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg___blue">Command</div>
+</foreignObject>
+
+<foreignObject x="325" y="286" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="___off___">Globe</div>
+</foreignObject>
+
+<foreignObject x="384" y="286" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg_orange">Page Down</div>
+</foreignObject>
+
+<foreignObject x="443" y="286" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg__white">Left</div>
+</foreignObject>
+
+<foreignObject x="502" y="286" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg__white">Down</div>
+</foreignObject>
+
+<foreignObject x="561" y="286" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg__white">Right</div>
+</foreignObject>
+
+<foreignObject x="620" y="286" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
+</foreignObject>
+
+<foreignObject x="679" y="286" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
+</foreignObject>
+
+<foreignObject x="30" y="335" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
+</foreignObject>
+
+<foreignObject x="89" y="335" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg___pink">Undo</div>
+</foreignObject>
+
+<foreignObject x="148" y="335" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="___off___">Cut</div>
+</foreignObject>
+
+<foreignObject x="207" y="335" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg__green">Copy</div>
+</foreignObject>
+
+<foreignObject x="266" y="335" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="___off___">Paste</div>
+</foreignObject>
+
+<foreignObject x="325" y="335" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="___off___">Redo</div>
+</foreignObject>
+
+<foreignObject x="384" y="335" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
+</foreignObject>
+
+<foreignObject x="443" y="335" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg_yellow">Spotlight</div>
+</foreignObject>
+
+<foreignObject x="502" y="335" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg_purple">Switch App</div>
+</foreignObject>
+
+<foreignObject x="561" y="335" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
+</foreignObject>
+
+<foreignObject x="620" y="335" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg___blue">Enter</div>
+</foreignObject>
+
+<foreignObject x="679" y="335" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
+</foreignObject>
+
+<foreignObject x="30" y="384" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="transparent blank ___off___"></div>
+</foreignObject>
+
+<foreignObject x="89" y="384" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="transparent ___off___">Num</div>
+</foreignObject>
+
+<foreignObject x="148" y="384" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="transparent ___off___">Shift</div>
+</foreignObject>
+
+<foreignObject x="207" y="384" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="transparent ___off___">Space</div>
+</foreignObject>
+
+<foreignObject x="266" y="384" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="transparent held mg_orange">Nav</div>
+</foreignObject>
+
+<foreignObject x="325" y="384" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="transparent blank ___off___"></div>
+</foreignObject>
+
+<text x="331.0" y="394.0" class="layer_title">Numpad</text>
+
+<foreignObject x="30" y="414" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
+</foreignObject>
+
+<foreignObject x="89" y="414" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg____red">Esc</div>
+</foreignObject>
+
+<foreignObject x="148" y="414" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg_orange">;</div>
+</foreignObject>
+
+<foreignObject x="207" y="414" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg_yellow">(</div>
+</foreignObject>
+
+<foreignObject x="266" y="414" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg_yellow">)</div>
+</foreignObject>
+
+<foreignObject x="325" y="414" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg___pink">\</div>
+</foreignObject>
+
+<foreignObject x="384" y="414" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg___pink">/</div>
+</foreignObject>
+
+<foreignObject x="443" y="414" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg__green">7</div>
+</foreignObject>
+
+<foreignObject x="502" y="414" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg__green">8</div>
+</foreignObject>
+
+<foreignObject x="561" y="414" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg__green">9</div>
+</foreignObject>
+
+<foreignObject x="620" y="414" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="___off___">-</div>
+</foreignObject>
+
+<foreignObject x="679" y="414" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
+</foreignObject>
+
+<foreignObject x="30" y="463" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
+</foreignObject>
+
+<foreignObject x="89" y="463" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="___off___">Tab</div>
+</foreignObject>
+
+<foreignObject x="148" y="463" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg___blue">Control</div>
+</foreignObject>
+
+<foreignObject x="207" y="463" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg___blue">Option</div>
+</foreignObject>
+
+<foreignObject x="266" y="463" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg___blue">Command</div>
+</foreignObject>
+
+<foreignObject x="325" y="463" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="___off___">Globe</div>
+</foreignObject>
+
+<foreignObject x="384" y="463" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="___off___">*</div>
+</foreignObject>
+
+<foreignObject x="443" y="463" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg__green">4</div>
+</foreignObject>
+
+<foreignObject x="502" y="463" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg__green">5</div>
+</foreignObject>
+
+<foreignObject x="561" y="463" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg__green">6</div>
+</foreignObject>
+
+<foreignObject x="620" y="463" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="___off___">=</div>
+</foreignObject>
+
+<foreignObject x="679" y="463" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
+</foreignObject>
+
+<foreignObject x="30" y="512" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
+</foreignObject>
+
+<foreignObject x="89" y="512" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="___off___">En Dash</div>
+</foreignObject>
+
+<foreignObject x="148" y="512" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg_purple">Em Dash</div>
+</foreignObject>
+
+<foreignObject x="207" y="512" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg_orange">[</div>
+</foreignObject>
+
+<foreignObject x="266" y="512" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg_orange">]</div>
+</foreignObject>
+
+<foreignObject x="325" y="512" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="___off___">`</div>
+</foreignObject>
+
+<foreignObject x="384" y="512" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="___off___">,</div>
+</foreignObject>
+
+<foreignObject x="443" y="512" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg__green">1</div>
+</foreignObject>
+
+<foreignObject x="502" y="512" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg__green">2</div>
+</foreignObject>
+
+<foreignObject x="561" y="512" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg__green">3</div>
+</foreignObject>
+
+<foreignObject x="620" y="512" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="___off___">.</div>
+</foreignObject>
+
+<foreignObject x="679" y="512" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
+</foreignObject>
+
+<foreignObject x="30" y="561" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="transparent blank ___off___"></div>
+</foreignObject>
+
+<foreignObject x="89" y="561" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="transparent held mg__green">Num</div>
+</foreignObject>
+
+<foreignObject x="148" y="561" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="transparent ___off___">Shift</div>
+</foreignObject>
+
+<foreignObject x="207" y="561" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg__green">0</div>
+</foreignObject>
+
+<foreignObject x="266" y="561" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="transparent ___off___">Nav</div>
+</foreignObject>
+
+<foreignObject x="325" y="561" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="transparent blank ___off___"></div>
+</foreignObject>
+
+<text x="331.0" y="571.0" class="layer_title">Adjust</text>
+
+<foreignObject x="30" y="591" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
+</foreignObject>
+
+<foreignObject x="89" y="591" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
+</foreignObject>
+
+<foreignObject x="148" y="591" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg_purple">Vol Down</div>
+</foreignObject>
+
+<foreignObject x="207" y="591" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg____red">Mute</div>
+</foreignObject>
+
+<foreignObject x="266" y="591" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg_purple">Vol Up</div>
+</foreignObject>
+
+<foreignObject x="325" y="591" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg__green">Mouse Accel 2</div>
+</foreignObject>
+
+<foreignObject x="384" y="591" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg_orange">Mouse Wheel Down</div>
+</foreignObject>
+
+<foreignObject x="443" y="591" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg___blue">Left Click</div>
+</foreignObject>
+
+<foreignObject x="502" y="591" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg__white">Mouse Up</div>
+</foreignObject>
+
+<foreignObject x="561" y="591" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg___blue">Right Click</div>
+</foreignObject>
+
+<foreignObject x="620" y="591" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg____red">Lock Screen</div>
+</foreignObject>
+
+<foreignObject x="679" y="591" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
+</foreignObject>
+
+<foreignObject x="30" y="640" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
+</foreignObject>
+
+<foreignObject x="89" y="640" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg___blue">Shift</div>
+</foreignObject>
+
+<foreignObject x="148" y="640" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg___blue">Control</div>
+</foreignObject>
+
+<foreignObject x="207" y="640" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg___blue">Option</div>
+</foreignObject>
+
+<foreignObject x="266" y="640" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg___blue">Command</div>
+</foreignObject>
+
+<foreignObject x="325" y="640" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg_yellow">Mouse Accel 1</div>
+</foreignObject>
+
+<foreignObject x="384" y="640" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg_orange">Mouse Wheel Up</div>
+</foreignObject>
+
+<foreignObject x="443" y="640" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg__white">Mouse Left</div>
+</foreignObject>
+
+<foreignObject x="502" y="640" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg__white">Mouse Down</div>
+</foreignObject>
+
+<foreignObject x="561" y="640" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg__white">Mouse Right</div>
+</foreignObject>
+
+<foreignObject x="620" y="640" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg_yellow">Brightness Up</div>
+</foreignObject>
+
+<foreignObject x="679" y="640" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
+</foreignObject>
+
+<foreignObject x="30" y="689" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
+</foreignObject>
+
+<foreignObject x="89" y="689" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
+</foreignObject>
+
+<foreignObject x="148" y="689" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg_yellow">Prev Track</div>
+</foreignObject>
+
+<foreignObject x="207" y="689" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg_yellow">Play Pause</div>
+</foreignObject>
+
+<foreignObject x="266" y="689" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg_yellow">Next Track</div>
+</foreignObject>
+
+<foreignObject x="325" y="689" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg____red">Mouse Accel 0</div>
+</foreignObject>
+
+<foreignObject x="384" y="689" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
+</foreignObject>
+
+<foreignObject x="443" y="689" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
+</foreignObject>
+
+<foreignObject x="502" y="689" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
+</foreignObject>
+
+<foreignObject x="561" y="689" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
+</foreignObject>
+
+<foreignObject x="620" y="689" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg_yellow">Brightness Down</div>
+</foreignObject>
+
+<foreignObject x="679" y="689" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
+</foreignObject>
+
+<foreignObject x="30" y="738" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="transparent blank ___off___"></div>
+</foreignObject>
+
+<foreignObject x="89" y="738" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="transparent held mg_purple">Num</div>
+</foreignObject>
+
+<foreignObject x="148" y="738" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="transparent ___off___">Shift</div>
+</foreignObject>
+
+<foreignObject x="207" y="738" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="transparent ___off___">Space</div>
+</foreignObject>
+
+<foreignObject x="266" y="738" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="transparent held mg_purple">Nav</div>
+</foreignObject>
+
+<foreignObject x="325" y="738" width="55" height="45" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="transparent blank ___off___"></div>
+</foreignObject>
 
 </svg>
