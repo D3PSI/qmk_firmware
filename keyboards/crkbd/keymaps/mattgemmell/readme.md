@@ -1,6 +1,6 @@
 [Matt Gemmell][]'s ever-evolving keymap for the Corne, designed for use with iPadOS.
 
-![](https://live.staticflickr.com/65535/51816332844_ba4216cd8a_h.jpg)
+![](keymap_diagram.svg)
 
 - 34 keys (5x3, plus 2 thumb keys, per half)
 - One-shot mods that can be carried between layers (via [callum][])
