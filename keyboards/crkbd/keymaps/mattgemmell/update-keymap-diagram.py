@@ -32,12 +32,12 @@ layout_num_edge_keys_ignored = 1 # first and last x keys per row won't be displa
 key_width = 65
 key_height = 55
 key_radius = 6 # corner radius (rx and ry in SVG; doesn't seem to be compatible with CSS as of Jan 2022)
-key_spacing = 4 # horizontal and vertical, interior to layout only (not around outer edges; see diagram_inset instead)
+key_spacing = 4 # horizontal and vertical, both between keys and around entire layer
 last_row_pad = 10 # additional vertical spacing (added to key_spacing) for final row
 
 # Split layout
 layout_split = True # expects an equal number of keys per half, and thus an even number of keys per row
-split_spacing = 20 # horizontal spacing between halves of a split layout (used instead of horizontal key_spacing if layout_split is True)
+split_spacing = 30 # horizontal spacing between halves of a split layout (used instead of horizontal key_spacing if layout_split is True)
 
 # RGB LED colours
 show_led_colours = True
@@ -117,6 +117,12 @@ svg_header = '''<svg width="${svg_width}" height="${svg_height}" viewBox="0 0 ${
 		font-weight: bold;
 		fill: #777;
     }
+
+    .layer_bg {
+        fill: #ccc;
+        width: ${layer_bg_width};
+        height: ${layer_bg_height};
+    }
 ${extra_css}
 </style>
 '''
@@ -127,6 +133,10 @@ svg_footer = '''
 
 svg_layer_title = '''
 <text x="${layer_title_x}" y="${layer_title_y}" class="layer_title">${layer_title}</text>
+'''
+
+svg_layer_bg = '''
+<rect rx="${key_radius}" x="${layer_bg_x}" y="${layer_bg_y}" class="layer_bg" />
 '''
 
 svg_key = '''
@@ -275,14 +285,15 @@ num_cols = num_real_cols
 if layout_num_edge_keys_ignored > 0:
     num_cols -= (2 * layout_num_edge_keys_ignored)
 
-svg_width = (2 * diagram_inset) + (num_cols * key_width) + ((num_cols - 2) * key_spacing)
+layer_width = (num_cols * key_width) + (num_cols * key_spacing)
 if layout_split:
-    svg_width += split_spacing
+    layer_width += split_spacing
 else:
-    svg_width += key_spacing
+    layer_width += key_spacing
+svg_width = (2 * diagram_inset) + layer_width
 
 num_layers = len(layer_order)
-layer_height = (num_rows * key_height) + ((num_rows - 1) * key_spacing) + last_row_pad
+layer_height = (num_rows * key_height) + ((num_rows + 1) * key_spacing) + last_row_pad
 if show_layer_titles:
     layer_height += (layer_title_height + layer_title_spacing)
 svg_height = (2 * diagram_inset) + (num_layers * layer_height) + ((num_layers - 1) * layer_spacing)
@@ -322,12 +333,15 @@ svg_raw += header_template.substitute({'svg_width': svg_width,
                                        'held_css_class': held_css_class,
                                        'blank_css_class': blank_css_class,
                                        'transparent_css_class': transparent_css_class,
+                                       'layer_bg_width': layer_width,
+                                       'layer_bg_height': layer_height,
                                        'extra_css': extra_css})
 
 if show_layer_titles:
     layer_title_template = Template(svg_layer_title)
     layer_title_x = float(svg_width) / 2.0; # SVG text boxes are positioned at their centre point
 
+layer_bg_template = Template(svg_layer_bg)
 key_template = Template(svg_key)
 
 cur_x = diagram_inset
@@ -343,6 +357,14 @@ for layer_id in layer_order:
                                                     'layer_title': layer_title})
         cur_x = diagram_inset
         cur_y += (layer_title_height + layer_title_spacing)
+
+    # Layer background
+    svg_raw += layer_bg_template.substitute({'key_radius': key_radius,
+                                             'layer_bg_x': cur_x,
+                                             'layer_bg_y': cur_y})
+
+    cur_x += key_spacing
+    cur_y += key_spacing
 
     # Keys
     key_index = 0 # Zero-based
@@ -386,6 +408,8 @@ for layer_id in layer_order:
                                             'key_width': key_width,
                                             'key_height': key_height,
                                             'key_label': key_label})
+
+
 
         # Adjust variables appropriately.
         key_index += 1
