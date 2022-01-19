@@ -66,7 +66,6 @@ svg_header = '''<svg width="${svg_width}" height="${svg_height}" viewBox="0 0 ${
         font-family: -apple-system, "Helvetica Neue", sans-serif;
         font-size: 14px;
         text-rendering: optimizeLegibility;
-        fill: #333;
         background-color: white;
     }
 
@@ -126,7 +125,7 @@ svg_header = '''<svg width="${svg_width}" height="${svg_height}" viewBox="0 0 ${
     }
 
     .layer_bg {
-        fill: #ccc;
+        fill: #c0c0c0;
         width: ${layer_bg_width}px;
         height: ${layer_bg_height}px;
     }
@@ -191,9 +190,9 @@ for led_row_match in led_row_matches:
 # Create substitution mappings
 layer_names = {
   "_BASE": "Base",
-  "_NAV": "Navigation",
-  "_NUM": "Numpad",
-  "_ADJUST": "Adjust"
+  "_NAV": "Navigation & Shortcuts",
+  "_NUM": "Numpad & Symbols",
+  "_ADJUST": "Mouse & Media"
 }
 
 # We'll just strip the keycode_prefix if a keycode isn't found in key_names.

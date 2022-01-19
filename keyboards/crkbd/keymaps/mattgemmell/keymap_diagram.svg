@@ -4,7 +4,6 @@
         font-family: -apple-system, "Helvetica Neue", sans-serif;
         font-size: 14px;
         text-rendering: optimizeLegibility;
-        fill: #333;
         background-color: white;
     }
 
@@ -64,7 +63,7 @@
     }
 
     .layer_bg {
-        fill: #ccc;
+        fill: #c0c0c0;
         width: 730px;
         height: 260px;
     }
@@ -275,7 +274,7 @@
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank"></div>
 </foreignObject>
 
-<text x="375.0" y="340.0" class="layer_title">Navigation</text>
+<text x="375.0" y="340.0" class="layer_title">Navigation & Shortcuts</text>
 
 <rect rx="6" x="10" y="360" class="layer_bg" />
 
@@ -447,7 +446,7 @@
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="transparent blank ___off___"></div>
 </foreignObject>
 
-<text x="375.0" y="660.0" class="layer_title">Numpad</text>
+<text x="375.0" y="660.0" class="layer_title">Numpad & Symbols</text>
 
 <rect rx="6" x="10" y="680" class="layer_bg" />
 
@@ -619,7 +618,7 @@
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="transparent blank ___off___"></div>
 </foreignObject>
 
-<text x="375.0" y="980.0" class="layer_title">Adjust</text>
+<text x="375.0" y="980.0" class="layer_title">Mouse & Media</text>
 
 <rect rx="6" x="10" y="1000" class="layer_bg" />
 
