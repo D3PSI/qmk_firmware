@@ -29,8 +29,8 @@ layer_spacing = 20 # vertical spacing between each layer
 layout_keys_per_row = 12 # last row (only) can have fewer keys
 layout_num_edge_keys_ignored = 1 # first and last x keys per row won't be displayed in diagram
 # Note: layout_keys_per_row is the actual, real number of keys per row in the keymap structure. It includes ignored edge keys.
-key_width = 55
-key_height = 45
+key_width = 65
+key_height = 55
 key_radius = 6 # corner radius (rx and ry in SVG; doesn't seem to be compatible with CSS as of Jan 2022)
 key_spacing = 4 # horizontal and vertical, interior to layout only (not around outer edges; see diagram_inset instead)
 last_row_pad = 10 # additional vertical spacing (added to key_spacing) for final row
@@ -57,11 +57,12 @@ blank_css_class = "blank" # as above, for keys with no function
 transparent_css_class = "transparent" # as above, for transparent keys (falling through to base layer)
 
 # SVG template segments
-svg_header = '''<svg width="${svg_width}" height="${svg_height}" viewBox="0 0 ${svg_width} ${svg_height}" xmlns="http://www.w3.org/2000/svg">
+svg_header = '''<svg width="${svg_width}" height="${svg_height}" viewBox="0 0 ${svg_width} ${svg_height}" xmlns="http://www.w3.org/2000/svg" class="${svg_classes}">
 <style>
     svg {
         font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
-        font-size: 13px;
+        font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+        font-size: 14px;
         font-kerning: normal;
         text-rendering: optimizeLegibility;
         fill: #333;
@@ -73,7 +74,14 @@ svg_header = '''<svg width="${svg_width}" height="${svg_height}" viewBox="0 0 ${
     	dominant-baseline: middle;
     }
 
+    .text-container {
+        background-color: white;
+        border-radius: ${key_radius}px;
+    }
+
     .text-container > div {
+        padding: 1px 2px;
+        box-sizing: border-box;
         background-color: #f0f0f0;
         text-align: center;
         width: ${key_width}px;
@@ -90,6 +98,10 @@ svg_header = '''<svg width="${svg_width}" height="${svg_height}" viewBox="0 0 ${
 
     .text-container > div.${held_css_class} {
         background-color: #ccf;
+    }
+
+    .rgb .text-container > div.${held_css_class} {
+        border: 2px solid #777;
     }
 
     .text-container > div.${blank_css_class} {
@@ -184,12 +196,12 @@ key_names = {
     "KC_MAC_PREV_TAB": "Prev Tab",
     "KC_MAC_NEXT_TAB": "Next Tab",
     "KC_MAC_SPOTLIGHT": "Spotlight",
-    "KC_EN_DASH": "En-Dash",
-    "KC_EM_DASH": "Em-Dash",
+    "KC_EN_DASH": "En Dash",
+    "KC_EM_DASH": "Em Dash",
     "OS_SHFT": "Shift",
-    "OS_CTRL": "Control",
+    "OS_CTRL": "Ctrl",
     "OS_ALT": "Option",
-    "OS_CMD": "Command",
+    "OS_CMD": "Cmd",
     "OS_CAPS": "Globe",
     "APP_SWITCH_FRWD": "Switch App",
     "NAV": "Nav",
@@ -207,12 +219,12 @@ key_names = {
     "KC_MS_LEFT": "Mouse Left",
     "KC_MS_DOWN": "Mouse Down",
     "KC_MS_RIGHT": "Mouse Right",
-    "KC_BRIGHTNESS_UP": "Brightness Up",
+    "KC_BRIGHTNESS_UP": "Screen Bright Up",
     "KC_MEDIA_PREV_TRACK": "Prev Track",
     "KC_MEDIA_PLAY_PAUSE": "Play Pause",
     "KC_MEDIA_NEXT_TRACK": "Next Track",
     "KC_MS_ACCEL0": "Mouse Accel 0",
-    "KC_BRIGHTNESS_DOWN": "Brightness Down",
+    "KC_BRIGHTNESS_DOWN": "Screen Bright Down",
     "KC_QUOT": "'",
     "KC_COMM": ",",
     "KC_DOT": ".",
@@ -221,7 +233,7 @@ key_names = {
     "KC_ESC": "Esc",
     "KC_PGUP": "Page Up",
     "KC_UP": "Up",
-    "KC_BSPC": "Backspace",
+    "KC_BSPC": "Bkspc",
     "KC_TAB": "Tab",
     "KC_PGDOWN": "Page Down",
     "KC_LEFT": "Left",
@@ -235,8 +247,6 @@ key_names = {
     "KC_MINUS": "-",
     "KC_ASTR": "*",
     "KC_EQUAL": "=",
-    "KC_EN_DASH": "En Dash",
-    "KC_EM_DASH": "Em Dash",
     "KC_LBRACKET": "[",
     "KC_RBRACKET": "]",
     "KC_GRAVE": "`",
@@ -299,9 +309,13 @@ if show_led_colours:
 svg_raw = ""
 
 # Header
+svg_classes = []
+if show_led_colours:
+    svg_classes.append("rgb")
 header_template = Template(svg_header)
 svg_raw += header_template.substitute({'svg_width': svg_width,
                                        'svg_height': svg_height,
+                                       'svg_classes': " ".join(svg_classes),
                                        'key_width': key_width,
                                        'key_height': key_height,
                                        'key_radius': key_radius,
