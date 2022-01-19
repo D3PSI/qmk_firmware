@@ -60,7 +60,8 @@ transparent_css_class = "transparent" # as above, for transparent keys (falling 
 # Note: Transparent keys (on non-base layers) will be labelled identically to the corresponding key on the base layer.
 
 # Advanced
-apply_keycode_class = True # applies the lowercase keycode name as a class to the key's DIV, to allow CSS customisation; for example, the "A" key would have class "kc_a" applied.
+apply_keycode_class = False # applies the lowercase keycode name as a class to the key's DIV, to allow CSS customisation; for example, the "A" key would have class "kc_a" applied.
+apply_keycode_title = True # applies the keycode (as-is) as a "title" attribute to the key's DIV, allowing it to be shown in a tooltip upon hover etc.
 
 # SVG template segments
 svg_header = '''<svg width="${svg_width}" height="${svg_height}" viewBox="0 0 ${svg_width} ${svg_height}" xmlns="http://www.w3.org/2000/svg" class="${svg_classes}">
@@ -150,7 +151,7 @@ svg_layer_bg = '''
 
 svg_key = '''
 <foreignObject x="${key_x}" y="${key_y}" width="${key_width}" height="${key_height}" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="${key_classes}">${key_label}</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" ${title_attr}class="${key_classes}">${key_label}</div>
 </foreignObject>
 '''
 
@@ -193,9 +194,9 @@ for led_row_match in led_row_matches:
 # Create substitution mappings
 layer_names = {
   "_BASE": "Base",
-  "_NAV": "Navigation & Shortcuts",
-  "_NUM": "Numpad & Symbols",
-  "_ADJUST": "Mouse & Media"
+  "_NAV": "Navigation &amp; Shortcuts",
+  "_NUM": "Numpad &amp; Symbols",
+  "_ADJUST": "Mouse &amp; Media"
 }
 
 # We'll just strip the keycode_prefix if a keycode isn't found in key_names.
@@ -425,9 +426,14 @@ for layer_id in layer_order:
             if apply_keycode_class and key not in [keycode_blank, keycode_transparent]:
                 key_classes.append(key.lower())
 
+            title_attr = ""
+            if apply_keycode_title:
+                title_attr = 'title="%s" ' % key
+
             svg_raw += key_template.substitute({'key_radius': key_radius,
                                                 'key_x': cur_x,
                                                 'key_y': cur_y,
+                                                'title_attr': title_attr,
                                                 'key_classes': " ".join(key_classes),
                                                 'key_width': key_width,
                                                 'key_height': key_height,
