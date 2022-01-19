@@ -44,7 +44,7 @@ show_led_colours = True # if True, sets "rgb" CSS class on the root <svg> elemen
 led_colours_opacity = 0.3 # 0.0 to 1.0
 
 # Layers
-show_layer_titles = False
+show_layer_titles = True
 layer_title_height = 20 # text box height; set font attributes in CSS below
 layer_title_spacing = 10 # vertical spacing between layer title and its layer diagram
 layer_held_keycodes = { # keycodes whose keys are implicitly held down on a given layer, gaining the held_css_class specified below
@@ -104,7 +104,7 @@ svg_header = '''<svg width="${svg_width}" height="${svg_height}" viewBox="0 0 ${
     }
 
     .text-container > div.${held_css_class} {
-        background-color: #ccf;
+        background-color: #bbf;
     }
 
     .rgb .text-container > div.${held_css_class} {
@@ -356,6 +356,8 @@ row_num = 0
 col_num = 0
 
 for layer_id in layer_order:
+    cur_x = diagram_inset
+
     # Layer title
     if show_layer_titles:
         layer_title = layer_names[layer_id]
@@ -363,7 +365,6 @@ for layer_id in layer_order:
         svg_raw += layer_title_template.substitute({'layer_title_x': layer_title_x,
                                                     'layer_title_y': layer_title_y,
                                                     'layer_title': layer_title})
-        cur_x = diagram_inset
         cur_y += (layer_title_height + layer_title_spacing)
 
     # Layer background
