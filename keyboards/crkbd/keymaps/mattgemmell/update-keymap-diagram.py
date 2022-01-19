@@ -24,46 +24,47 @@ keymap_filename = "keymap.c"
 svg_filename = "keymap_diagram.svg"
 
 # SVG Geometry
-diagram_inset = 30 # horizontal and vertical, around entire diagram
-layer_spacing = 20 # vertical spacing between each layer
+diagram_inset = 0 # horizontal and vertical, around entire diagram
+layer_spacing = 30 # vertical spacing between each layer
 layout_keys_per_row = 12 # last row (only) can have fewer keys
 layout_num_edge_keys_ignored = 1 # first and last x keys per row won't be displayed in diagram
 # Note: layout_keys_per_row is the actual, real number of keys per row in the keymap structure. It includes ignored edge keys.
 key_width = 65
 key_height = 55
-key_radius = 6 # corner radius (rx and ry in SVG; doesn't seem to be compatible with CSS as of Jan 2022)
+key_radius = 6 # corner radius
 key_spacing = 4 # horizontal and vertical, both between keys and around entire layer
-last_row_pad = 10 # additional vertical spacing (added to key_spacing) for final row
+last_row_pad = 20 # additional vertical spacing (added to key_spacing) for final row
 
 # Split layout
 layout_split = True # expects an equal number of keys per half, and thus an even number of keys per row
 split_spacing = 30 # horizontal spacing between halves of a split layout (used instead of horizontal key_spacing if layout_split is True)
 
 # RGB LED colours
-show_led_colours = True
+show_led_colours = True # if True, sets "rgb" CSS class on the root <svg> element
 led_colours_opacity = 0.3 # 0.0 to 1.0
 
 # Layers
-show_layer_titles = True
+show_layer_titles = False
 layer_title_height = 20 # text box height; set font attributes in CSS below
 layer_title_spacing = 10 # vertical spacing between layer title and its layer diagram
-layer_held_keycodes = { # keycodes whose keys are implicitly held down on a given layer, gaining the CSS "held" class specified below
+layer_held_keycodes = { # keycodes whose keys are implicitly held down on a given layer, gaining the held_css_class specified below
   "_NAV": ["NAV"],
   "_NUM": ["NUM"],
   "_ADJUST": ["NUM", "NAV"]
 }
 held_css_class = "held" # edit the actual CSS below
-blank_css_class = "blank" # as above, for keys with no function
-transparent_css_class = "transparent" # as above, for transparent keys (falling through to base layer)
+keycode_blank = "XXXXXXX"
+blank_css_class = "blank" # as above, for keys with no function (i.e. keycode_blank above)
+keycode_transparent = "_______"
+transparent_css_class = "transparent" # as above, for transparent keys (falling through to base layer; i.e. keycode_transparent above)
+# Note: Transparent keys (on non-base layers) will be labelled identically to the corresponding key on the base layer
 
 # SVG template segments
 svg_header = '''<svg width="${svg_width}" height="${svg_height}" viewBox="0 0 ${svg_width} ${svg_height}" xmlns="http://www.w3.org/2000/svg" class="${svg_classes}">
 <style>
     svg {
-        font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
-        font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+        font-family: -apple-system, "Helvetica Neue", sans-serif;
         font-size: 14px;
-        font-kerning: normal;
         text-rendering: optimizeLegibility;
         fill: #333;
         background-color: white;
@@ -79,7 +80,13 @@ svg_header = '''<svg width="${svg_width}" height="${svg_height}" viewBox="0 0 ${
         border-radius: ${key_radius}px;
     }
 
+    .text-container > div:hover {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
     .text-container > div {
+        cursor: default;
         padding: 1px 2px;
         box-sizing: border-box;
         background-color: #f0f0f0;
@@ -101,7 +108,7 @@ svg_header = '''<svg width="${svg_width}" height="${svg_height}" viewBox="0 0 ${
     }
 
     .rgb .text-container > div.${held_css_class} {
-        border: 2px solid #777;
+        border: 3px solid #666;
     }
 
     .text-container > div.${blank_css_class} {
@@ -120,8 +127,8 @@ svg_header = '''<svg width="${svg_width}" height="${svg_height}" viewBox="0 0 ${
 
     .layer_bg {
         fill: #ccc;
-        width: ${layer_bg_width};
-        height: ${layer_bg_height};
+        width: ${layer_bg_width}px;
+        height: ${layer_bg_height}px;
     }
 ${extra_css}
 </style>
@@ -262,9 +269,6 @@ key_names = {
     "KC_GRAVE": "`",
 }
 
-keycode_blank = "XXXXXXX"
-keycode_transparent = "_______"
-
 # Parse colour values and create mapping
 led_colours = {}
 colours_regexp = re.compile(r"#define\s+(\S+)\s+\{([^\}]+)\}", re.MULTILINE)
@@ -294,9 +298,9 @@ svg_width = (2 * diagram_inset) + layer_width
 
 num_layers = len(layer_order)
 layer_height = (num_rows * key_height) + ((num_rows + 1) * key_spacing) + last_row_pad
-if show_layer_titles:
-    layer_height += (layer_title_height + layer_title_spacing)
 svg_height = (2 * diagram_inset) + (num_layers * layer_height) + ((num_layers - 1) * layer_spacing)
+if show_layer_titles:
+    svg_height += num_layers * (layer_title_height + layer_title_spacing)
 
 extra_css = ""
 from string import Template
@@ -346,6 +350,9 @@ key_template = Template(svg_key)
 
 cur_x = diagram_inset
 cur_y = diagram_inset
+
+layer_num = 0
+row_num = 0
 
 for layer_id in layer_order:
     # Layer title
@@ -409,15 +416,23 @@ for layer_id in layer_order:
                                             'key_height': key_height,
                                             'key_label': key_label})
 
-
-
-        # Adjust variables appropriately.
+        # Prep for next key
         key_index += 1
-        if key_index % num_real_cols == 0:
-            cur_x = diagram_inset
+        if (key_index % num_real_cols == 0) or (key_index == num_keys):
+            # Start of a new row
+            cur_x = diagram_inset + key_spacing
             cur_y += (key_spacing + key_height)
+            row_num += 1
+            if row_num == num_rows - 1:
+                cur_y += last_row_pad
         else:
+            # Continue current row
             cur_x += (key_spacing + key_width)
+
+    # Prep for next layer
+    layer_num += 1
+    row_num = 0
+    cur_y += layer_spacing
 
 # Footer
 svg_raw += svg_footer # no vars in this, so it can be included literally
