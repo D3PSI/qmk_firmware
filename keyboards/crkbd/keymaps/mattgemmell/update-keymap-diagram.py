@@ -384,37 +384,48 @@ for layer_id in layer_order:
         key_label = key
         key_classes = []
 
-        # Text box position (coords are the centre of the box)
-        key_text_x = float(cur_x) + (float(key_width) / 2.0)
-        key_text_y = float(cur_y) + (float(key_height) / 2.0)
+        # Decide whether to output key
+        output_key = True
+        if layout_num_edge_keys_ignored > 0:
+            last_col_num = num_real_cols;
+            if row_num == num_rows - 1:
+                # Last row may have fewer keys.
+                last_col_num = num_keys % ((num_rows - 1) * num_real_cols)
+            if col_num < layout_num_edge_keys_ignored or (last_col_num - col_num) <= layout_num_edge_keys_ignored:
+                output_key = False
 
-        # Key's human-readable label
-        if key == keycode_transparent:
-            key_classes.append(transparent_css_class)
-            if layer_id != layer_order[0]:
-                key = key_layers[layer_order[0]][key_index]
+        if output_key:
+            # Text box position (coords are the centre of the box)
+            key_text_x = float(cur_x) + (float(key_width) / 2.0)
+            key_text_y = float(cur_y) + (float(key_height) / 2.0)
 
-        if key in key_names:
-            key_label = key_names[key]
-        elif key.startswith(keycode_prefix):
-            key_label = key[len(keycode_prefix):]
-        elif key == keycode_blank:
-            key_classes.append(blank_css_class)
-            key_label = ""
+            # Key's human-readable label
+            if key == keycode_transparent:
+                key_classes.append(transparent_css_class)
+                if layer_id != layer_order[0]:
+                    key = key_layers[layer_order[0]][key_index]
 
-        # CSS classes to apply to the key rect shape
-        if layer_id in layer_held_keycodes and key in layer_held_keycodes[layer_id]:
-            key_classes.append(held_css_class)
-        if show_led_colours and layer_id in led_layers:
-            key_classes.append(led_layers[layer_id][key_index].lower())
+            if key in key_names:
+                key_label = key_names[key]
+            elif key.startswith(keycode_prefix):
+                key_label = key[len(keycode_prefix):]
+            elif key == keycode_blank:
+                key_classes.append(blank_css_class)
+                key_label = ""
 
-        svg_raw += key_template.substitute({'key_radius': key_radius,
-                                            'key_x': cur_x,
-                                            'key_y': cur_y,
-                                            'key_classes': " ".join(key_classes),
-                                            'key_width': key_width,
-                                            'key_height': key_height,
-                                            'key_label': key_label})
+            # CSS classes to apply to the key rect shape
+            if layer_id in layer_held_keycodes and key in layer_held_keycodes[layer_id]:
+                key_classes.append(held_css_class)
+            if show_led_colours and layer_id in led_layers:
+                key_classes.append(led_layers[layer_id][key_index].lower())
+
+            svg_raw += key_template.substitute({'key_radius': key_radius,
+                                                'key_x': cur_x,
+                                                'key_y': cur_y,
+                                                'key_classes': " ".join(key_classes),
+                                                'key_width': key_width,
+                                                'key_height': key_height,
+                                                'key_label': key_label})
 
         # Prep for next key
         key_index += 1
@@ -428,10 +439,13 @@ for layer_id in layer_order:
                 cur_y += last_row_pad
         else:
             # Continue current row
-            cur_x += (key_spacing + key_width)
+            if output_key:
+                cur_x += key_width
             col_num += 1
             if col_num == num_real_cols / 2 and layout_split:
                 cur_x += split_spacing
+            elif output_key:
+                cur_x += key_spacing
 
     # Prep for next layer
     layer_num += 1
@@ -439,8 +453,8 @@ for layer_id in layer_order:
     col_num = 0
     cur_y += layer_spacing
 
-    # TODO: Ignored edge keys: layout_num_edge_keys_ignored
-    # TODO: Last/shorter row centred: layout_keys_per_row etc
+    # TODO: Last/shorter row SPLIT.
+    # TODO: Last/shorter row CENTRED: layout_keys_per_row etc.
 
 # Footer
 svg_raw += svg_footer # no vars in this, so it can be included literally
