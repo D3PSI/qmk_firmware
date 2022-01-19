@@ -59,6 +59,9 @@ keycode_transparent = "_______"
 transparent_css_class = "transparent" # as above, for transparent keys (falling through to base layer; i.e. keycode_transparent above).
 # Note: Transparent keys (on non-base layers) will be labelled identically to the corresponding key on the base layer.
 
+# Advanced
+apply_keycode_class = True # applies the lowercase keycode name as a class to the key's DIV, to allow CSS customisation; for example, the "A" key would have class "kc_a" applied.
+
 # SVG template segments
 svg_header = '''<svg width="${svg_width}" height="${svg_height}" viewBox="0 0 ${svg_width} ${svg_height}" xmlns="http://www.w3.org/2000/svg" class="${svg_classes}">
 <style>
@@ -384,13 +387,14 @@ for layer_id in layer_order:
         key_label = key
         key_classes = []
 
+        last_col_num = num_real_cols;
+        if row_num == num_rows - 1:
+            # Last row may have fewer keys.
+            last_col_num = num_keys % ((num_rows - 1) * num_real_cols)
+
         # Decide whether to output key
         output_key = True
         if layout_num_edge_keys_ignored > 0:
-            last_col_num = num_real_cols;
-            if row_num == num_rows - 1:
-                # Last row may have fewer keys.
-                last_col_num = num_keys % ((num_rows - 1) * num_real_cols)
             if col_num < layout_num_edge_keys_ignored or (last_col_num - col_num) <= layout_num_edge_keys_ignored:
                 output_key = False
 
@@ -413,11 +417,13 @@ for layer_id in layer_order:
                 key_classes.append(blank_css_class)
                 key_label = ""
 
-            # CSS classes to apply to the key rect shape
+            # CSS classes to apply to the key container
             if layer_id in layer_held_keycodes and key in layer_held_keycodes[layer_id]:
                 key_classes.append(held_css_class)
             if show_led_colours and layer_id in led_layers:
                 key_classes.append(led_layers[layer_id][key_index].lower())
+            if apply_keycode_class and key not in [keycode_blank, keycode_transparent]:
+                key_classes.append(key.lower())
 
             svg_raw += key_template.substitute({'key_radius': key_radius,
                                                 'key_x': cur_x,
@@ -442,7 +448,7 @@ for layer_id in layer_order:
             if output_key:
                 cur_x += key_width
             col_num += 1
-            if col_num == num_real_cols / 2 and layout_split:
+            if col_num == last_col_num / 2 and layout_split:
                 cur_x += split_spacing
             elif output_key:
                 cur_x += key_spacing
@@ -453,7 +459,6 @@ for layer_id in layer_order:
     col_num = 0
     cur_y += layer_spacing
 
-    # TODO: Last/shorter row SPLIT.
     # TODO: Last/shorter row CENTRED: layout_keys_per_row etc.
 
 # Footer
