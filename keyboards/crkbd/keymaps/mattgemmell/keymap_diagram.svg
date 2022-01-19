@@ -1,4 +1,4 @@
-<svg width="730" height="1250" viewBox="0 0 730 1250" xmlns="http://www.w3.org/2000/svg" class="rgb">
+<svg width="750" height="1270" viewBox="0 0 750 1270" xmlns="http://www.w3.org/2000/svg" class="rgb">
 <style>
     svg {
         font-family: -apple-system, "Helvetica Neue", sans-serif;
@@ -58,7 +58,7 @@
     }
 
     .layer_title {
-		font-size: 16px;
+		font-size: 17px;
 		font-weight: bold;
 		fill: #777;
     }
@@ -103,691 +103,691 @@
 
 </style>
 
-<text x="365.0" y="10.0" class="layer_title">Base</text>
+<text x="375.0" y="20.0" class="layer_title">Base</text>
 
-<rect rx="6" x="0" y="30" class="layer_bg" />
+<rect rx="6" x="10" y="40" class="layer_bg" />
 
-<foreignObject x="4" y="34" width="65" height="55" class="text-container">
+<foreignObject x="14" y="44" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank"></div>
 </foreignObject>
 
-<foreignObject x="73" y="34" width="65" height="55" class="text-container">
+<foreignObject x="83" y="44" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">Q</div>
 </foreignObject>
 
-<foreignObject x="142" y="34" width="65" height="55" class="text-container">
+<foreignObject x="152" y="44" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">W</div>
 </foreignObject>
 
-<foreignObject x="211" y="34" width="65" height="55" class="text-container">
+<foreignObject x="221" y="44" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">E</div>
 </foreignObject>
 
-<foreignObject x="280" y="34" width="65" height="55" class="text-container">
+<foreignObject x="290" y="44" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">R</div>
 </foreignObject>
 
-<foreignObject x="349" y="34" width="65" height="55" class="text-container">
+<foreignObject x="359" y="44" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">T</div>
 </foreignObject>
 
-<foreignObject x="458" y="34" width="65" height="55" class="text-container">
+<foreignObject x="468" y="44" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">Y</div>
 </foreignObject>
 
-<foreignObject x="527" y="34" width="65" height="55" class="text-container">
+<foreignObject x="537" y="44" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">U</div>
 </foreignObject>
 
-<foreignObject x="596" y="34" width="65" height="55" class="text-container">
+<foreignObject x="606" y="44" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">I</div>
 </foreignObject>
 
-<foreignObject x="665" y="34" width="65" height="55" class="text-container">
+<foreignObject x="675" y="44" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">O</div>
 </foreignObject>
 
-<foreignObject x="734" y="34" width="65" height="55" class="text-container">
+<foreignObject x="744" y="44" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">P</div>
 </foreignObject>
 
-<foreignObject x="803" y="34" width="65" height="55" class="text-container">
+<foreignObject x="813" y="44" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank"></div>
 </foreignObject>
 
-<foreignObject x="4" y="93" width="65" height="55" class="text-container">
+<foreignObject x="14" y="103" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank"></div>
 </foreignObject>
 
-<foreignObject x="73" y="93" width="65" height="55" class="text-container">
+<foreignObject x="83" y="103" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">A</div>
 </foreignObject>
 
-<foreignObject x="142" y="93" width="65" height="55" class="text-container">
+<foreignObject x="152" y="103" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">S</div>
 </foreignObject>
 
-<foreignObject x="211" y="93" width="65" height="55" class="text-container">
+<foreignObject x="221" y="103" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">D</div>
 </foreignObject>
 
-<foreignObject x="280" y="93" width="65" height="55" class="text-container">
+<foreignObject x="290" y="103" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">F</div>
 </foreignObject>
 
-<foreignObject x="349" y="93" width="65" height="55" class="text-container">
+<foreignObject x="359" y="103" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">G</div>
 </foreignObject>
 
-<foreignObject x="458" y="93" width="65" height="55" class="text-container">
+<foreignObject x="468" y="103" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">H</div>
 </foreignObject>
 
-<foreignObject x="527" y="93" width="65" height="55" class="text-container">
+<foreignObject x="537" y="103" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">J</div>
 </foreignObject>
 
-<foreignObject x="596" y="93" width="65" height="55" class="text-container">
+<foreignObject x="606" y="103" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">K</div>
 </foreignObject>
 
-<foreignObject x="665" y="93" width="65" height="55" class="text-container">
+<foreignObject x="675" y="103" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">L</div>
 </foreignObject>
 
-<foreignObject x="734" y="93" width="65" height="55" class="text-container">
+<foreignObject x="744" y="103" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">'</div>
 </foreignObject>
 
-<foreignObject x="803" y="93" width="65" height="55" class="text-container">
+<foreignObject x="813" y="103" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank"></div>
 </foreignObject>
 
-<foreignObject x="4" y="152" width="65" height="55" class="text-container">
+<foreignObject x="14" y="162" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank"></div>
 </foreignObject>
 
-<foreignObject x="73" y="152" width="65" height="55" class="text-container">
+<foreignObject x="83" y="162" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">Z</div>
 </foreignObject>
 
-<foreignObject x="142" y="152" width="65" height="55" class="text-container">
+<foreignObject x="152" y="162" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">X</div>
 </foreignObject>
 
-<foreignObject x="211" y="152" width="65" height="55" class="text-container">
+<foreignObject x="221" y="162" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">C</div>
 </foreignObject>
 
-<foreignObject x="280" y="152" width="65" height="55" class="text-container">
+<foreignObject x="290" y="162" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">V</div>
 </foreignObject>
 
-<foreignObject x="349" y="152" width="65" height="55" class="text-container">
+<foreignObject x="359" y="162" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">B</div>
 </foreignObject>
 
-<foreignObject x="458" y="152" width="65" height="55" class="text-container">
+<foreignObject x="468" y="162" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">N</div>
 </foreignObject>
 
-<foreignObject x="527" y="152" width="65" height="55" class="text-container">
+<foreignObject x="537" y="162" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">M</div>
 </foreignObject>
 
-<foreignObject x="596" y="152" width="65" height="55" class="text-container">
+<foreignObject x="606" y="162" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">,</div>
 </foreignObject>
 
-<foreignObject x="665" y="152" width="65" height="55" class="text-container">
+<foreignObject x="675" y="162" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">.</div>
 </foreignObject>
 
-<foreignObject x="734" y="152" width="65" height="55" class="text-container">
+<foreignObject x="744" y="162" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">/</div>
 </foreignObject>
 
-<foreignObject x="803" y="152" width="65" height="55" class="text-container">
+<foreignObject x="813" y="162" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank"></div>
 </foreignObject>
 
-<foreignObject x="4" y="231" width="65" height="55" class="text-container">
+<foreignObject x="14" y="241" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank"></div>
 </foreignObject>
 
-<foreignObject x="73" y="231" width="65" height="55" class="text-container">
+<foreignObject x="83" y="241" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">Num</div>
 </foreignObject>
 
-<foreignObject x="142" y="231" width="65" height="55" class="text-container">
+<foreignObject x="152" y="241" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">Shift</div>
 </foreignObject>
 
-<foreignObject x="211" y="231" width="65" height="55" class="text-container">
+<foreignObject x="221" y="241" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">Space</div>
 </foreignObject>
 
-<foreignObject x="280" y="231" width="65" height="55" class="text-container">
+<foreignObject x="290" y="241" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="">Nav</div>
 </foreignObject>
 
-<foreignObject x="349" y="231" width="65" height="55" class="text-container">
+<foreignObject x="359" y="241" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank"></div>
 </foreignObject>
 
-<text x="365.0" y="330.0" class="layer_title">Navigation</text>
+<text x="375.0" y="340.0" class="layer_title">Navigation</text>
 
-<rect rx="6" x="0" y="350" class="layer_bg" />
+<rect rx="6" x="10" y="360" class="layer_bg" />
 
-<foreignObject x="4" y="354" width="65" height="55" class="text-container">
+<foreignObject x="14" y="364" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
 </foreignObject>
 
-<foreignObject x="73" y="354" width="65" height="55" class="text-container">
+<foreignObject x="83" y="364" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg____red">Esc</div>
 </foreignObject>
 
-<foreignObject x="142" y="354" width="65" height="55" class="text-container">
+<foreignObject x="152" y="364" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
 </foreignObject>
 
-<foreignObject x="211" y="354" width="65" height="55" class="text-container">
+<foreignObject x="221" y="364" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg___pink">Screen Shot</div>
 </foreignObject>
 
-<foreignObject x="280" y="354" width="65" height="55" class="text-container">
+<foreignObject x="290" y="364" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg___pink">Markup Screen</div>
 </foreignObject>
 
-<foreignObject x="349" y="354" width="65" height="55" class="text-container">
+<foreignObject x="359" y="364" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
 </foreignObject>
 
-<foreignObject x="458" y="354" width="65" height="55" class="text-container">
+<foreignObject x="468" y="364" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg_orange">Page Up</div>
 </foreignObject>
 
-<foreignObject x="527" y="354" width="65" height="55" class="text-container">
+<foreignObject x="537" y="364" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg___pink">Prev Tab</div>
 </foreignObject>
 
-<foreignObject x="596" y="354" width="65" height="55" class="text-container">
+<foreignObject x="606" y="364" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg__white">Up</div>
 </foreignObject>
 
-<foreignObject x="665" y="354" width="65" height="55" class="text-container">
+<foreignObject x="675" y="364" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg___pink">Next Tab</div>
 </foreignObject>
 
-<foreignObject x="734" y="354" width="65" height="55" class="text-container">
+<foreignObject x="744" y="364" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg____red">Bkspc</div>
 </foreignObject>
 
-<foreignObject x="803" y="354" width="65" height="55" class="text-container">
+<foreignObject x="813" y="364" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
 </foreignObject>
 
-<foreignObject x="4" y="413" width="65" height="55" class="text-container">
+<foreignObject x="14" y="423" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
 </foreignObject>
 
-<foreignObject x="73" y="413" width="65" height="55" class="text-container">
+<foreignObject x="83" y="423" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="___off___">Tab</div>
 </foreignObject>
 
-<foreignObject x="142" y="413" width="65" height="55" class="text-container">
+<foreignObject x="152" y="423" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg___blue">Ctrl</div>
 </foreignObject>
 
-<foreignObject x="211" y="413" width="65" height="55" class="text-container">
+<foreignObject x="221" y="423" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg___blue">Option</div>
 </foreignObject>
 
-<foreignObject x="280" y="413" width="65" height="55" class="text-container">
+<foreignObject x="290" y="423" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg___blue">Cmd</div>
 </foreignObject>
 
-<foreignObject x="349" y="413" width="65" height="55" class="text-container">
+<foreignObject x="359" y="423" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="___off___">Globe</div>
 </foreignObject>
 
-<foreignObject x="458" y="413" width="65" height="55" class="text-container">
+<foreignObject x="468" y="423" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg_orange">Page Down</div>
 </foreignObject>
 
-<foreignObject x="527" y="413" width="65" height="55" class="text-container">
+<foreignObject x="537" y="423" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg__white">Left</div>
 </foreignObject>
 
-<foreignObject x="596" y="413" width="65" height="55" class="text-container">
+<foreignObject x="606" y="423" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg__white">Down</div>
 </foreignObject>
 
-<foreignObject x="665" y="413" width="65" height="55" class="text-container">
+<foreignObject x="675" y="423" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg__white">Right</div>
 </foreignObject>
 
-<foreignObject x="734" y="413" width="65" height="55" class="text-container">
+<foreignObject x="744" y="423" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
 </foreignObject>
 
-<foreignObject x="803" y="413" width="65" height="55" class="text-container">
+<foreignObject x="813" y="423" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
 </foreignObject>
 
-<foreignObject x="4" y="472" width="65" height="55" class="text-container">
+<foreignObject x="14" y="482" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
 </foreignObject>
 
-<foreignObject x="73" y="472" width="65" height="55" class="text-container">
+<foreignObject x="83" y="482" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg___pink">Undo</div>
 </foreignObject>
 
-<foreignObject x="142" y="472" width="65" height="55" class="text-container">
+<foreignObject x="152" y="482" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="___off___">Cut</div>
 </foreignObject>
 
-<foreignObject x="211" y="472" width="65" height="55" class="text-container">
+<foreignObject x="221" y="482" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg__green">Copy</div>
 </foreignObject>
 
-<foreignObject x="280" y="472" width="65" height="55" class="text-container">
+<foreignObject x="290" y="482" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="___off___">Paste</div>
 </foreignObject>
 
-<foreignObject x="349" y="472" width="65" height="55" class="text-container">
+<foreignObject x="359" y="482" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="___off___">Redo</div>
 </foreignObject>
 
-<foreignObject x="458" y="472" width="65" height="55" class="text-container">
+<foreignObject x="468" y="482" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
 </foreignObject>
 
-<foreignObject x="527" y="472" width="65" height="55" class="text-container">
+<foreignObject x="537" y="482" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg_yellow">Spotlight</div>
 </foreignObject>
 
-<foreignObject x="596" y="472" width="65" height="55" class="text-container">
+<foreignObject x="606" y="482" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg_purple">Switch App</div>
 </foreignObject>
 
-<foreignObject x="665" y="472" width="65" height="55" class="text-container">
+<foreignObject x="675" y="482" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
 </foreignObject>
 
-<foreignObject x="734" y="472" width="65" height="55" class="text-container">
+<foreignObject x="744" y="482" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg___blue">Enter</div>
 </foreignObject>
 
-<foreignObject x="803" y="472" width="65" height="55" class="text-container">
+<foreignObject x="813" y="482" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
 </foreignObject>
 
-<foreignObject x="4" y="551" width="65" height="55" class="text-container">
+<foreignObject x="14" y="561" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="transparent blank ___off___"></div>
 </foreignObject>
 
-<foreignObject x="73" y="551" width="65" height="55" class="text-container">
+<foreignObject x="83" y="561" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="transparent ___off___">Num</div>
 </foreignObject>
 
-<foreignObject x="142" y="551" width="65" height="55" class="text-container">
+<foreignObject x="152" y="561" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="transparent ___off___">Shift</div>
 </foreignObject>
 
-<foreignObject x="211" y="551" width="65" height="55" class="text-container">
+<foreignObject x="221" y="561" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="transparent ___off___">Space</div>
 </foreignObject>
 
-<foreignObject x="280" y="551" width="65" height="55" class="text-container">
+<foreignObject x="290" y="561" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="transparent held mg_orange">Nav</div>
 </foreignObject>
 
-<foreignObject x="349" y="551" width="65" height="55" class="text-container">
+<foreignObject x="359" y="561" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="transparent blank ___off___"></div>
 </foreignObject>
 
-<text x="365.0" y="650.0" class="layer_title">Numpad</text>
+<text x="375.0" y="660.0" class="layer_title">Numpad</text>
 
-<rect rx="6" x="0" y="670" class="layer_bg" />
+<rect rx="6" x="10" y="680" class="layer_bg" />
 
-<foreignObject x="4" y="674" width="65" height="55" class="text-container">
+<foreignObject x="14" y="684" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
 </foreignObject>
 
-<foreignObject x="73" y="674" width="65" height="55" class="text-container">
+<foreignObject x="83" y="684" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg____red">Esc</div>
 </foreignObject>
 
-<foreignObject x="142" y="674" width="65" height="55" class="text-container">
+<foreignObject x="152" y="684" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg_orange">;</div>
 </foreignObject>
 
-<foreignObject x="211" y="674" width="65" height="55" class="text-container">
+<foreignObject x="221" y="684" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg_yellow">(</div>
 </foreignObject>
 
-<foreignObject x="280" y="674" width="65" height="55" class="text-container">
+<foreignObject x="290" y="684" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg_yellow">)</div>
 </foreignObject>
 
-<foreignObject x="349" y="674" width="65" height="55" class="text-container">
+<foreignObject x="359" y="684" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg___pink">\</div>
 </foreignObject>
 
-<foreignObject x="458" y="674" width="65" height="55" class="text-container">
+<foreignObject x="468" y="684" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg___pink">/</div>
 </foreignObject>
 
-<foreignObject x="527" y="674" width="65" height="55" class="text-container">
+<foreignObject x="537" y="684" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg__green">7</div>
 </foreignObject>
 
-<foreignObject x="596" y="674" width="65" height="55" class="text-container">
+<foreignObject x="606" y="684" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg__green">8</div>
 </foreignObject>
 
-<foreignObject x="665" y="674" width="65" height="55" class="text-container">
+<foreignObject x="675" y="684" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg__green">9</div>
 </foreignObject>
 
-<foreignObject x="734" y="674" width="65" height="55" class="text-container">
+<foreignObject x="744" y="684" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="___off___">-</div>
 </foreignObject>
 
-<foreignObject x="803" y="674" width="65" height="55" class="text-container">
+<foreignObject x="813" y="684" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
 </foreignObject>
 
-<foreignObject x="4" y="733" width="65" height="55" class="text-container">
+<foreignObject x="14" y="743" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
 </foreignObject>
 
-<foreignObject x="73" y="733" width="65" height="55" class="text-container">
+<foreignObject x="83" y="743" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="___off___">Tab</div>
 </foreignObject>
 
-<foreignObject x="142" y="733" width="65" height="55" class="text-container">
+<foreignObject x="152" y="743" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg___blue">Ctrl</div>
 </foreignObject>
 
-<foreignObject x="211" y="733" width="65" height="55" class="text-container">
+<foreignObject x="221" y="743" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg___blue">Option</div>
 </foreignObject>
 
-<foreignObject x="280" y="733" width="65" height="55" class="text-container">
+<foreignObject x="290" y="743" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg___blue">Cmd</div>
 </foreignObject>
 
-<foreignObject x="349" y="733" width="65" height="55" class="text-container">
+<foreignObject x="359" y="743" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="___off___">Globe</div>
 </foreignObject>
 
-<foreignObject x="458" y="733" width="65" height="55" class="text-container">
+<foreignObject x="468" y="743" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="___off___">*</div>
 </foreignObject>
 
-<foreignObject x="527" y="733" width="65" height="55" class="text-container">
+<foreignObject x="537" y="743" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg__green">4</div>
 </foreignObject>
 
-<foreignObject x="596" y="733" width="65" height="55" class="text-container">
+<foreignObject x="606" y="743" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg__green">5</div>
 </foreignObject>
 
-<foreignObject x="665" y="733" width="65" height="55" class="text-container">
+<foreignObject x="675" y="743" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg__green">6</div>
 </foreignObject>
 
-<foreignObject x="734" y="733" width="65" height="55" class="text-container">
+<foreignObject x="744" y="743" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="___off___">=</div>
 </foreignObject>
 
-<foreignObject x="803" y="733" width="65" height="55" class="text-container">
+<foreignObject x="813" y="743" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
 </foreignObject>
 
-<foreignObject x="4" y="792" width="65" height="55" class="text-container">
+<foreignObject x="14" y="802" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
 </foreignObject>
 
-<foreignObject x="73" y="792" width="65" height="55" class="text-container">
+<foreignObject x="83" y="802" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="___off___">En Dash</div>
 </foreignObject>
 
-<foreignObject x="142" y="792" width="65" height="55" class="text-container">
+<foreignObject x="152" y="802" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg_purple">Em Dash</div>
 </foreignObject>
 
-<foreignObject x="211" y="792" width="65" height="55" class="text-container">
+<foreignObject x="221" y="802" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg_orange">[</div>
 </foreignObject>
 
-<foreignObject x="280" y="792" width="65" height="55" class="text-container">
+<foreignObject x="290" y="802" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg_orange">]</div>
 </foreignObject>
 
-<foreignObject x="349" y="792" width="65" height="55" class="text-container">
+<foreignObject x="359" y="802" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="___off___">`</div>
 </foreignObject>
 
-<foreignObject x="458" y="792" width="65" height="55" class="text-container">
+<foreignObject x="468" y="802" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="___off___">,</div>
 </foreignObject>
 
-<foreignObject x="527" y="792" width="65" height="55" class="text-container">
+<foreignObject x="537" y="802" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg__green">1</div>
 </foreignObject>
 
-<foreignObject x="596" y="792" width="65" height="55" class="text-container">
+<foreignObject x="606" y="802" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg__green">2</div>
 </foreignObject>
 
-<foreignObject x="665" y="792" width="65" height="55" class="text-container">
+<foreignObject x="675" y="802" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg__green">3</div>
 </foreignObject>
 
-<foreignObject x="734" y="792" width="65" height="55" class="text-container">
+<foreignObject x="744" y="802" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="___off___">.</div>
 </foreignObject>
 
-<foreignObject x="803" y="792" width="65" height="55" class="text-container">
+<foreignObject x="813" y="802" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
 </foreignObject>
 
-<foreignObject x="4" y="871" width="65" height="55" class="text-container">
+<foreignObject x="14" y="881" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="transparent blank ___off___"></div>
 </foreignObject>
 
-<foreignObject x="73" y="871" width="65" height="55" class="text-container">
+<foreignObject x="83" y="881" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="transparent held mg__green">Num</div>
 </foreignObject>
 
-<foreignObject x="142" y="871" width="65" height="55" class="text-container">
+<foreignObject x="152" y="881" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="transparent ___off___">Shift</div>
 </foreignObject>
 
-<foreignObject x="211" y="871" width="65" height="55" class="text-container">
+<foreignObject x="221" y="881" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg__green">0</div>
 </foreignObject>
 
-<foreignObject x="280" y="871" width="65" height="55" class="text-container">
+<foreignObject x="290" y="881" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="transparent ___off___">Nav</div>
 </foreignObject>
 
-<foreignObject x="349" y="871" width="65" height="55" class="text-container">
+<foreignObject x="359" y="881" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="transparent blank ___off___"></div>
 </foreignObject>
 
-<text x="365.0" y="970.0" class="layer_title">Adjust</text>
+<text x="375.0" y="980.0" class="layer_title">Adjust</text>
 
-<rect rx="6" x="0" y="990" class="layer_bg" />
+<rect rx="6" x="10" y="1000" class="layer_bg" />
 
-<foreignObject x="4" y="994" width="65" height="55" class="text-container">
+<foreignObject x="14" y="1004" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
 </foreignObject>
 
-<foreignObject x="73" y="994" width="65" height="55" class="text-container">
+<foreignObject x="83" y="1004" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
 </foreignObject>
 
-<foreignObject x="142" y="994" width="65" height="55" class="text-container">
+<foreignObject x="152" y="1004" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg_purple">Vol Down</div>
 </foreignObject>
 
-<foreignObject x="211" y="994" width="65" height="55" class="text-container">
+<foreignObject x="221" y="1004" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg____red">Mute</div>
 </foreignObject>
 
-<foreignObject x="280" y="994" width="65" height="55" class="text-container">
+<foreignObject x="290" y="1004" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg_purple">Vol Up</div>
 </foreignObject>
 
-<foreignObject x="349" y="994" width="65" height="55" class="text-container">
+<foreignObject x="359" y="1004" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg__green">Mouse Accel 2</div>
 </foreignObject>
 
-<foreignObject x="458" y="994" width="65" height="55" class="text-container">
+<foreignObject x="468" y="1004" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg_orange">Mouse Wheel Down</div>
 </foreignObject>
 
-<foreignObject x="527" y="994" width="65" height="55" class="text-container">
+<foreignObject x="537" y="1004" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg___blue">Left Click</div>
 </foreignObject>
 
-<foreignObject x="596" y="994" width="65" height="55" class="text-container">
+<foreignObject x="606" y="1004" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg__white">Mouse Up</div>
 </foreignObject>
 
-<foreignObject x="665" y="994" width="65" height="55" class="text-container">
+<foreignObject x="675" y="1004" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg___blue">Right Click</div>
 </foreignObject>
 
-<foreignObject x="734" y="994" width="65" height="55" class="text-container">
+<foreignObject x="744" y="1004" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg____red">Lock Screen</div>
 </foreignObject>
 
-<foreignObject x="803" y="994" width="65" height="55" class="text-container">
+<foreignObject x="813" y="1004" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
 </foreignObject>
 
-<foreignObject x="4" y="1053" width="65" height="55" class="text-container">
+<foreignObject x="14" y="1063" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
 </foreignObject>
 
-<foreignObject x="73" y="1053" width="65" height="55" class="text-container">
+<foreignObject x="83" y="1063" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg___blue">Shift</div>
 </foreignObject>
 
-<foreignObject x="142" y="1053" width="65" height="55" class="text-container">
+<foreignObject x="152" y="1063" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg___blue">Ctrl</div>
 </foreignObject>
 
-<foreignObject x="211" y="1053" width="65" height="55" class="text-container">
+<foreignObject x="221" y="1063" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg___blue">Option</div>
 </foreignObject>
 
-<foreignObject x="280" y="1053" width="65" height="55" class="text-container">
+<foreignObject x="290" y="1063" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg___blue">Cmd</div>
 </foreignObject>
 
-<foreignObject x="349" y="1053" width="65" height="55" class="text-container">
+<foreignObject x="359" y="1063" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg_yellow">Mouse Accel 1</div>
 </foreignObject>
 
-<foreignObject x="458" y="1053" width="65" height="55" class="text-container">
+<foreignObject x="468" y="1063" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg_orange">Mouse Wheel Up</div>
 </foreignObject>
 
-<foreignObject x="527" y="1053" width="65" height="55" class="text-container">
+<foreignObject x="537" y="1063" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg__white">Mouse Left</div>
 </foreignObject>
 
-<foreignObject x="596" y="1053" width="65" height="55" class="text-container">
+<foreignObject x="606" y="1063" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg__white">Mouse Down</div>
 </foreignObject>
 
-<foreignObject x="665" y="1053" width="65" height="55" class="text-container">
+<foreignObject x="675" y="1063" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg__white">Mouse Right</div>
 </foreignObject>
 
-<foreignObject x="734" y="1053" width="65" height="55" class="text-container">
+<foreignObject x="744" y="1063" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg_yellow">Screen Bright Up</div>
 </foreignObject>
 
-<foreignObject x="803" y="1053" width="65" height="55" class="text-container">
+<foreignObject x="813" y="1063" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
 </foreignObject>
 
-<foreignObject x="4" y="1112" width="65" height="55" class="text-container">
+<foreignObject x="14" y="1122" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
 </foreignObject>
 
-<foreignObject x="73" y="1112" width="65" height="55" class="text-container">
+<foreignObject x="83" y="1122" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
 </foreignObject>
 
-<foreignObject x="142" y="1112" width="65" height="55" class="text-container">
+<foreignObject x="152" y="1122" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg_yellow">Prev Track</div>
 </foreignObject>
 
-<foreignObject x="211" y="1112" width="65" height="55" class="text-container">
+<foreignObject x="221" y="1122" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg_yellow">Play Pause</div>
 </foreignObject>
 
-<foreignObject x="280" y="1112" width="65" height="55" class="text-container">
+<foreignObject x="290" y="1122" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg_yellow">Next Track</div>
 </foreignObject>
 
-<foreignObject x="349" y="1112" width="65" height="55" class="text-container">
+<foreignObject x="359" y="1122" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg____red">Mouse Accel 0</div>
 </foreignObject>
 
-<foreignObject x="458" y="1112" width="65" height="55" class="text-container">
+<foreignObject x="468" y="1122" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
 </foreignObject>
 
-<foreignObject x="527" y="1112" width="65" height="55" class="text-container">
+<foreignObject x="537" y="1122" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
 </foreignObject>
 
-<foreignObject x="596" y="1112" width="65" height="55" class="text-container">
+<foreignObject x="606" y="1122" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
 </foreignObject>
 
-<foreignObject x="665" y="1112" width="65" height="55" class="text-container">
+<foreignObject x="675" y="1122" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
 </foreignObject>
 
-<foreignObject x="734" y="1112" width="65" height="55" class="text-container">
+<foreignObject x="744" y="1122" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="mg_yellow">Screen Bright Down</div>
 </foreignObject>
 
-<foreignObject x="803" y="1112" width="65" height="55" class="text-container">
+<foreignObject x="813" y="1122" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="blank ___off___"></div>
 </foreignObject>
 
-<foreignObject x="4" y="1191" width="65" height="55" class="text-container">
+<foreignObject x="14" y="1201" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="transparent blank ___off___"></div>
 </foreignObject>
 
-<foreignObject x="73" y="1191" width="65" height="55" class="text-container">
+<foreignObject x="83" y="1201" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="transparent held mg_purple">Num</div>
 </foreignObject>
 
-<foreignObject x="142" y="1191" width="65" height="55" class="text-container">
+<foreignObject x="152" y="1201" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="transparent ___off___">Shift</div>
 </foreignObject>
 
-<foreignObject x="211" y="1191" width="65" height="55" class="text-container">
+<foreignObject x="221" y="1201" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="transparent ___off___">Space</div>
 </foreignObject>
 
-<foreignObject x="280" y="1191" width="65" height="55" class="text-container">
+<foreignObject x="290" y="1201" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="transparent held mg_purple">Nav</div>
 </foreignObject>
 
-<foreignObject x="349" y="1191" width="65" height="55" class="text-container">
+<foreignObject x="359" y="1201" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" class="transparent blank ___off___"></div>
 </foreignObject>
 

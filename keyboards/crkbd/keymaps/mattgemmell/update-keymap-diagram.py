@@ -24,7 +24,7 @@ keymap_filename = "keymap.c"
 svg_filename = "keymap_diagram.svg"
 
 # SVG Geometry
-diagram_inset = 0 # horizontal and vertical, around entire diagram
+diagram_inset = 10 # horizontal and vertical, around entire diagram
 layer_spacing = 30 # vertical spacing between each layer
 layout_keys_per_row = 12 # last row (only) can have fewer keys
 layout_num_edge_keys_ignored = 1 # first and last x keys per row won't be displayed in diagram
@@ -52,12 +52,12 @@ layer_held_keycodes = { # keycodes whose keys are implicitly held down on a give
   "_NUM": ["NUM"],
   "_ADJUST": ["NUM", "NAV"]
 }
-held_css_class = "held" # edit the actual CSS below
+held_css_class = "held" # keys which are held down on a given layer, i.e. MO(); edit the actual CSS below.
 keycode_blank = "XXXXXXX"
-blank_css_class = "blank" # as above, for keys with no function (i.e. keycode_blank above)
+blank_css_class = "blank" # as above, for keys with no function (i.e. keycode_blank above).
 keycode_transparent = "_______"
-transparent_css_class = "transparent" # as above, for transparent keys (falling through to base layer; i.e. keycode_transparent above)
-# Note: Transparent keys (on non-base layers) will be labelled identically to the corresponding key on the base layer
+transparent_css_class = "transparent" # as above, for transparent keys (falling through to base layer; i.e. keycode_transparent above).
+# Note: Transparent keys (on non-base layers) will be labelled identically to the corresponding key on the base layer.
 
 # SVG template segments
 svg_header = '''<svg width="${svg_width}" height="${svg_height}" viewBox="0 0 ${svg_width} ${svg_height}" xmlns="http://www.w3.org/2000/svg" class="${svg_classes}">
@@ -120,7 +120,7 @@ svg_header = '''<svg width="${svg_width}" height="${svg_height}" viewBox="0 0 ${
     }
 
     .layer_title {
-		font-size: 16px;
+		font-size: 17px;
 		font-weight: bold;
 		fill: #777;
     }
@@ -156,8 +156,6 @@ svg_key = '''
 #   END OF SETTINGS
 # ============================================
 
-import re
-import pprint
 
 # Read keymap C file
 keymap_file = open(keymap_filename, "r")
@@ -166,6 +164,7 @@ keymap_raw = ""
 ledmap_raw = ""
 
 # Extract raw C keymap and ledmap
+import re
 keymap_regexp = re.compile(r"^[^]\r\n]+?keymaps\[\][^}]+?{$.*?};$", re.MULTILINE | re.DOTALL)
 keymap_match = keymap_regexp.search(keymap_contents)
 if keymap_match != None:
@@ -440,6 +439,9 @@ for layer_id in layer_order:
     row_num = 0
     col_num = 0
     cur_y += layer_spacing
+
+    # TODO: Ignored edge keys: layout_num_edge_keys_ignored
+    # TODO: Last/shorter row centred: layout_keys_per_row etc
 
 # Footer
 svg_raw += svg_footer # no vars in this, so it can be included literally
