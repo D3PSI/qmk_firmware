@@ -37,7 +37,7 @@ last_row_pad = 20 # additional vertical spacing (added to key_spacing) for final
 
 # Split layout
 layout_split = True # expects an equal number of keys per half, and thus an even number of keys per row
-split_spacing = 30 # horizontal spacing between halves of a split layout (used instead of horizontal key_spacing if layout_split is True)
+split_spacing = 40 # horizontal spacing between halves of a split layout (used instead of horizontal key_spacing if layout_split is True)
 
 # RGB LED colours
 show_led_colours = True # if True, sets "rgb" CSS class on the root <svg> element
@@ -353,6 +353,7 @@ cur_y = diagram_inset
 
 layer_num = 0
 row_num = 0
+col_num = 0
 
 for layer_id in layer_order:
     # Layer title
@@ -423,15 +424,20 @@ for layer_id in layer_order:
             cur_x = diagram_inset + key_spacing
             cur_y += (key_spacing + key_height)
             row_num += 1
+            col_num = 0
             if row_num == num_rows - 1:
                 cur_y += last_row_pad
         else:
             # Continue current row
             cur_x += (key_spacing + key_width)
+            col_num += 1
+            if col_num == num_real_cols / 2 and layout_split:
+                cur_x += split_spacing
 
     # Prep for next layer
     layer_num += 1
     row_num = 0
+    col_num = 0
     cur_y += layer_spacing
 
 # Footer
@@ -441,3 +447,4 @@ svg_raw += svg_footer # no vars in this, so it can be included literally
 svg_file = open(svg_filename, "w")
 svg_file.write(svg_raw)
 svg_file.close()
+# Got to love Python.
