@@ -226,19 +226,19 @@
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_SLSH" class="">/</div>
 </foreignObject>
 
-<foreignObject x="14" y="241" width="65" height="55" class="text-container">
+<foreignObject x="221" y="241" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="NUM" class="">Num</div>
 </foreignObject>
 
-<foreignObject x="83" y="241" width="65" height="55" class="text-container">
+<foreignObject x="290" y="241" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="OS_SHFT" class="">Shift</div>
 </foreignObject>
 
-<foreignObject x="188" y="241" width="65" height="55" class="text-container">
+<foreignObject x="395" y="241" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_SPC" class="">Space</div>
 </foreignObject>
 
-<foreignObject x="257" y="241" width="65" height="55" class="text-container">
+<foreignObject x="464" y="241" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="NAV" class="">Nav</div>
 </foreignObject>
 
@@ -366,19 +366,19 @@
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_ENT" class="mg___blue">Enter</div>
 </foreignObject>
 
-<foreignObject x="14" y="561" width="65" height="55" class="text-container">
+<foreignObject x="221" y="561" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="NUM" class="transparent ___off___">Num</div>
 </foreignObject>
 
-<foreignObject x="83" y="561" width="65" height="55" class="text-container">
+<foreignObject x="290" y="561" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="OS_SHFT" class="transparent ___off___">Shift</div>
 </foreignObject>
 
-<foreignObject x="188" y="561" width="65" height="55" class="text-container">
+<foreignObject x="395" y="561" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_SPC" class="transparent ___off___">Space</div>
 </foreignObject>
 
-<foreignObject x="257" y="561" width="65" height="55" class="text-container">
+<foreignObject x="464" y="561" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="NAV" class="transparent held mg_orange">Nav</div>
 </foreignObject>
 
@@ -506,19 +506,19 @@
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_DOT" class="___off___">.</div>
 </foreignObject>
 
-<foreignObject x="14" y="881" width="65" height="55" class="text-container">
+<foreignObject x="221" y="881" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="NUM" class="transparent held mg__green">Num</div>
 </foreignObject>
 
-<foreignObject x="83" y="881" width="65" height="55" class="text-container">
+<foreignObject x="290" y="881" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="OS_SHFT" class="transparent ___off___">Shift</div>
 </foreignObject>
 
-<foreignObject x="188" y="881" width="65" height="55" class="text-container">
+<foreignObject x="395" y="881" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_0" class="mg__green">0</div>
 </foreignObject>
 
-<foreignObject x="257" y="881" width="65" height="55" class="text-container">
+<foreignObject x="464" y="881" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="NAV" class="transparent ___off___">Nav</div>
 </foreignObject>
 
@@ -646,19 +646,19 @@
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_BRIGHTNESS_DOWN" class="mg_yellow">Screen Bright Down</div>
 </foreignObject>
 
-<foreignObject x="14" y="1201" width="65" height="55" class="text-container">
+<foreignObject x="221" y="1201" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="NUM" class="transparent held mg_purple">Num</div>
 </foreignObject>
 
-<foreignObject x="83" y="1201" width="65" height="55" class="text-container">
+<foreignObject x="290" y="1201" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="OS_SHFT" class="transparent ___off___">Shift</div>
 </foreignObject>
 
-<foreignObject x="188" y="1201" width="65" height="55" class="text-container">
+<foreignObject x="395" y="1201" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_SPC" class="transparent ___off___">Space</div>
 </foreignObject>
 
-<foreignObject x="257" y="1201" width="65" height="55" class="text-container">
+<foreignObject x="464" y="1201" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="NAV" class="transparent held mg_purple">Nav</div>
 </foreignObject>
 

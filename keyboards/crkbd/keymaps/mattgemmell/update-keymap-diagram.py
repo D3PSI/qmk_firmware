@@ -448,7 +448,13 @@ for layer_id in layer_order:
             row_num += 1
             col_num = 0
             if row_num == num_rows - 1:
+                # Last row
                 cur_y += last_row_pad
+
+                last_col_num = num_keys % ((num_rows - 1) * num_real_cols)
+                if last_col_num < num_real_cols:
+                    # Fewer keys in last row; indent them so they're still centred.
+                    cur_x += (((num_real_cols - last_col_num) / 2) * (key_spacing + key_width))
         else:
             # Continue current row
             if output_key:
@@ -464,8 +470,6 @@ for layer_id in layer_order:
     row_num = 0
     col_num = 0
     cur_y += layer_spacing
-
-    # TODO: Last/shorter row CENTRED: layout_keys_per_row etc.
 
 # Footer
 svg_raw += svg_footer # no vars in this, so it can be included literally
