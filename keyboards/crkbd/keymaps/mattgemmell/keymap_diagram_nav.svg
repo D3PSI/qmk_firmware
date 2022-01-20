@@ -1,0 +1,243 @@
+<svg width="750" height="280" viewBox="0 0 750 280" xmlns="http://www.w3.org/2000/svg" class="rgb">
+<style>
+    svg {
+        font-family: -apple-system, "Helvetica Neue", sans-serif;
+        font-size: 14px;
+        text-rendering: optimizeLegibility;
+        background-color: white;
+    }
+
+    text {
+    	text-anchor: middle;
+    	dominant-baseline: middle;
+    }
+
+    .text-container {
+        background-color: white;
+        border-radius: 6px;
+    }
+
+    .text-container > div:hover {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .text-container > div {
+        cursor: default;
+        padding: 1px 2px;
+        box-sizing: border-box;
+        background-color: #f0f0f0;
+        text-align: center;
+        width: 65px;
+        height: 55px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        hyphens: auto;
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        border-radius: 6px;
+    }
+
+    .text-container > div.held {
+        background-color: #bbf;
+    }
+
+    .rgb .text-container > div.held {
+        border: 3px solid #666;
+    }
+
+    .text-container > div.blank {
+
+    }
+
+    .text-container > div.transparent {
+
+    }
+
+    .layer_title {
+		font-size: 17px;
+		font-weight: bold;
+		fill: #777;
+    }
+
+    .layer_bg {
+        fill: #c0c0c0;
+        width: 730px;
+        height: 260px;
+    }
+
+    .text-container > div.mg____red {
+		background-color: rgba(255, 0, 0, 0.3);
+    }
+
+    .text-container > div.mg__white {
+		background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .text-container > div.mg__green {
+		background-color: rgba(32, 159, 33, 0.3);
+    }
+
+    .text-container > div.mg_purple {
+		background-color: rgba(50, 0, 232, 0.3);
+    }
+
+    .text-container > div.mg___pink {
+		background-color: rgba(208, 0, 255, 0.3);
+    }
+
+    .text-container > div.mg___blue {
+		background-color: rgba(0, 181, 213, 0.3);
+    }
+
+    .text-container > div.mg_yellow {
+		background-color: rgba(255, 208, 0, 0.3);
+    }
+
+    .text-container > div.mg_orange {
+		background-color: rgba(255, 85, 0, 0.3);
+    }
+
+</style>
+
+<rect rx="6" x="10" y="10" class="layer_bg" />
+
+<foreignObject x="14" y="14" width="65" height="55" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_ESC" class="mg____red">Esc</div>
+</foreignObject>
+
+<foreignObject x="83" y="14" width="65" height="55" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="XXXXXXX" class="blank ___off___"></div>
+</foreignObject>
+
+<foreignObject x="152" y="14" width="65" height="55" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_MAC_SCRN_SHOT" class="mg___pink">Screen Shot</div>
+</foreignObject>
+
+<foreignObject x="221" y="14" width="65" height="55" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_MAC_SCRN_MRKP" class="mg___pink">Markup Screen</div>
+</foreignObject>
+
+<foreignObject x="290" y="14" width="65" height="55" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="XXXXXXX" class="blank ___off___"></div>
+</foreignObject>
+
+<foreignObject x="395" y="14" width="65" height="55" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_PGUP" class="mg_orange">Page Up</div>
+</foreignObject>
+
+<foreignObject x="464" y="14" width="65" height="55" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_MAC_PREV_TAB" class="mg___pink">Prev Tab</div>
+</foreignObject>
+
+<foreignObject x="533" y="14" width="65" height="55" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_UP" class="mg__white">Up</div>
+</foreignObject>
+
+<foreignObject x="602" y="14" width="65" height="55" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_MAC_NEXT_TAB" class="mg___pink">Next Tab</div>
+</foreignObject>
+
+<foreignObject x="671" y="14" width="65" height="55" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_BSPC" class="mg____red">Bkspc</div>
+</foreignObject>
+
+<foreignObject x="14" y="73" width="65" height="55" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_TAB" class="___off___">Tab</div>
+</foreignObject>
+
+<foreignObject x="83" y="73" width="65" height="55" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="OS_CTRL" class="mg___blue">Ctrl</div>
+</foreignObject>
+
+<foreignObject x="152" y="73" width="65" height="55" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="OS_ALT" class="mg___blue">Option</div>
+</foreignObject>
+
+<foreignObject x="221" y="73" width="65" height="55" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="OS_CMD" class="mg___blue">Cmd</div>
+</foreignObject>
+
+<foreignObject x="290" y="73" width="65" height="55" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="OS_CAPS" class="___off___">Globe</div>
+</foreignObject>
+
+<foreignObject x="395" y="73" width="65" height="55" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_PGDOWN" class="mg_orange">Page Down</div>
+</foreignObject>
+
+<foreignObject x="464" y="73" width="65" height="55" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_LEFT" class="mg__white">Left</div>
+</foreignObject>
+
+<foreignObject x="533" y="73" width="65" height="55" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_DOWN" class="mg__white">Down</div>
+</foreignObject>
+
+<foreignObject x="602" y="73" width="65" height="55" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_RIGHT" class="mg__white">Right</div>
+</foreignObject>
+
+<foreignObject x="671" y="73" width="65" height="55" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="XXXXXXX" class="blank ___off___"></div>
+</foreignObject>
+
+<foreignObject x="14" y="132" width="65" height="55" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_MAC_UNDO" class="mg___pink">Undo</div>
+</foreignObject>
+
+<foreignObject x="83" y="132" width="65" height="55" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_MAC_CUT" class="___off___">Cut</div>
+</foreignObject>
+
+<foreignObject x="152" y="132" width="65" height="55" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_MAC_COPY" class="mg__green">Copy</div>
+</foreignObject>
+
+<foreignObject x="221" y="132" width="65" height="55" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_MAC_PASTE" class="___off___">Paste</div>
+</foreignObject>
+
+<foreignObject x="290" y="132" width="65" height="55" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_MAC_REDO" class="___off___">Redo</div>
+</foreignObject>
+
+<foreignObject x="395" y="132" width="65" height="55" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="XXXXXXX" class="blank ___off___"></div>
+</foreignObject>
+
+<foreignObject x="464" y="132" width="65" height="55" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_MAC_SPOTLIGHT" class="mg_yellow">Spotlight</div>
+</foreignObject>
+
+<foreignObject x="533" y="132" width="65" height="55" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="APP_SWITCH_FRWD" class="mg_purple">Switch App</div>
+</foreignObject>
+
+<foreignObject x="602" y="132" width="65" height="55" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="XXXXXXX" class="blank ___off___"></div>
+</foreignObject>
+
+<foreignObject x="671" y="132" width="65" height="55" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_ENT" class="mg___blue">Enter</div>
+</foreignObject>
+
+<foreignObject x="221" y="211" width="65" height="55" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="NUM" class="transparent ___off___">Num</div>
+</foreignObject>
+
+<foreignObject x="290" y="211" width="65" height="55" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="OS_SHFT" class="transparent ___off___">Shift</div>
+</foreignObject>
+
+<foreignObject x="395" y="211" width="65" height="55" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_SPC" class="transparent ___off___">Space</div>
+</foreignObject>
+
+<foreignObject x="464" y="211" width="65" height="55" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="NAV" class="transparent held mg_orange">Nav</div>
+</foreignObject>
+
+</svg>

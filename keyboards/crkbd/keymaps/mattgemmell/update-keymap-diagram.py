@@ -22,6 +22,7 @@
 # Files (in same dir as this script)
 keymap_filename = "keymap.c"
 svg_filename = "keymap_diagram.svg"
+create_layer_diagrams = True # also create one diagram per layer, named "[svg_filename basename]_[layer_id lowercase].[svg_filename extension]"
 
 # SVG Geometry
 diagram_inset = 10 # horizontal and vertical, around entire diagram
@@ -44,7 +45,8 @@ show_led_colours = True # if True, sets "rgb" CSS class on the root <svg> elemen
 led_colours_opacity = 0.3 # 0.0 to 1.0
 
 # Layers
-show_layer_titles = True
+show_layer_titles = True # applies to single overall diagram
+show_layer_titles_per_layer = False # applies to separate layer-specific diagrams
 layer_title_height = 20 # text box height; set font attributes in CSS below
 layer_title_spacing = 10 # vertical spacing between layer title and its layer diagram
 layer_held_keycodes = { # keycodes whose keys are implicitly held down on a given layer, gaining the held_css_class specified below
@@ -324,6 +326,8 @@ if show_led_colours:
 
 # Generate output
 svg_raw = ""
+svg_layer_header = "" # for per-layer svg output
+svg_layers = {} # for per-layer svg output
 
 # Header
 svg_classes = []
@@ -342,26 +346,42 @@ svg_raw += header_template.substitute({'svg_width': svg_width,
                                        'layer_bg_width': layer_width,
                                        'layer_bg_height': layer_height,
                                        'extra_css': extra_css})
+if create_layer_diagrams:
+    layer_diagram_height = layer_height + (2 * diagram_inset)
+    if show_layer_titles_per_layer:
+        layer_diagram_height += (layer_title_height + layer_title_spacing)
+    svg_layer_header = header_template.substitute({'svg_width': svg_width,
+                                                   'svg_height': layer_diagram_height,
+                                                   'svg_classes': " ".join(svg_classes),
+                                                   'key_width': key_width,
+                                                   'key_height': key_height,
+                                                   'key_radius': key_radius,
+                                                   'held_css_class': held_css_class,
+                                                   'blank_css_class': blank_css_class,
+                                                   'transparent_css_class': transparent_css_class,
+                                                   'layer_bg_width': layer_width,
+                                                   'layer_bg_height': layer_height,
+                                                   'extra_css': extra_css})
 
-if show_layer_titles:
+if show_layer_titles or show_layer_titles_per_layer:
     layer_title_template = Template(svg_layer_title)
     layer_title_x = float(svg_width) / 2.0; # SVG text boxes are positioned at their centre point
 
 layer_bg_template = Template(svg_layer_bg)
 key_template = Template(svg_key)
 
-cur_x = diagram_inset
 cur_y = diagram_inset
-
 layer_num = 0
-row_num = 0
-col_num = 0
 
-for layer_id in layer_order:
+def svg_for_layer(layer_id, start_y, show_title):
+    svg_raw = ""
+    cur_y = start_y
+    row_num = 0
+    col_num = 0
     cur_x = diagram_inset
 
     # Layer title
-    if show_layer_titles:
+    if show_title:
         layer_title = layer_names[layer_id]
         layer_title_y = float(cur_y) + (float(layer_title_height) / 2.0)
         svg_raw += layer_title_template.substitute({'layer_title_x': layer_title_x,
@@ -379,8 +399,6 @@ for layer_id in layer_order:
 
     # Keys
     key_index = 0 # Zero-based
-    key_text_x = 0
-    key_text_y = 0
     key_classes = []
     key_label = ""
     layer_keys = key_layers[layer_id]
@@ -400,10 +418,6 @@ for layer_id in layer_order:
                 output_key = False
 
         if output_key:
-            # Text box position (coords are the centre of the box)
-            key_text_x = float(cur_x) + (float(key_width) / 2.0)
-            key_text_y = float(cur_y) + (float(key_height) / 2.0)
-
             # Key's human-readable label
             if key == keycode_transparent:
                 key_classes.append(transparent_css_class)
@@ -465,11 +479,19 @@ for layer_id in layer_order:
             elif output_key:
                 cur_x += key_spacing
 
+    return {'svg': svg_raw, 'delta_y': cur_y - start_y}
+
+for layer_id in layer_order:
+    layer_svg_data = svg_for_layer(layer_id, cur_y, show_layer_titles)
+    svg_raw += layer_svg_data['svg']
+
     # Prep for next layer
     layer_num += 1
-    row_num = 0
-    col_num = 0
-    cur_y += layer_spacing
+    cur_y += layer_spacing + layer_svg_data['delta_y']
+
+    if create_layer_diagrams:
+        layer_svg_data = svg_for_layer(layer_id, diagram_inset, show_layer_titles_per_layer)
+        svg_layers[layer_id] = svg_layer_header + layer_svg_data['svg'] + svg_footer
 
 # Footer
 svg_raw += svg_footer # no vars in this, so it can be included literally
@@ -479,3 +501,13 @@ svg_file = open(svg_filename, "w")
 svg_file.write(svg_raw)
 svg_file.close()
 # Got to love Python.
+
+if create_layer_diagrams:
+    for layer_id in svg_layers:
+        svg_filename_components = svg_filename.split(".")
+        svg_filename_root = svg_filename_components[0]
+        svg_filename_ext = svg_filename_components[1]
+        layer_filename = svg_filename_root + "_" + layer_id.lstrip("_").lower() + "." + svg_filename_ext
+        svg_file = open(layer_filename, "w")
+        svg_file.write(svg_layers[layer_id])
+        svg_file.close()
