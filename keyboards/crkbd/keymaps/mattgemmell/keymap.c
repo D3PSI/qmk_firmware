@@ -79,14 +79,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_NAV] = LAYOUT_split_3x6_3(
       XXXXXXX, KC_ESC,      XXXXXXX,    KC_MAC_SCRN_SHOT,  KC_MAC_SCRN_MRKP,  XXXXXXX,            KC_PGUP,   KC_MAC_PREV_TAB,  KC_UP,           KC_MAC_NEXT_TAB, KC_BSPC, XXXXXXX,
-      XXXXXXX, KC_TAB,      OS_CTRL,    OS_ALT,            OS_CMD,            OS_CAPS,            KC_PGDOWN, KC_LEFT,          KC_DOWN,         KC_RIGHT,        XXXXXXX, XXXXXXX,
+      XXXXXXX, OS_SHFT,      OS_CTRL,    OS_ALT,            OS_CMD,            OS_CAPS,            KC_PGDOWN, KC_LEFT,          KC_DOWN,         KC_RIGHT,        XXXXXXX, XXXXXXX,
       XXXXXXX, KC_MAC_UNDO, KC_MAC_CUT, KC_MAC_COPY,       KC_MAC_PASTE,      KC_MAC_REDO,        XXXXXXX,   KC_MAC_SPOTLIGHT, APP_SWITCH_FRWD, XXXXXXX,         KC_ENT,  XXXXXXX,
                                                          _______, _______, _______,             _______, _______, _______
   ),
 
   [_NUM] = LAYOUT_split_3x6_3(
-     XXXXXXX, KC_ESC,     KC_SCLN,    KC_LPRN,     KC_RPRN,     KC_BSLASH,          KC_SLSH, KC_7, KC_8, KC_9, KC_MINUS,   XXXXXXX,
-     XXXXXXX, KC_TAB,     OS_CTRL,    OS_ALT,      OS_CMD,      OS_CAPS,            KC_ASTR, KC_4, KC_5, KC_6, KC_EQUAL,   XXXXXXX,
+     XXXXXXX, KC_TAB,     KC_SCLN,    KC_LPRN,     KC_RPRN,     KC_BSLASH,          KC_SLSH, KC_7, KC_8, KC_9, KC_MINUS,   XXXXXXX,
+     XXXXXXX, OS_SHFT,     OS_CTRL,    OS_ALT,      OS_CMD,      OS_CAPS,            KC_ASTR, KC_4, KC_5, KC_6, KC_EQUAL,   XXXXXXX,
      XXXXXXX, KC_EN_DASH, KC_EM_DASH, KC_LBRACKET, KC_RBRACKET, KC_GRAVE,           KC_COMM, KC_1, KC_2, KC_3, KC_DOT,     XXXXXXX,
                                            _______, _______, _______,            KC_0, _______, _______
   ),
@@ -103,13 +103,13 @@ const uint8_t PROGMEM ledmap[][42][3] = {
 /* Starts at layer 1; we don't apply lights to Base (layer 0). */
 [_NAV] = {
 ___off___, MG____RED, ___off___, MG___PINK, MG___PINK, ___off___, 				MG_ORANGE, MG___PINK, MG__WHITE, MG___PINK, MG____RED, ___off___,
-___off___, ___off___, MG___BLUE, MG___BLUE, MG___BLUE, ___off___, 				MG_ORANGE, MG__WHITE, MG__WHITE, MG__WHITE, ___off___, ___off___,
+___off___, MG___BLUE, MG___BLUE, MG___BLUE, MG___BLUE, MG_PURPLE, 				MG_ORANGE, MG__WHITE, MG__WHITE, MG__WHITE, ___off___, ___off___,
 ___off___, MG___PINK, ___off___, MG__GREEN, ___off___, ___off___, 				___off___, MG_YELLOW, MG_PURPLE, ___off___, MG___BLUE, ___off___,
 								 ___off___, ___off___, ___off___, 				___off___, MG_ORANGE, ___off___
 			},
 [_NUM] = {
-___off___, MG____RED, MG_ORANGE, MG_YELLOW, MG_YELLOW, MG___PINK, 				MG___PINK, MG__GREEN, MG__GREEN, MG__GREEN, ___off___, ___off___,
-___off___, ___off___, MG___BLUE, MG___BLUE, MG___BLUE, ___off___, 				___off___, MG__GREEN, MG__GREEN, MG__GREEN, ___off___, ___off___,
+___off___, MG_ORANGE, MG_ORANGE, MG_YELLOW, MG_YELLOW, MG___PINK, 				MG___PINK, MG__GREEN, MG__GREEN, MG__GREEN, ___off___, ___off___,
+___off___, MG___BLUE, MG___BLUE, MG___BLUE, MG___BLUE, MG_PURPLE, 				___off___, MG__GREEN, MG__GREEN, MG__GREEN, ___off___, ___off___,
 ___off___, ___off___, MG_PURPLE, MG_ORANGE, MG_ORANGE, ___off___, 				___off___, MG__GREEN, MG__GREEN, MG__GREEN, ___off___, ___off___,
 						   		 ___off___, MG__GREEN, ___off___, 				MG__GREEN, ___off___, ___off___
 			},

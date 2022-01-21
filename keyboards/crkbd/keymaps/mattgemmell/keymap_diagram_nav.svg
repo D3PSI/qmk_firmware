@@ -145,7 +145,7 @@
 </foreignObject>
 
 <foreignObject x="14" y="73" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_TAB" class="___off___">Tab</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="OS_SHFT" class="mg___blue">Shift</div>
 </foreignObject>
 
 <foreignObject x="83" y="73" width="65" height="55" class="text-container">
@@ -161,7 +161,7 @@
 </foreignObject>
 
 <foreignObject x="290" y="73" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="OS_CAPS" class="___off___">Globe</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="OS_CAPS" class="mg_purple">Globe</div>
 </foreignObject>
 
 <foreignObject x="395" y="73" width="65" height="55" class="text-container">
