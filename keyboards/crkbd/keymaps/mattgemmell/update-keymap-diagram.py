@@ -292,6 +292,19 @@ svg_header = '''<svg width="${svg_width}" height="${svg_height}" viewBox="0 0 ${
     	content: "\\23ed";
     	font-size: 26px;
     }
+
+    .os_shft:after, .os_ctrl:after, .os_alt:after, .os_cmd:after, .os_caps:after {
+        color: #33f;
+    	font-size: 11px;
+    	font-weight: bold;
+    	font-variant: small-caps;
+		position: fixed;
+		bottom: 0;
+		content: "one-shot";
+		background-color: #ff8;
+		width: 100%;
+        border-radius: 0 0 6px 6px;
+    }
 ${extra_css}
 </style>
 '''
