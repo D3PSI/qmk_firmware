@@ -18,8 +18,7 @@
     }
 
     .text-container > div:hover {
-        font-size: 16px;
-        font-weight: bold;
+
     }
 
     .text-container > div {
@@ -525,19 +524,19 @@
 </foreignObject>
 
 <foreignObject x="221" y="561" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="NUM" class="transparent ___off___ num">Num</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="_______" class="transparent ___off___ num">Num</div>
 </foreignObject>
 
 <foreignObject x="290" y="561" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="OS_SHFT" class="transparent ___off___ os_shft">Shift</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="_______" class="transparent ___off___ os_shft">Shift</div>
 </foreignObject>
 
 <foreignObject x="395" y="561" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_SPC" class="transparent ___off___ kc_spc">Space</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="_______" class="transparent ___off___ kc_spc">Space</div>
 </foreignObject>
 
 <foreignObject x="464" y="561" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="NAV" class="transparent held mg_orange nav">Nav</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="_______" class="transparent held mg_orange nav">Nav</div>
 </foreignObject>
 
 <text x="375.0" y="660.0" class="layer_title">Numpad &amp; Symbols</text>
@@ -665,11 +664,11 @@
 </foreignObject>
 
 <foreignObject x="221" y="881" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="NUM" class="transparent held mg__green num">Num</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="_______" class="transparent held mg__green num">Num</div>
 </foreignObject>
 
 <foreignObject x="290" y="881" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="OS_SHFT" class="transparent ___off___ os_shft">Shift</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="_______" class="transparent ___off___ os_shft">Shift</div>
 </foreignObject>
 
 <foreignObject x="395" y="881" width="65" height="55" class="text-container">
@@ -677,7 +676,7 @@
 </foreignObject>
 
 <foreignObject x="464" y="881" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="NAV" class="transparent ___off___ nav">Nav</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="_______" class="transparent ___off___ nav">Nav</div>
 </foreignObject>
 
 <text x="375.0" y="980.0" class="layer_title">Mouse &amp; Media</text>
@@ -805,19 +804,19 @@
 </foreignObject>
 
 <foreignObject x="221" y="1201" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="NUM" class="transparent held mg_purple num">Num</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="_______" class="transparent held mg_purple num">Num</div>
 </foreignObject>
 
 <foreignObject x="290" y="1201" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="OS_SHFT" class="transparent ___off___ os_shft">Shift</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="_______" class="transparent ___off___ os_shft">Shift</div>
 </foreignObject>
 
 <foreignObject x="395" y="1201" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_SPC" class="transparent ___off___ kc_spc">Space</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="_______" class="transparent ___off___ kc_spc">Space</div>
 </foreignObject>
 
 <foreignObject x="464" y="1201" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="NAV" class="transparent held mg_purple nav">Nav</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="_______" class="transparent held mg_purple nav">Nav</div>
 </foreignObject>
 
 </svg>

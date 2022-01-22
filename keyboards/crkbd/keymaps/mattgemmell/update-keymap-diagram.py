@@ -86,8 +86,7 @@ svg_header = '''<svg width="${svg_width}" height="${svg_height}" viewBox="0 0 ${
     }
 
     .text-container > div:hover {
-        font-size: 16px;
-        font-weight: bold;
+
     }
 
     .text-container > div {
@@ -328,13 +327,14 @@ ledmap_raw = ""
 
 # Extract raw C keymap and ledmap
 import re
-keymap_regexp = re.compile(r"^[^]\r\n]+?keymaps\[\][^}]+?{$.*?};$", re.MULTILINE | re.DOTALL)
-keymap_match = keymap_regexp.search(keymap_contents)
+map_regexp = re.compile(r"^[^]\r\n]+?[a-z]+\[\][^}]+?{$.*?};$", re.MULTILINE | re.DOTALL)
+keymap_match = map_regexp.search(keymap_contents)
+search_start = 0;
 if keymap_match != None:
     keymap_raw = keymap_match.group()
+    search_start += keymap_match.span()[1]
 
-ledmap_regexp = re.compile(r"^[^]\r\n]+?ledmap\[\][^}]+?{$.*?};$", re.MULTILINE | re.DOTALL)
-ledmap_match = ledmap_regexp.search(keymap_contents)
+ledmap_match = map_regexp.search(keymap_contents[search_start:])
 if ledmap_match != None:
     ledmap_raw = ledmap_match.group()
 
@@ -577,9 +577,12 @@ def svg_for_layer(layer_id, start_y, show_title):
 
         if output_key:
             # Key's human-readable label
+            key_is_transparent = False
             if key == keycode_transparent:
+                key_is_transparent = True
                 key_classes.append(transparent_css_class)
                 if layer_id != layer_order[0]:
+                    # Obtain transparent key's effective keycode from base layer
                     key = key_layers[layer_order[0]][key_index]
 
             if key in key_names:
@@ -599,8 +602,11 @@ def svg_for_layer(layer_id, start_y, show_title):
                 key_classes.append(key.lower())
 
             title_attr = ""
+            title_val = key
             if apply_keycode_title:
-                title_attr = 'title="%s" ' % key
+                if key_is_transparent:
+                    title_val = keycode_transparent
+                title_attr = 'title="%s" ' % title_val
 
             svg_raw += key_template.substitute({'key_radius': key_radius,
                                                 'key_x': cur_x,
