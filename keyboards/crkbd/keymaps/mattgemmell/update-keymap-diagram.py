@@ -62,7 +62,7 @@ transparent_css_class = "transparent" # as above, for transparent keys (falling 
 # Note: Transparent keys (on non-base layers) will be labelled identically to the corresponding key on the base layer.
 
 # Advanced
-apply_keycode_class = False # applies the lowercase keycode name as a class to the key's DIV, to allow CSS customisation; for example, the "A" key would have class "kc_a" applied.
+apply_keycode_class = True # applies the lowercase keycode name as a class to the key's DIV, to allow CSS customisation; for example, the "A" key would have class "kc_a" applied.
 apply_keycode_title = True # applies the keycode (as-is) as a "title" attribute to the key's DIV, allowing it to be shown in a tooltip upon hover etc.
 
 # SVG template segments
@@ -134,6 +134,164 @@ svg_header = '''<svg width="${svg_width}" height="${svg_height}" viewBox="0 0 ${
         fill: #c0c0c0;
         width: ${layer_bg_width}px;
         height: ${layer_bg_height}px;
+    }
+
+    .kc_up, .kc_down, .kc_left, .kc_right,
+    .kc_ent, .kc_bspc, .os_caps, .kc_esc,
+    .os_shft, .os_ctrl, .os_alt, .os_cmd,
+    .kc_mac_spotlight, .kc_pgup, .kc_pgdown,
+    .kc_mac_undo, .kc_mac_redo, .kc_tab,
+    .kc_mac_cut, .kc_spc, .kc_mac_lock_scrn,
+    .kc_brightness_up, .kc_brightness_down,
+    .kc_audio_vol_up, .kc_audio_vol_down, .kc_audio_mute,
+    .kc_media_play_pause, .kc_media_prev_track, .kc_media_next_track {
+    	color: transparent;
+    }
+
+    .kc_up:before, .kc_down:before, .kc_left:before, .kc_right:before,
+    .kc_ent:before, .kc_bspc:before, .os_caps:before, .kc_esc:before,
+    .os_shft:before, .os_ctrl:before, .os_alt:before, .os_cmd:before,
+    .kc_mac_spotlight:before, .kc_pgup:before, .kc_pgdown:before,
+    .kc_mac_undo:before, .kc_mac_redo:before, .kc_tab:before,
+    .kc_mac_cut:before, .kc_spc:before, .kc_mac_lock_scrn:before,
+    .kc_brightness_up:before, .kc_brightness_down:before,
+    .kc_audio_vol_up:before, .kc_audio_vol_down:before, .kc_audio_mute:before,
+    .kc_media_play_pause:before, .kc_media_prev_track:before, .kc_media_next_track:before  {
+    	color: #333;
+    	font-size: 18px;
+		position: fixed;
+		margin: 0 auto;
+		content: "\\25b2";
+    }
+
+    .kc_down:before {
+    	content: "\\25bc";
+    }
+
+    .kc_left:before {
+    	content: "\\25c0";
+    }
+
+    .kc_right:before {
+    	content: "\\25b6";
+    }
+
+    .kc_ent:before {
+    	content: "\\23ce";
+    	font-size: 20px;
+    }
+
+    .kc_bspc:before {
+    	content: "\\232b";
+    	font-size: 22px;
+    }
+
+    .os_caps:before {
+    	content: "\\1f310";
+    	font-size: 20px;
+    }
+
+    .kc_esc:before {
+    	content: "\\238b";
+    }
+
+    .os_shft:before {
+    	content: "\\21e7";
+    }
+
+    .os_ctrl:before {
+    	content: "\\5e";
+    }
+
+    .os_alt:before {
+    	content: "\\2325";
+    }
+
+    .os_cmd:before {
+    	content: "\\2318";
+    }
+
+    .kc_mac_spotlight:before {
+    	content: "\\2315";
+    	font-size: 40px;
+    	transform: scaleX(-1);
+    }
+
+    .kc_pgup:before {
+    	content: "\\21de";
+    }
+
+    .kc_pgdown:before {
+    	content: "\\21df";
+    }
+
+    .kc_mac_undo:before {
+    	content: "\\293a";
+    	font-size: 34px;
+    }
+
+    .kc_mac_redo:before {
+    	content: "\\293b";
+    	font-size: 34px;
+    }
+
+    .kc_tab:before {
+    	content: "\\21e5";
+    }
+
+    .kc_mac_cut:before {
+    	content: "\\2702";
+    	font-size: 20px;
+    }
+
+    .kc_spc:before {
+    	content: "\\2423";
+    	font-size: 24px;
+    }
+
+    .kc_mac_lock_scrn:before {
+    	content: "\\23fb";
+    	font-size: 22px;
+    }
+
+    .kc_brightness_up:before {
+    	content: "\\2600";
+    	font-size: 30px;
+    }
+
+    .kc_brightness_down:before {
+    	content: "\\263c";
+    	font-size: 32px;
+    }
+
+    .kc_audio_vol_down:before {
+    	content: "\\1f509";
+    	font-size: 22px;
+    }
+
+    .kc_audio_vol_up:before {
+    	content: "\\1f50a";
+    	font-size: 22px;
+    }
+
+    .kc_audio_mute:before {
+    	content: "\\1f507";
+    	font-size: 22px;
+    }
+
+    .kc_media_play_pause:before {
+    	content: "\\23ef";
+    	font-size: 26px;
+    }
+
+    .kc_media_prev_track:before {
+    	content: "\\23ee";
+    	font-size: 26px;
+    }
+
+    .kc_media_next_track:before {
+    	content: "\\23ed";
+    	font-size: 26px;
     }
 ${extra_css}
 </style>
@@ -233,13 +391,13 @@ key_names = {
     "KC_MS_ACCEL2": "Mouse Accel 2",
     "KC_MS_WH_DOWN": "Mouse Wheel Down",
     "KC_MS_BTN1": "Left Click",
-    "KC_MS_UP": "Mouse Up",
+    "KC_MS_UP": "Mouse &#9650;",
     "KC_MS_BTN2": "Right Click",
     "KC_MS_ACCEL1": "Mouse Accel 1",
     "KC_MS_WH_UP": "Mouse Wheel Up",
-    "KC_MS_LEFT": "Mouse Left",
-    "KC_MS_DOWN": "Mouse Down",
-    "KC_MS_RIGHT": "Mouse Right",
+    "KC_MS_LEFT": "Mouse &#9664;",
+    "KC_MS_DOWN": "Mouse &#9660;",
+    "KC_MS_RIGHT": "Mouse &#9654;",
     "KC_BRIGHTNESS_UP": "Screen Bright Up",
     "KC_MEDIA_PREV_TRACK": "Prev Track",
     "KC_MEDIA_PLAY_PAUSE": "Play Pause",

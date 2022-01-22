@@ -68,6 +68,164 @@
         height: 260px;
     }
 
+    .kc_up, .kc_down, .kc_left, .kc_right,
+    .kc_ent, .kc_bspc, .os_caps, .kc_esc,
+    .os_shft, .os_ctrl, .os_alt, .os_cmd,
+    .kc_mac_spotlight, .kc_pgup, .kc_pgdown,
+    .kc_mac_undo, .kc_mac_redo, .kc_tab,
+    .kc_mac_cut, .kc_spc, .kc_mac_lock_scrn,
+    .kc_brightness_up, .kc_brightness_down,
+    .kc_audio_vol_up, .kc_audio_vol_down, .kc_audio_mute,
+    .kc_media_play_pause, .kc_media_prev_track, .kc_media_next_track {
+    	color: transparent;
+    }
+
+    .kc_up:before, .kc_down:before, .kc_left:before, .kc_right:before,
+    .kc_ent:before, .kc_bspc:before, .os_caps:before, .kc_esc:before,
+    .os_shft:before, .os_ctrl:before, .os_alt:before, .os_cmd:before,
+    .kc_mac_spotlight:before, .kc_pgup:before, .kc_pgdown:before,
+    .kc_mac_undo:before, .kc_mac_redo:before, .kc_tab:before,
+    .kc_mac_cut:before, .kc_spc:before, .kc_mac_lock_scrn:before,
+    .kc_brightness_up:before, .kc_brightness_down:before,
+    .kc_audio_vol_up:before, .kc_audio_vol_down:before, .kc_audio_mute:before,
+    .kc_media_play_pause:before, .kc_media_prev_track:before, .kc_media_next_track:before  {
+    	color: #333;
+    	font-size: 18px;
+		position: fixed;
+		margin: 0 auto;
+		content: "\25b2";
+    }
+
+    .kc_down:before {
+    	content: "\25bc";
+    }
+
+    .kc_left:before {
+    	content: "\25c0";
+    }
+
+    .kc_right:before {
+    	content: "\25b6";
+    }
+
+    .kc_ent:before {
+    	content: "\23ce";
+    	font-size: 20px;
+    }
+
+    .kc_bspc:before {
+    	content: "\232b";
+    	font-size: 22px;
+    }
+
+    .os_caps:before {
+    	content: "\1f310";
+    	font-size: 20px;
+    }
+
+    .kc_esc:before {
+    	content: "\238b";
+    }
+
+    .os_shft:before {
+    	content: "\21e7";
+    }
+
+    .os_ctrl:before {
+    	content: "\5e";
+    }
+
+    .os_alt:before {
+    	content: "\2325";
+    }
+
+    .os_cmd:before {
+    	content: "\2318";
+    }
+
+    .kc_mac_spotlight:before {
+    	content: "\2315";
+    	font-size: 40px;
+    	transform: scaleX(-1);
+    }
+
+    .kc_pgup:before {
+    	content: "\21de";
+    }
+
+    .kc_pgdown:before {
+    	content: "\21df";
+    }
+
+    .kc_mac_undo:before {
+    	content: "\293a";
+    	font-size: 34px;
+    }
+
+    .kc_mac_redo:before {
+    	content: "\293b";
+    	font-size: 34px;
+    }
+
+    .kc_tab:before {
+    	content: "\21e5";
+    }
+
+    .kc_mac_cut:before {
+    	content: "\2702";
+    	font-size: 20px;
+    }
+
+    .kc_spc:before {
+    	content: "\2423";
+    	font-size: 24px;
+    }
+
+    .kc_mac_lock_scrn:before {
+    	content: "\23fb";
+    	font-size: 22px;
+    }
+
+    .kc_brightness_up:before {
+    	content: "\2600";
+    	font-size: 30px;
+    }
+
+    .kc_brightness_down:before {
+    	content: "\263c";
+    	font-size: 32px;
+    }
+
+    .kc_audio_vol_down:before {
+    	content: "\1f509";
+    	font-size: 22px;
+    }
+
+    .kc_audio_vol_up:before {
+    	content: "\1f50a";
+    	font-size: 22px;
+    }
+
+    .kc_audio_mute:before {
+    	content: "\1f507";
+    	font-size: 22px;
+    }
+
+    .kc_media_play_pause:before {
+    	content: "\23ef";
+    	font-size: 26px;
+    }
+
+    .kc_media_prev_track:before {
+    	content: "\23ee";
+    	font-size: 26px;
+    }
+
+    .kc_media_next_track:before {
+    	content: "\23ed";
+    	font-size: 26px;
+    }
+
     .text-container > div.mg____red {
 		background-color: rgba(255, 0, 0, 0.3);
     }
@@ -109,79 +267,79 @@
 </foreignObject>
 
 <foreignObject x="83" y="14" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_AUDIO_VOL_DOWN" class="mg_purple">Vol Down</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_AUDIO_VOL_DOWN" class="mg_purple kc_audio_vol_down">Vol Down</div>
 </foreignObject>
 
 <foreignObject x="152" y="14" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_AUDIO_MUTE" class="mg____red">Mute</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_AUDIO_MUTE" class="mg____red kc_audio_mute">Mute</div>
 </foreignObject>
 
 <foreignObject x="221" y="14" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_AUDIO_VOL_UP" class="mg_purple">Vol Up</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_AUDIO_VOL_UP" class="mg_purple kc_audio_vol_up">Vol Up</div>
 </foreignObject>
 
 <foreignObject x="290" y="14" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_MS_ACCEL2" class="mg__green">Mouse Accel 2</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_MS_ACCEL2" class="mg__green kc_ms_accel2">Mouse Accel 2</div>
 </foreignObject>
 
 <foreignObject x="395" y="14" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_MS_WH_DOWN" class="mg_orange">Mouse Wheel Down</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_MS_WH_DOWN" class="mg_orange kc_ms_wh_down">Mouse Wheel Down</div>
 </foreignObject>
 
 <foreignObject x="464" y="14" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_MS_BTN1" class="mg___blue">Left Click</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_MS_BTN1" class="mg___blue kc_ms_btn1">Left Click</div>
 </foreignObject>
 
 <foreignObject x="533" y="14" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_MS_UP" class="mg__white">Mouse Up</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_MS_UP" class="mg__white kc_ms_up">Mouse &#9650;</div>
 </foreignObject>
 
 <foreignObject x="602" y="14" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_MS_BTN2" class="mg___blue">Right Click</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_MS_BTN2" class="mg___blue kc_ms_btn2">Right Click</div>
 </foreignObject>
 
 <foreignObject x="671" y="14" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_MAC_LOCK_SCRN" class="mg____red">Lock Screen</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_MAC_LOCK_SCRN" class="mg____red kc_mac_lock_scrn">Lock Screen</div>
 </foreignObject>
 
 <foreignObject x="14" y="73" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="OS_SHFT" class="mg___blue">Shift</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="OS_SHFT" class="mg___blue os_shft">Shift</div>
 </foreignObject>
 
 <foreignObject x="83" y="73" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="OS_CTRL" class="mg___blue">Ctrl</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="OS_CTRL" class="mg___blue os_ctrl">Ctrl</div>
 </foreignObject>
 
 <foreignObject x="152" y="73" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="OS_ALT" class="mg___blue">Option</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="OS_ALT" class="mg___blue os_alt">Option</div>
 </foreignObject>
 
 <foreignObject x="221" y="73" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="OS_CMD" class="mg___blue">Cmd</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="OS_CMD" class="mg___blue os_cmd">Cmd</div>
 </foreignObject>
 
 <foreignObject x="290" y="73" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_MS_ACCEL1" class="mg_yellow">Mouse Accel 1</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_MS_ACCEL1" class="mg_yellow kc_ms_accel1">Mouse Accel 1</div>
 </foreignObject>
 
 <foreignObject x="395" y="73" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_MS_WH_UP" class="mg_orange">Mouse Wheel Up</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_MS_WH_UP" class="mg_orange kc_ms_wh_up">Mouse Wheel Up</div>
 </foreignObject>
 
 <foreignObject x="464" y="73" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_MS_LEFT" class="mg__white">Mouse Left</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_MS_LEFT" class="mg__white kc_ms_left">Mouse &#9664;</div>
 </foreignObject>
 
 <foreignObject x="533" y="73" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_MS_DOWN" class="mg__white">Mouse Down</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_MS_DOWN" class="mg__white kc_ms_down">Mouse &#9660;</div>
 </foreignObject>
 
 <foreignObject x="602" y="73" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_MS_RIGHT" class="mg__white">Mouse Right</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_MS_RIGHT" class="mg__white kc_ms_right">Mouse &#9654;</div>
 </foreignObject>
 
 <foreignObject x="671" y="73" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_BRIGHTNESS_UP" class="mg_yellow">Screen Bright Up</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_BRIGHTNESS_UP" class="mg_yellow kc_brightness_up">Screen Bright Up</div>
 </foreignObject>
 
 <foreignObject x="14" y="132" width="65" height="55" class="text-container">
@@ -189,19 +347,19 @@
 </foreignObject>
 
 <foreignObject x="83" y="132" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_MEDIA_PREV_TRACK" class="mg_yellow">Prev Track</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_MEDIA_PREV_TRACK" class="mg_yellow kc_media_prev_track">Prev Track</div>
 </foreignObject>
 
 <foreignObject x="152" y="132" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_MEDIA_PLAY_PAUSE" class="mg_yellow">Play Pause</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_MEDIA_PLAY_PAUSE" class="mg_yellow kc_media_play_pause">Play Pause</div>
 </foreignObject>
 
 <foreignObject x="221" y="132" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_MEDIA_NEXT_TRACK" class="mg_yellow">Next Track</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_MEDIA_NEXT_TRACK" class="mg_yellow kc_media_next_track">Next Track</div>
 </foreignObject>
 
 <foreignObject x="290" y="132" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_MS_ACCEL0" class="mg____red">Mouse Accel 0</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_MS_ACCEL0" class="mg____red kc_ms_accel0">Mouse Accel 0</div>
 </foreignObject>
 
 <foreignObject x="395" y="132" width="65" height="55" class="text-container">
@@ -221,23 +379,23 @@
 </foreignObject>
 
 <foreignObject x="671" y="132" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_BRIGHTNESS_DOWN" class="mg_yellow">Screen Bright Down</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_BRIGHTNESS_DOWN" class="mg_yellow kc_brightness_down">Screen Bright Down</div>
 </foreignObject>
 
 <foreignObject x="221" y="211" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="NUM" class="transparent held mg_purple">Num</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="NUM" class="transparent held mg_purple num">Num</div>
 </foreignObject>
 
 <foreignObject x="290" y="211" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="OS_SHFT" class="transparent ___off___">Shift</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="OS_SHFT" class="transparent ___off___ os_shft">Shift</div>
 </foreignObject>
 
 <foreignObject x="395" y="211" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_SPC" class="transparent ___off___">Space</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_SPC" class="transparent ___off___ kc_spc">Space</div>
 </foreignObject>
 
 <foreignObject x="464" y="211" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="NAV" class="transparent held mg_purple">Nav</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="NAV" class="transparent held mg_purple nav">Nav</div>
 </foreignObject>
 
 </svg>
