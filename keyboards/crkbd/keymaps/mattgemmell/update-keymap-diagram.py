@@ -107,12 +107,36 @@ svg_header = '''<svg width="${svg_width}" height="${svg_height}" viewBox="0 0 ${
         border-radius: ${key_radius}px;
     }
 
+    .text-container > div:before, .text-container > div:after {
+        box-sizing: border-box;
+    }
+
+    .text-container > div:before {
+        color: #333;
+		position: fixed;
+		margin: 0 auto;
+    }
+
+    div:before {
+        font-size: 18px;
+    }
+
+    div:after {
+        font-size: 11px;
+    	font-weight: bold;
+    	font-variant: small-caps;
+		position: fixed;
+		bottom: 0;
+		padding-bottom: 1px;
+		width: 100%;
+    }
+
     .text-container > div.${held_css_class} {
         background-color: #bbf;
     }
 
     .rgb .text-container > div.${held_css_class} {
-        border: 3px solid #666;
+        border: 3px solid #00e;
     }
 
     .text-container > div.${blank_css_class} {
@@ -147,20 +171,8 @@ svg_header = '''<svg width="${svg_width}" height="${svg_height}" viewBox="0 0 ${
     	color: transparent;
     }
 
-    .kc_up:before, .kc_down:before, .kc_left:before, .kc_right:before,
-    .kc_ent:before, .kc_bspc:before, .os_caps:before, .kc_esc:before,
-    .os_shft:before, .os_ctrl:before, .os_alt:before, .os_cmd:before,
-    .kc_mac_spotlight:before, .kc_pgup:before, .kc_pgdown:before,
-    .kc_mac_undo:before, .kc_mac_redo:before, .kc_tab:before,
-    .kc_mac_cut:before, .kc_spc:before, .kc_mac_lock_scrn:before,
-    .kc_brightness_up:before, .kc_brightness_down:before,
-    .kc_audio_vol_up:before, .kc_audio_vol_down:before, .kc_audio_mute:before,
-    .kc_media_play_pause:before, .kc_media_prev_track:before, .kc_media_next_track:before  {
-    	color: #333;
-    	font-size: 18px;
-		position: fixed;
-		margin: 0 auto;
-		content: "\\25b2";
+    .kc_up:before {
+    	content: "\\25b2";
     }
 
     .kc_down:before {
@@ -293,17 +305,21 @@ svg_header = '''<svg width="${svg_width}" height="${svg_height}" viewBox="0 0 ${
     	font-size: 26px;
     }
 
-    .os_shft:after, .os_ctrl:after, .os_alt:after, .os_cmd:after, .os_caps:after {
-        color: #33f;
-    	font-size: 11px;
-    	font-weight: bold;
-    	font-variant: small-caps;
-		position: fixed;
-		bottom: 0;
-		content: "one-shot";
-		background-color: #ff8;
-		width: 100%;
+    .os_shft:after, .os_ctrl:after, .os_alt:after, .os_cmd:after, .os_caps:after,
+    .num:after, .nav:after {
         border-radius: 0 0 6px 6px;
+        content: "one-shot";
+        color: #f6f6f6;
+		background-color: #666;
+    }
+
+    .num:after, .nav:after {
+		content: "layer";
+    }
+
+    .num.${held_css_class}:after, .nav.${held_css_class}:after {
+        background-color: #00e;
+        content: "held";
     }
 ${extra_css}
 </style>
