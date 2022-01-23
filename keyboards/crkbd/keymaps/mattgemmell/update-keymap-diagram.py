@@ -164,7 +164,8 @@ svg_header = '''<svg width="${svg_width}" height="${svg_height}" viewBox="0 0 ${
     }
 
     .os_caps {
-    	font-size: 20px;
+    	font-size: 19px;
+    	padding-top: 4px !important;
     }
 
     .kc_mac_spotlight {
@@ -192,7 +193,7 @@ svg_header = '''<svg width="${svg_width}" height="${svg_height}" viewBox="0 0 ${
     }
 
     .kc_brightness_up {
-    	font-size: 30px;
+    	font-size: 28px;
     }
 
     .kc_brightness_down {
