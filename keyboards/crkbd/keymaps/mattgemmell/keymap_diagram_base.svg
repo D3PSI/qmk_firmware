@@ -39,21 +39,8 @@
         border-radius: 6px;
     }
 
-    .text-container > div:before, .text-container > div:after {
+    .text-container > div:after {
         box-sizing: border-box;
-    }
-
-    .text-container > div:before {
-        color: #333;
-		position: fixed;
-		margin: 0 auto;
-    }
-
-    div:before {
-        font-size: 18px;
-    }
-
-    div:after {
         font-size: 11px;
     	font-weight: bold;
     	font-variant: small-caps;
@@ -61,6 +48,7 @@
 		bottom: 0;
 		padding-bottom: 1px;
 		width: 100%;
+		display: none;
     }
 
     .text-container > div.held {
@@ -100,140 +88,70 @@
     .kc_brightness_up, .kc_brightness_down,
     .kc_audio_vol_up, .kc_audio_vol_down, .kc_audio_mute,
     .kc_media_play_pause, .kc_media_prev_track, .kc_media_next_track {
-    	color: transparent;
+    	font-size: 18px;
     }
 
-    .kc_up:before {
-    	content: "\25b2";
-    }
-
-    .kc_down:before {
-    	content: "\25bc";
-    }
-
-    .kc_left:before {
-    	content: "\25c0";
-    }
-
-    .kc_right:before {
-    	content: "\25b6";
-    }
-
-    .kc_ent:before {
-    	content: "\23ce";
-    	font-size: 20px;
-    }
-
-    .kc_bspc:before {
-    	content: "\232b";
+    .kc_bspc {
     	font-size: 22px;
     }
 
-    .os_caps:before {
-    	content: "\1f310";
+    .os_caps {
     	font-size: 20px;
     }
 
-    .kc_esc:before {
-    	content: "\238b";
-    }
-
-    .os_shft:before {
-    	content: "\21e7";
-    }
-
-    .os_ctrl:before {
-    	content: "\5e";
-    }
-
-    .os_alt:before {
-    	content: "\2325";
-    }
-
-    .os_cmd:before {
-    	content: "\2318";
-    }
-
-    .kc_mac_spotlight:before {
-    	content: "\2315";
+    .kc_mac_spotlight {
     	font-size: 40px;
-    	transform: scaleX(-1);
     }
 
-    .kc_pgup:before {
-    	content: "\21de";
-    }
-
-    .kc_pgdown:before {
-    	content: "\21df";
-    }
-
-    .kc_mac_undo:before {
-    	content: "\293a";
+    .kc_mac_undo {
     	font-size: 34px;
     }
 
-    .kc_mac_redo:before {
-    	content: "\293b";
+    .kc_mac_redo {
     	font-size: 34px;
     }
 
-    .kc_tab:before {
-    	content: "\21e5";
-    }
-
-    .kc_mac_cut:before {
-    	content: "\2702";
+    .kc_mac_cut {
     	font-size: 20px;
     }
 
-    .kc_spc:before {
-    	content: "\2423";
+    .kc_spc {
     	font-size: 24px;
     }
 
-    .kc_mac_lock_scrn:before {
-    	content: "\23fb";
+    .kc_mac_lock_scrn {
     	font-size: 22px;
     }
 
-    .kc_brightness_up:before {
-    	content: "\2600";
+    .kc_brightness_up {
     	font-size: 30px;
     }
 
-    .kc_brightness_down:before {
-    	content: "\263c";
+    .kc_brightness_down {
     	font-size: 32px;
     }
 
-    .kc_audio_vol_down:before {
-    	content: "\1f509";
+    .kc_audio_vol_down {
     	font-size: 22px;
     }
 
-    .kc_audio_vol_up:before {
-    	content: "\1f50a";
+    .kc_audio_vol_up {
     	font-size: 22px;
     }
 
-    .kc_audio_mute:before {
-    	content: "\1f507";
+    .kc_audio_mute {
     	font-size: 22px;
     }
 
-    .kc_media_play_pause:before {
-    	content: "\23ef";
+    .kc_media_play_pause {
     	font-size: 26px;
     }
 
-    .kc_media_prev_track:before {
-    	content: "\23ee";
+    .kc_media_prev_track {
     	font-size: 26px;
     }
 
-    .kc_media_next_track:before {
-    	content: "\23ed";
+    .kc_media_next_track {
     	font-size: 26px;
     }
 
@@ -415,11 +333,11 @@
 </foreignObject>
 
 <foreignObject x="290" y="211" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="OS_SHFT" class="os_shft">Shift</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Shift (OS_SHFT)" class="os_shft">&#8679;</div>
 </foreignObject>
 
 <foreignObject x="395" y="211" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_SPC" class="kc_spc">Space</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Space (KC_SPC)" class="kc_spc">&#9251;</div>
 </foreignObject>
 
 <foreignObject x="464" y="211" width="65" height="55" class="text-container">

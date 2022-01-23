@@ -107,21 +107,8 @@ svg_header = '''<svg width="${svg_width}" height="${svg_height}" viewBox="0 0 ${
         border-radius: ${key_radius}px;
     }
 
-    .text-container > div:before, .text-container > div:after {
+    .text-container > div:after {
         box-sizing: border-box;
-    }
-
-    .text-container > div:before {
-        color: #333;
-		position: fixed;
-		margin: 0 auto;
-    }
-
-    div:before {
-        font-size: 18px;
-    }
-
-    div:after {
         font-size: 11px;
     	font-weight: bold;
     	font-variant: small-caps;
@@ -129,6 +116,7 @@ svg_header = '''<svg width="${svg_width}" height="${svg_height}" viewBox="0 0 ${
 		bottom: 0;
 		padding-bottom: 1px;
 		width: 100%;
+		display: none;
     }
 
     .text-container > div.${held_css_class} {
@@ -168,140 +156,70 @@ svg_header = '''<svg width="${svg_width}" height="${svg_height}" viewBox="0 0 ${
     .kc_brightness_up, .kc_brightness_down,
     .kc_audio_vol_up, .kc_audio_vol_down, .kc_audio_mute,
     .kc_media_play_pause, .kc_media_prev_track, .kc_media_next_track {
-    	color: transparent;
+    	font-size: 18px;
     }
 
-    .kc_up:before {
-    	content: "\\25b2";
-    }
-
-    .kc_down:before {
-    	content: "\\25bc";
-    }
-
-    .kc_left:before {
-    	content: "\\25c0";
-    }
-
-    .kc_right:before {
-    	content: "\\25b6";
-    }
-
-    .kc_ent:before {
-    	content: "\\23ce";
-    	font-size: 20px;
-    }
-
-    .kc_bspc:before {
-    	content: "\\232b";
+    .kc_bspc {
     	font-size: 22px;
     }
 
-    .os_caps:before {
-    	content: "\\1f310";
+    .os_caps {
     	font-size: 20px;
     }
 
-    .kc_esc:before {
-    	content: "\\238b";
-    }
-
-    .os_shft:before {
-    	content: "\\21e7";
-    }
-
-    .os_ctrl:before {
-    	content: "\\5e";
-    }
-
-    .os_alt:before {
-    	content: "\\2325";
-    }
-
-    .os_cmd:before {
-    	content: "\\2318";
-    }
-
-    .kc_mac_spotlight:before {
-    	content: "\\2315";
+    .kc_mac_spotlight {
     	font-size: 40px;
-    	transform: scaleX(-1);
     }
 
-    .kc_pgup:before {
-    	content: "\\21de";
-    }
-
-    .kc_pgdown:before {
-    	content: "\\21df";
-    }
-
-    .kc_mac_undo:before {
-    	content: "\\293a";
+    .kc_mac_undo {
     	font-size: 34px;
     }
 
-    .kc_mac_redo:before {
-    	content: "\\293b";
+    .kc_mac_redo {
     	font-size: 34px;
     }
 
-    .kc_tab:before {
-    	content: "\\21e5";
-    }
-
-    .kc_mac_cut:before {
-    	content: "\\2702";
+    .kc_mac_cut {
     	font-size: 20px;
     }
 
-    .kc_spc:before {
-    	content: "\\2423";
+    .kc_spc {
     	font-size: 24px;
     }
 
-    .kc_mac_lock_scrn:before {
-    	content: "\\23fb";
+    .kc_mac_lock_scrn {
     	font-size: 22px;
     }
 
-    .kc_brightness_up:before {
-    	content: "\\2600";
+    .kc_brightness_up {
     	font-size: 30px;
     }
 
-    .kc_brightness_down:before {
-    	content: "\\263c";
+    .kc_brightness_down {
     	font-size: 32px;
     }
 
-    .kc_audio_vol_down:before {
-    	content: "\\1f509";
+    .kc_audio_vol_down {
     	font-size: 22px;
     }
 
-    .kc_audio_vol_up:before {
-    	content: "\\1f50a";
+    .kc_audio_vol_up {
     	font-size: 22px;
     }
 
-    .kc_audio_mute:before {
-    	content: "\\1f507";
+    .kc_audio_mute {
     	font-size: 22px;
     }
 
-    .kc_media_play_pause:before {
-    	content: "\\23ef";
+    .kc_media_play_pause {
     	font-size: 26px;
     }
 
-    .kc_media_prev_track:before {
-    	content: "\\23ee";
+    .kc_media_prev_track {
     	font-size: 26px;
     }
 
-    .kc_media_next_track:before {
-    	content: "\\23ed";
+    .kc_media_next_track {
     	font-size: 26px;
     }
 
@@ -391,73 +309,73 @@ layer_names = {
 # We'll just strip the keycode_prefix if a keycode isn't found in key_names.
 keycode_prefix = "KC_"
 key_names = {
-    "KC_MAC_UNDO": "Undo",
-    "KC_MAC_REDO": "Redo",
-    "KC_MAC_CUT": "Cut",
-    "KC_MAC_COPY": "Copy",
-    "KC_MAC_PASTE": "Paste",
-    "KC_MAC_LOCK_SCRN": "Lock Screen",
-    "KC_MAC_SCRN_SHOT": "Screen Shot",
-    "KC_MAC_SCRN_MRKP": "Markup Screen",
-    "KC_MAC_HOME": "Home",
-    "KC_MAC_END": "End",
-    "KC_MAC_PREV_TAB": "Prev Tab",
-    "KC_MAC_NEXT_TAB": "Next Tab",
-    "KC_MAC_SPOTLIGHT": "Spotlight",
-    "KC_EN_DASH": "En Dash",
-    "KC_EM_DASH": "Em Dash",
-    "OS_SHFT": "Shift",
-    "OS_CTRL": "Ctrl",
-    "OS_ALT": "Option",
-    "OS_CMD": "Cmd",
-    "OS_CAPS": "Globe",
-    "APP_SWITCH_FRWD": "Switch App",
-    "NAV": "Nav",
-    "NUM": "Num",
-    "KC_AUDIO_VOL_DOWN": "Vol Down",
-    "KC_AUDIO_MUTE": "Mute",
-    "KC_AUDIO_VOL_UP": "Vol Up",
-    "KC_MS_ACCEL2": "Mouse Accel 2",
-    "KC_MS_WH_DOWN": "Mouse Wheel Down",
-    "KC_MS_BTN1": "Left Click",
-    "KC_MS_UP": "Mouse &#9650;",
-    "KC_MS_BTN2": "Right Click",
-    "KC_MS_ACCEL1": "Mouse Accel 1",
-    "KC_MS_WH_UP": "Mouse Wheel Up",
-    "KC_MS_LEFT": "Mouse &#9664;",
-    "KC_MS_DOWN": "Mouse &#9660;",
-    "KC_MS_RIGHT": "Mouse &#9654;",
-    "KC_BRIGHTNESS_UP": "Screen Bright Up",
-    "KC_MEDIA_PREV_TRACK": "Prev Track",
-    "KC_MEDIA_PLAY_PAUSE": "Play Pause",
-    "KC_MEDIA_NEXT_TRACK": "Next Track",
-    "KC_MS_ACCEL0": "Mouse Accel 0",
-    "KC_BRIGHTNESS_DOWN": "Screen Bright Down",
-    "KC_QUOT": "'",
-    "KC_COMM": ",",
-    "KC_DOT": ".",
-    "KC_SLSH": "/",
-    "KC_SPC": "Space",
-    "KC_ESC": "Esc",
-    "KC_PGUP": "Page Up",
-    "KC_UP": "Up",
-    "KC_BSPC": "Bkspc",
-    "KC_TAB": "Tab",
-    "KC_PGDOWN": "Page Down",
-    "KC_LEFT": "Left",
-    "KC_DOWN": "Down",
-    "KC_RIGHT": "Right",
-    "KC_ENT": "Enter",
-    "KC_SCLN": ";",
-    "KC_LPRN": "(",
-    "KC_RPRN": ")",
-    "KC_BSLASH": "\\",
-    "KC_MINUS": "-",
-    "KC_ASTR": "*",
-    "KC_EQUAL": "=",
-    "KC_LBRACKET": "[",
-    "KC_RBRACKET": "]",
-    "KC_GRAVE": "`",
+    "KC_MAC_UNDO": {"label": "&#10554;", "title": "Undo"},
+    "KC_MAC_REDO": {"label": "&#10555;", "title": "Redo"},
+    "KC_MAC_CUT": {"label": "&#9986;", "title": "Cut"},
+    "KC_MAC_COPY": {"label": "Copy", "title": ""},
+    "KC_MAC_PASTE": {"label": "Paste", "title": ""},
+    "KC_MAC_LOCK_SCRN": {"label": "&#9211;", "title": "Lock Screen"},
+    "KC_MAC_SCRN_SHOT": {"label": "Screen Shot", "title": ""},
+    "KC_MAC_SCRN_MRKP": {"label": "Markup Screen", "title": ""},
+    "KC_MAC_HOME": {"label": "Home", "title": ""},
+    "KC_MAC_END": {"label": "End", "title": ""},
+    "KC_MAC_PREV_TAB": {"label": "Prev Tab", "title": ""},
+    "KC_MAC_NEXT_TAB": {"label": "Next Tab", "title": ""},
+    "KC_MAC_SPOTLIGHT": {"label": "&#8981;", "title": "Spotlight"},
+    "KC_EN_DASH": {"label": "En Dash", "title": ""},
+    "KC_EM_DASH": {"label": "Em Dash", "title": ""},
+    "OS_SHFT": {"label": "&#8679;", "title": "Shift"},
+    "OS_CTRL": {"label": "&#94;", "title": "Control"},
+    "OS_ALT": {"label": "&#8997;", "title": "Option"},
+    "OS_CMD": {"label": "&#8984;", "title": "Command"},
+    "OS_CAPS": {"label": "&#127760;", "title": "Globe"},
+    "APP_SWITCH_FRWD": {"label": "Switch App", "title": ""},
+    "NAV": {"label": "Nav", "title": ""},
+    "NUM": {"label": "Num", "title": ""},
+    "KC_AUDIO_VOL_DOWN": {"label": "&#128265;", "title": "Volume Down"},
+    "KC_AUDIO_MUTE": {"label": "&#128263;", "title": "Mute"},
+    "KC_AUDIO_VOL_UP": {"label": "&#128266;", "title": "Volume Up"},
+    "KC_MS_ACCEL2": {"label": "Mouse Accel 2", "title": ""},
+    "KC_MS_WH_DOWN": {"label": "Mouse Wheel Down", "title": ""},
+    "KC_MS_BTN1": {"label": "Left Click", "title": ""},
+    "KC_MS_UP": {"label": "Mouse &#9650;", "title": ""},
+    "KC_MS_BTN2": {"label": "Right Click", "title": ""},
+    "KC_MS_ACCEL1": {"label": "Mouse Accel 1", "title": ""},
+    "KC_MS_WH_UP": {"label": "Mouse Wheel Up", "title": ""},
+    "KC_MS_LEFT": {"label": "Mouse &#9664;", "title": ""},
+    "KC_MS_DOWN": {"label": "Mouse &#9660;", "title": ""},
+    "KC_MS_RIGHT": {"label": "Mouse &#9654;", "title": ""},
+    "KC_BRIGHTNESS_UP": {"label": "&#9728;", "title": "Brightness Up"},
+    "KC_MEDIA_PREV_TRACK": {"label": "&#9198;", "title": "Previous Track"},
+    "KC_MEDIA_PLAY_PAUSE": {"label": "&#9199;", "title": "Play/Pause"},
+    "KC_MEDIA_NEXT_TRACK": {"label": "&#9197;", "title": "Next Track"},
+    "KC_MS_ACCEL0": {"label": "Mouse Accel 0", "title": ""},
+    "KC_BRIGHTNESS_DOWN": {"label": "&#9788;", "title": "Brightness Down"},
+    "KC_QUOT": {"label": "'", "title": ""},
+    "KC_COMM": {"label": ",", "title": ""},
+    "KC_DOT": {"label": ".", "title": ""},
+    "KC_SLSH": {"label": "/", "title": ""},
+    "KC_SPC": {"label": "&#9251;", "title": "Space"},
+    "KC_ESC": {"label": "&#9099;", "title": "Escape"},
+    "KC_PGUP": {"label": "&#8670;", "title": "Page Up"},
+    "KC_UP": {"label": "&#9650;", "title": "Up"},
+    "KC_BSPC": {"label": "&#9003;", "title": "Backspace"},
+    "KC_TAB": {"label": "&#8677;", "title": "Tab"},
+    "KC_PGDOWN": {"label": "&#8671;", "title": "Page Down"},
+    "KC_LEFT": {"label": "&#9664;", "title": "Left"},
+    "KC_DOWN": {"label": "&#9660;", "title": "Down"},
+    "KC_RIGHT": {"label": "&#9654;", "title": "Right"},
+    "KC_ENT": {"label": "&#9166;", "title": "Enter"},
+    "KC_SCLN": {"label": ";", "title": ""},
+    "KC_LPRN": {"label": "(", "title": ""},
+    "KC_RPRN": {"label": ")", "title": ""},
+    "KC_BSLASH": {"label": "\\", "title": ""},
+    "KC_MINUS": {"label": "-", "title": ""},
+    "KC_ASTR": {"label": "*", "title": ""},
+    "KC_EQUAL": {"label": "=", "title": ""},
+    "KC_LBRACKET": {"label": "[", "title": ""},
+    "KC_RBRACKET": {"label": "]", "title": ""},
+    "KC_GRAVE": {"label": "`", "title": ""},
 }
 
 # Parse colour values and create mapping
@@ -615,7 +533,7 @@ def svg_for_layer(layer_id, start_y, show_title):
                     key = key_layers[layer_order[0]][key_index]
 
             if key in key_names:
-                key_label = key_names[key]
+                key_label = key_names[key]["label"]
             elif key.startswith(keycode_prefix):
                 key_label = key[len(keycode_prefix):]
             elif key == keycode_blank:
@@ -631,11 +549,18 @@ def svg_for_layer(layer_id, start_y, show_title):
                 key_classes.append(key.lower())
 
             title_attr = ""
-            title_val = key
-            if apply_keycode_title:
-                if key_is_transparent:
-                    title_val = keycode_transparent
-                title_attr = 'title="%s" ' % title_val
+            title_val = ""
+            if key in key_names:
+                title_val = key_names[key]["title"]
+            title_keycode = key
+            if key_is_transparent:
+                title_keycode = keycode_transparent
+            if title_val != "" and apply_keycode_title:
+                title_attr = 'title="%s (%s)" ' % (title_val, title_keycode)
+            elif title_val != "":
+                title_attr = 'title="%s" ' % (title_val)
+            elif apply_keycode_title:
+                title_attr = 'title="%s" ' % (title_keycode)
 
             svg_raw += key_template.substitute({'key_radius': key_radius,
                                                 'key_x': cur_x,
