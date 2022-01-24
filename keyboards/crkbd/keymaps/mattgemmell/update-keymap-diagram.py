@@ -49,17 +49,25 @@ show_layer_titles = True # applies to single overall diagram
 show_layer_titles_per_layer = False # applies to separate layer-specific diagrams
 layer_title_height = 20 # text box height; set font attributes in CSS below
 layer_title_spacing = 10 # vertical spacing between layer title and its layer diagram
+held_css_class = "held" # CSS class applied to keys which are held down on a given layer, i.e. MO(); edit the actual CSS below.
+keycode_blank = "XXXXXXX"
+blank_css_class = "blank" # as above, applied to keys with no function (i.e. keycode_blank above).
+keycode_transparent = "_______"
+transparent_css_class = "transparent" # as above, applied to transparent keys (falling through to base layer; i.e. keycode_transparent above).
+# Note: Transparent keys (on non-base layers) will be labelled identically to the corresponding key on the base layer.
+annotation_keycodes = { # keycodes with annotations
+    "layer": {"keycodes": ["NAV", "NUM"],
+              "label": "layer"},
+    "one-shot": {"keycodes": ["OS_SHFT", "OS_CTRL", "OS_ALT", "OS_CMD", "OS_CAPS"],
+                 "label": "one-shot"},
+    held_css_class: {"keycodes": [], # special case, to provide label for held layer keys
+                     "label": "held"},
+}
 layer_held_keycodes = { # keycodes whose keys are implicitly held down on a given layer, gaining the held_css_class specified below
   "_NAV": ["NAV"],
   "_NUM": ["NUM"],
   "_ADJUST": ["NUM", "NAV"]
 }
-held_css_class = "held" # keys which are held down on a given layer, i.e. MO(); edit the actual CSS below.
-keycode_blank = "XXXXXXX"
-blank_css_class = "blank" # as above, for keys with no function (i.e. keycode_blank above).
-keycode_transparent = "_______"
-transparent_css_class = "transparent" # as above, for transparent keys (falling through to base layer; i.e. keycode_transparent above).
-# Note: Transparent keys (on non-base layers) will be labelled identically to the corresponding key on the base layer.
 
 # Advanced
 apply_keycode_class = True # applies the lowercase keycode name as a class to the key's DIV, to allow CSS customisation; for example, the "A" key would have class "kc_a" applied.
@@ -82,12 +90,19 @@ svg_header = '''<svg width="${svg_width}" height="${svg_height}" viewBox="0 0 ${
 
     .text-container > div {
         cursor: default;
-        padding: 1px 2px;
         box-sizing: border-box;
         background-color: #f0f0f0;
         text-align: center;
         width: ${key_width}px;
         height: ${key_height}px;
+        border-radius: ${key_radius}px;
+        display: flex;
+        flex-direction: column;
+		overflow: hidden;
+    }
+
+    .glyph {
+        padding: 1px 2px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -95,7 +110,7 @@ svg_header = '''<svg width="${svg_width}" height="${svg_height}" viewBox="0 0 ${
         -webkit-hyphens: auto;
         -moz-hyphens: auto;
         -ms-hyphens: auto;
-        border-radius: ${key_radius}px;
+		flex: 1 0 auto;
     }
 
     .text-container > div:after {
@@ -110,12 +125,15 @@ svg_header = '''<svg width="${svg_width}" height="${svg_height}" viewBox="0 0 ${
 		display: none;
     }
 
-    .text-container > div.${held_css_class} {
+    .text-container > div.${held_css_class} > .glyph {
         background-color: #bbf;
     }
 
-    .rgb .text-container > div.${held_css_class} {
+    .rgb .text-container > div.${held_css_class} > .glyph {
+        background-color: initial;
         border: 3px solid #00e;
+        border-bottom-width: 0;
+        border-radius: ${key_radius}px ${key_radius}px 0 0;
     }
 
     .text-container > div.${blank_css_class} {
@@ -215,21 +233,19 @@ svg_header = '''<svg width="${svg_width}" height="${svg_height}" viewBox="0 0 ${
     	font-size: 26px;
     }
 
-    .os_shft:after, .os_ctrl:after, .os_alt:after, .os_cmd:after, .os_caps:after,
-    .num:after, .nav:after {
-        border-radius: 0 0 6px 6px;
-        content: "one-shot";
+    .annotation {
+        box-sizing: border-box;
+        font-size: 11px;
+    	font-weight: bold;
+    	font-variant: small-caps;
+		padding-bottom: 2px;
+		width: 100%;
         color: #f6f6f6;
 		background-color: #666;
     }
 
-    .num:after, .nav:after {
-		content: "layer";
-    }
-
-    .num.${held_css_class}:after, .nav.${held_css_class}:after {
+    .${held_css_class} .annotation.layer {
         background-color: #00e;
-        content: "held";
     }
 ${extra_css}
 </style>
@@ -249,7 +265,7 @@ svg_layer_bg = '''
 
 svg_key = '''
 <foreignObject x="${key_x}" y="${key_y}" width="${key_width}" height="${key_height}" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" ${title_attr}class="${key_classes}">${key_label}</div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" ${title_attr}class="${key_classes}"><div class="glyph">${key_label}</div>${annotation}</div>
 </foreignObject>
 '''
 
@@ -544,13 +560,15 @@ def svg_for_layer(layer_id, start_y, show_title):
                 key_label = ""
 
             # CSS classes to apply to the key container
-            if layer_id in layer_held_keycodes and key in layer_held_keycodes[layer_id]:
+            key_is_held = (layer_id in layer_held_keycodes and key in layer_held_keycodes[layer_id])
+            if key_is_held:
                 key_classes.append(held_css_class)
             if show_led_colours and layer_id in led_layers:
                 key_classes.append(led_layers[layer_id][key_index].lower())
             if apply_keycode_class and key not in [keycode_blank, keycode_transparent]:
                 key_classes.append(key.lower())
 
+            # Title attribute
             title_attr = ""
             title_val = ""
             if key in key_names:
@@ -565,6 +583,18 @@ def svg_for_layer(layer_id, start_y, show_title):
             elif apply_keycode_title:
                 title_attr = 'title="%s" ' % (title_keycode)
 
+            # Annotation
+            annotation = ""
+            for ann_class in annotation_keycodes:
+                if key in annotation_keycodes[ann_class]["keycodes"]:
+                    ann_content = annotation_keycodes[ann_class]["label"]
+                    if key_is_held:
+                        ann_content = annotation_keycodes[held_css_class]["label"]
+                    annotation = '<div class="annotation %s">%s</div>' % (ann_class, ann_content)
+                    break;
+            # <div class="annotation one-shot">one-shot</div>
+
+            # Process key template
             svg_raw += key_template.substitute({'key_radius': key_radius,
                                                 'key_x': cur_x,
                                                 'key_y': cur_y,
@@ -572,7 +602,8 @@ def svg_for_layer(layer_id, start_y, show_title):
                                                 'key_classes': " ".join(key_classes),
                                                 'key_width': key_width,
                                                 'key_height': key_height,
-                                                'key_label': key_label})
+                                                'key_label': key_label,
+                                                'annotation': annotation})
 
         # Prep for next key
         key_index += 1
