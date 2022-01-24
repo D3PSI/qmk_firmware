@@ -12,15 +12,6 @@
     	dominant-baseline: middle;
     }
 
-    .text-container {
-        background-color: white;
-        border-radius: 6px;
-    }
-
-    .text-container > div:hover {
-
-    }
-
     .text-container > div {
         cursor: default;
         padding: 1px 2px;
@@ -174,35 +165,35 @@
     }
 
     .text-container > div.mg____red {
-		background-color: rgba(255, 0, 0, 0.3);
+		background-color: hsl(0.000000, 100.000000%, 85.000000%);
     }
 
     .text-container > div.mg__white {
-		background-color: rgba(255, 255, 255, 0.3);
+		background-color: hsl(0.000000, 0.000000%, 100.000000%);
     }
 
     .text-container > div.mg__green {
-		background-color: rgba(32, 159, 33, 0.3);
+		background-color: hsl(120.472441, 79.874214%, 85.000000%);
     }
 
     .text-container > div.mg_purple {
-		background-color: rgba(50, 0, 232, 0.3);
+		background-color: hsl(252.931034, 100.000000%, 85.000000%);
     }
 
     .text-container > div.mg___pink {
-		background-color: rgba(208, 0, 255, 0.3);
+		background-color: hsl(288.941176, 100.000000%, 85.000000%);
     }
 
     .text-container > div.mg___blue {
-		background-color: rgba(0, 181, 213, 0.3);
+		background-color: hsl(189.014085, 100.000000%, 85.000000%);
     }
 
     .text-container > div.mg_yellow {
-		background-color: rgba(255, 208, 0, 0.3);
+		background-color: hsl(48.941176, 100.000000%, 85.000000%);
     }
 
     .text-container > div.mg_orange {
-		background-color: rgba(255, 85, 0, 0.3);
+		background-color: hsl(20.000000, 100.000000%, 85.000000%);
     }
 
 </style>

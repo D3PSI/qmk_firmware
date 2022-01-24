@@ -42,7 +42,7 @@ split_spacing = 40 # horizontal spacing between halves of a split layout (used i
 
 # RGB LED colours
 show_led_colours = True # if True, sets "rgb" CSS class on the root <svg> element
-led_colours_opacity = 0.3 # 0.0 to 1.0
+led_colours_lightness = 0.85 # 0.0 to 1.0
 
 # Layers
 show_layer_titles = True # applies to single overall diagram
@@ -78,15 +78,6 @@ svg_header = '''<svg width="${svg_width}" height="${svg_height}" viewBox="0 0 ${
     text {
     	text-anchor: middle;
     	dominant-baseline: middle;
-    }
-
-    .text-container {
-        background-color: white;
-        border-radius: ${key_radius}px;
-    }
-
-    .text-container > div:hover {
-
     }
 
     .text-container > div {
@@ -383,8 +374,18 @@ key_names = {
 led_colours = {}
 colours_regexp = re.compile(r"#define\s+(\S+)\s+\{([^\}]+)\}", re.MULTILINE)
 colours_matches = colours_regexp.finditer(keymap_contents)
+colour_rgb = []
+import colorsys
 for colour_match in colours_matches:
-    led_colours.update({colour_match.group(1): [x.strip() for x in colour_match.group(2).split(",")]});
+    colour_rgb_str = [x.strip() for x in colour_match.group(2).split(",")]
+    colour_rgb = []
+    for component_rgb in colour_rgb_str:
+        colour_rgb.append(float(component_rgb) / float(255))
+    colour_hsl = colorsys.rgb_to_hsv(colour_rgb[0], colour_rgb[1], colour_rgb[2])
+    lightness = colour_hsl[2]
+    if not (colour_hsl[0] == 0 and colour_hsl[1] == 0):
+        lightness = led_colours_lightness
+    led_colours.update({colour_match.group(1): [colour_hsl[0], colour_hsl[1], lightness]});
 
 # Ensure we have at least layout_keys_per_row keys on our base layer.
 num_keys = len(key_layers[layer_order[0]])
@@ -418,17 +419,18 @@ from string import Template
 if show_led_colours:
     colour_css_template = Template('''
     .text-container > div.${colour_class} {
-		background-color: rgba(${colour_rgb}, ${led_colours_opacity});
+		background-color: hsl(${colour_hsl});
     }
 ''')
     for colour in led_colours:
         colour_class = colour.lower()
-        colour_rgb_vals = led_colours[colour]
-        if not (colour_rgb_vals[0] == "0" and colour_rgb_vals[1] == "0" and colour_rgb_vals[2] == "0"):
-            colour_rgb = ", ".join(colour_rgb_vals)
+        colour_hsl_vals = led_colours[colour]
+        if not (colour_hsl_vals[2] == 0):
+            colour_hsl = "%f, %f%%, %f%%" % (colour_hsl_vals[0] * 360.0,
+                                             colour_hsl_vals[1] * 100.0,
+                                             colour_hsl_vals[2] * 100.0)
             extra_css += colour_css_template.substitute({'colour_class': colour_class,
-                                                         'colour_rgb': colour_rgb,
-                                                         'led_colours_opacity': led_colours_opacity})
+                                                         'colour_hsl': colour_hsl})
 
 # Generate output
 svg_raw = ""
