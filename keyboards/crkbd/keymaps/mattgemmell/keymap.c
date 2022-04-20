@@ -78,7 +78,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [_NAV] = LAYOUT_split_3x6_3(
-      XXXXXXX, KC_ESC,      XXXXXXX,    KC_MAC_SCRN_SHOT,  KC_MAC_SCRN_MRKP,  XXXXXXX,            KC_PGUP,   KC_MAC_PREV_TAB,  KC_UP,           KC_MAC_NEXT_TAB, KC_BSPC, XXXXXXX,
+      XXXXXXX, KC_ESC,      XXXXXXX,    XXXXXXX,  XXXXXXX,  XXXXXXX,            KC_PGUP,   KC_MAC_PREV_TAB,  KC_UP,           KC_MAC_NEXT_TAB, KC_BSPC, XXXXXXX,
       XXXXXXX, OS_SHFT,      OS_CTRL,    OS_ALT,            OS_CMD,            OS_CAPS,            KC_PGDOWN, KC_LEFT,          KC_DOWN,         KC_RIGHT,        XXXXXXX, XXXXXXX,
       XXXXXXX, KC_MAC_UNDO, KC_MAC_CUT, KC_MAC_COPY,       KC_MAC_PASTE,      KC_MAC_REDO,        XXXXXXX,   KC_MAC_SPOTLIGHT, APP_SWITCH_FRWD, XXXXXXX,         KC_ENT,  XXXXXXX,
                                                          _______, _______, _______,             _______, _______, _______
@@ -102,7 +102,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 const uint8_t PROGMEM ledmap[][42][3] = {
 /* Starts at layer 1; we don't apply lights to Base (layer 0). */
 [_NAV] = {
-___off___, MG____RED, ___off___, MG___PINK, MG___PINK, ___off___, 				MG_ORANGE, MG___PINK, MG__WHITE, MG___PINK, MG____RED, ___off___,
+___off___, MG____RED, ___off___, ___off___, ___off___, ___off___, 				MG_ORANGE, MG___PINK, MG__WHITE, MG___PINK, MG____RED, ___off___,
 ___off___, MG___BLUE, MG___BLUE, MG___BLUE, MG___BLUE, MG_PURPLE, 				MG_ORANGE, MG__WHITE, MG__WHITE, MG__WHITE, ___off___, ___off___,
 ___off___, MG___PINK, ___off___, MG__GREEN, ___off___, ___off___, 				___off___, MG_YELLOW, MG_PURPLE, ___off___, MG___BLUE, ___off___,
 								 ___off___, ___off___, ___off___, 				___off___, MG_ORANGE, ___off___

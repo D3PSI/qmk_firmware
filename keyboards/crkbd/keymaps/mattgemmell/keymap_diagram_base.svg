@@ -172,24 +172,16 @@
         background-color: #00e;
     }
 
-    .text-container > div.mg____red {
-		background-color: hsl(0.000000, 100.000000%, 85.000000%);
-    }
-
     .text-container > div.mg__white {
 		background-color: hsl(0.000000, 0.000000%, 100.000000%);
     }
 
+    .text-container > div.mg____red {
+		background-color: hsl(0.000000, 100.000000%, 85.000000%);
+    }
+
     .text-container > div.mg__green {
 		background-color: hsl(120.472441, 79.874214%, 85.000000%);
-    }
-
-    .text-container > div.mg_purple {
-		background-color: hsl(252.931034, 100.000000%, 85.000000%);
-    }
-
-    .text-container > div.mg___pink {
-		background-color: hsl(288.941176, 100.000000%, 85.000000%);
     }
 
     .text-container > div.mg___blue {
@@ -202,6 +194,14 @@
 
     .text-container > div.mg_orange {
 		background-color: hsl(20.000000, 100.000000%, 85.000000%);
+    }
+
+    .text-container > div.mg___pink {
+		background-color: hsl(288.941176, 100.000000%, 85.000000%);
+    }
+
+    .text-container > div.mg_purple {
+		background-color: hsl(252.931034, 100.000000%, 85.000000%);
     }
 
 </style>
@@ -328,19 +328,19 @@
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_SLSH" class="kc_slsh"><div class="glyph">/</div></div>
 </foreignObject>
 
-<foreignObject x="221" y="211" width="65" height="55" class="text-container">
+<foreignObject x="221.0" y="211" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="NUM" class="num"><div class="glyph">Num</div><div class="annotation layer">layer</div></div>
 </foreignObject>
 
-<foreignObject x="290" y="211" width="65" height="55" class="text-container">
+<foreignObject x="290.0" y="211" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Shift (OS_SHFT)" class="os_shft"><div class="glyph">&#8679;</div><div class="annotation one-shot">one-shot</div></div>
 </foreignObject>
 
-<foreignObject x="395" y="211" width="65" height="55" class="text-container">
+<foreignObject x="395.0" y="211" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Space (KC_SPC)" class="kc_spc"><div class="glyph">&#9251;</div></div>
 </foreignObject>
 
-<foreignObject x="464" y="211" width="65" height="55" class="text-container">
+<foreignObject x="464.0" y="211" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="NAV" class="nav"><div class="glyph">Nav</div><div class="annotation layer">layer</div></div>
 </foreignObject>
 

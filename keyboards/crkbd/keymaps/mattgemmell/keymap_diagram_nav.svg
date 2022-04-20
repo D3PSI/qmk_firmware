@@ -172,24 +172,16 @@
         background-color: #00e;
     }
 
-    .text-container > div.mg____red {
-		background-color: hsl(0.000000, 100.000000%, 85.000000%);
-    }
-
     .text-container > div.mg__white {
 		background-color: hsl(0.000000, 0.000000%, 100.000000%);
     }
 
+    .text-container > div.mg____red {
+		background-color: hsl(0.000000, 100.000000%, 85.000000%);
+    }
+
     .text-container > div.mg__green {
 		background-color: hsl(120.472441, 79.874214%, 85.000000%);
-    }
-
-    .text-container > div.mg_purple {
-		background-color: hsl(252.931034, 100.000000%, 85.000000%);
-    }
-
-    .text-container > div.mg___pink {
-		background-color: hsl(288.941176, 100.000000%, 85.000000%);
     }
 
     .text-container > div.mg___blue {
@@ -202,6 +194,14 @@
 
     .text-container > div.mg_orange {
 		background-color: hsl(20.000000, 100.000000%, 85.000000%);
+    }
+
+    .text-container > div.mg___pink {
+		background-color: hsl(288.941176, 100.000000%, 85.000000%);
+    }
+
+    .text-container > div.mg_purple {
+		background-color: hsl(252.931034, 100.000000%, 85.000000%);
     }
 
 </style>
@@ -217,11 +217,11 @@
 </foreignObject>
 
 <foreignObject x="152" y="14" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_MAC_SCRN_SHOT" class="mg___pink kc_mac_scrn_shot"><div class="glyph">Screen Shot</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="XXXXXXX" class="blank ___off___"><div class="glyph"></div></div>
 </foreignObject>
 
 <foreignObject x="221" y="14" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_MAC_SCRN_MRKP" class="mg___pink kc_mac_scrn_mrkp"><div class="glyph">Markup Screen</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="XXXXXXX" class="blank ___off___"><div class="glyph"></div></div>
 </foreignObject>
 
 <foreignObject x="290" y="14" width="65" height="55" class="text-container">
@@ -328,19 +328,19 @@
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Enter (KC_ENT)" class="mg___blue kc_ent"><div class="glyph">&#9166;</div></div>
 </foreignObject>
 
-<foreignObject x="221" y="211" width="65" height="55" class="text-container">
+<foreignObject x="221.0" y="211" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="_______" class="transparent ___off___ num"><div class="glyph">Num</div><div class="annotation layer">layer</div></div>
 </foreignObject>
 
-<foreignObject x="290" y="211" width="65" height="55" class="text-container">
+<foreignObject x="290.0" y="211" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Shift (_______)" class="transparent ___off___ os_shft"><div class="glyph">&#8679;</div><div class="annotation one-shot">one-shot</div></div>
 </foreignObject>
 
-<foreignObject x="395" y="211" width="65" height="55" class="text-container">
+<foreignObject x="395.0" y="211" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Space (_______)" class="transparent ___off___ kc_spc"><div class="glyph">&#9251;</div></div>
 </foreignObject>
 
-<foreignObject x="464" y="211" width="65" height="55" class="text-container">
+<foreignObject x="464.0" y="211" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="_______" class="transparent held mg_orange nav"><div class="glyph">Nav</div><div class="annotation layer">held</div></div>
 </foreignObject>
 
