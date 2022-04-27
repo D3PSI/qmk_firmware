@@ -12,7 +12,7 @@ MAGIC_ENABLE = no # NKRO toggling, mod swapping, etc
 MUSIC_ENABLE = no
 OLED_ENABLE = no
 RGBLIGHT_ENABLE = no
-RGB_MATRIX_ENABLE = yes
+RGB_MATRIX_ENABLE = yes # yes for per-key/layer RGB
 TAP_DANCE_ENABLE = no
 COMBO_ENABLE = no
 
