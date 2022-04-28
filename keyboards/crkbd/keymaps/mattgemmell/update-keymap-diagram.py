@@ -74,7 +74,8 @@ apply_keycode_class = True # applies the lowercase keycode name as a class to th
 apply_keycode_title = True # applies the keycode (as-is) as a "title" attribute to the key's DIV, allowing it to be shown in a tooltip upon hover etc.
 
 # SVG template segments
-svg_header = '''<svg width="${svg_width}" height="${svg_height}" viewBox="0 0 ${svg_width} ${svg_height}" xmlns="http://www.w3.org/2000/svg" class="${svg_classes}">
+svg_header = '''<svg width="100%" height="auto" viewBox="0 0 ${svg_width} ${svg_height}" xmlns="http://www.w3.org/2000/svg" class="${svg_classes}">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <style>
     svg {
         font-family: -apple-system, "Helvetica Neue", sans-serif;
