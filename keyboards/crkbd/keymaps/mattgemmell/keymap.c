@@ -38,15 +38,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define KC_EN_DASH LALT(KC_MINUS)
 #define KC_EM_DASH LSFT(LALT(KC_MINUS))
 
-#define ___off___	{0,0,0}
-#define MG__WHITE	{255,255,255}
-#define	MG____RED	{255,0,0}
-#define MG__GREEN	{32,159,33}
-#define MG___BLUE	{0,181,213}
-#define MG_YELLOW	{255,208,0}
-#define MG_ORANGE	{255,85,0}
-#define MG___PINK	{208,0,255}
-#define MG_PURPLE	{50,0,232}
+#ifdef RGB_MATRIX_ENABLE
+    #define ___off___	{0,0,0}
+    #define MG__WHITE	{255,255,255}
+    #define	MG____RED	{255,0,0}
+    #define MG__GREEN	{32,159,33}
+    #define MG___BLUE	{0,181,213}
+    #define MG_YELLOW	{255,208,0}
+    #define MG_ORANGE	{255,85,0}
+    #define MG___PINK	{208,0,255}
+    #define MG_PURPLE	{50,0,232}
+#endif
 
 enum my_layers {
     _BASE,
@@ -99,6 +101,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   )
 };
 
+#ifdef RGB_MATRIX_ENABLE
+
 const uint8_t PROGMEM ledmap[][42][3] = {
 /* Starts at layer 1; we don't apply lights to Base (layer 0). */
 [_NAV] = {
@@ -121,13 +125,11 @@ ___off___, ___off___, MG_YELLOW, MG_YELLOW, MG_YELLOW, MG____RED, 				___off___,
 			},
 };
 
-
 extern bool g_suspend_state;
 extern rgb_config_t rgb_matrix_config;
 
 void keyboard_post_init_user(void) {
-    //rgb_matrix_enable();
-    rgb_matrix_disable();
+    rgb_matrix_enable();
     rgb_matrix_sethsv_noeeprom(0, 0, 0); // (180, 255, 231) is purple
     rgb_matrix_mode_noeeprom(1);
 }
@@ -200,6 +202,8 @@ void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
     }
     */
 }
+
+#endif
 
 // ====================================================
 // Callum One-Shot Modifiers
