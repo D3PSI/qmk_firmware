@@ -41,7 +41,7 @@ layout_split = True # expects an equal number of keys per half, and thus an even
 split_spacing = 40 # horizontal spacing between halves of a split layout (used instead of horizontal key_spacing if layout_split is True)
 
 # RGB LED colours
-show_led_colours = True # if True, sets "rgb" CSS class on the root <svg> element
+show_led_colours = False # if True, sets "rgb" CSS class on the root <svg> element
 led_colours_lightness = 0.85 # 0.0 to 1.0
 
 # Layers

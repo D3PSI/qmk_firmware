@@ -46,7 +46,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define USB_SUSPEND_WAKEUP_DELAY 200
 #define AUTO_SHIFT_TIMEOUT 150
 #define NO_AUTO_SHIFT_TAB
-//#define NO_AUTO_SHIFT_ALPHA
+#define NO_AUTO_SHIFT_ALPHA
 #define RGB_MATRIX_STARTUP_SPD 60
 #define TAPPING_TERM 250 // default 200
 #define IGNORE_MOD_TAP_INTERRUPT
