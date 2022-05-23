@@ -225,6 +225,8 @@ bool is_oneshot_ignored_key(uint16_t keycode) {
     switch (keycode) {
     case NAV:
     case NUM:
+    case B_NUM:
+    case N_NAV:
     case KC_LSFT:
     case OS_SHFT:
     case OS_CTRL:
@@ -283,7 +285,7 @@ layer_state_t layer_state_set_user(layer_state_t state) {
 // Combos
 // ====================================================
 
-const uint16_t PROGMEM space_combo[] = {KC_B, KC_N, COMBO_END};
+const uint16_t PROGMEM space_combo[] = {B_NUM, N_NAV, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(space_combo, KC_SPC),
