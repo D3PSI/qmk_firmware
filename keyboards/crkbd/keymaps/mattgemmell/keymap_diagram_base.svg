@@ -1,4 +1,4 @@
-<svg width="100%" height="auto" viewBox="0 0 750 201" xmlns="http://www.w3.org/2000/svg" class="rgb">
+<svg width="100%" height="auto" viewBox="0 0 750 231" xmlns="http://www.w3.org/2000/svg" class="rgb">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <style>
     svg {
@@ -73,6 +73,12 @@
 		font-size: 17px;
 		font-weight: bold;
 		fill: #777;
+    }
+
+    .layer_note {
+		font-size: 12px;
+		font-weight: bold;
+		fill: #09f;
     }
 
     .layer_bg {
@@ -328,5 +334,7 @@
 <foreignObject x="671" y="132" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_SLSH" class="kc_slsh"><div class="glyph">/</div></div>
 </foreignObject>
+
+<text x="375.0" y="211.0" class="layer_note">B+N = Space</text>
 
 </svg>

@@ -26,7 +26,7 @@ create_layer_diagrams = True # also create one diagram per layer, named "[svg_fi
 
 # SVG Geometry
 diagram_inset = 10 # horizontal and vertical, around entire diagram
-layer_spacing = 30 # vertical spacing between each layer
+layer_spacing = 20 # vertical spacing between each layer
 layout_keys_per_row = 12 # last row (only) can have fewer keys
 layout_num_edge_keys_ignored = 1 # first and last x keys per row won't be displayed in diagram
 # Note: layout_keys_per_row is the actual, real number of keys per row in the keymap structure. It includes ignored edge keys.
@@ -50,7 +50,7 @@ show_layer_titles = True # applies to single overall diagram
 show_layer_titles_per_layer = False # applies to separate layer-specific diagrams
 layer_title_height = 20 # text box height; set font attributes in CSS below
 layer_title_spacing = 10 # vertical spacing between layer title and its layer diagram
-held_css_class = "held" # CSS class applied to keys which are held down on a given layer, i.e. MO(); edit the actual CSS below.
+held_css_class = "held" # CSS class applied to keys which are held down on a given layer, e.g. MO() or LT(); edit the actual CSS below.
 keycode_blank = "XXXXXXX"
 blank_css_class = "blank" # as above, applied to keys with no function (i.e. keycode_blank above).
 keycode_transparent = "_______"
@@ -73,8 +73,10 @@ layer_held_keycodes = { # keycodes whose keys are implicitly held down on a give
   "_NUM": ["NUM", "B_NUM"],
   "_ADJUST": ["NUM", "NAV", "N_NAV", "B_NUM"]
 }
+layer_note_height = 20 # text box height; set font attributes in CSS below
+layer_note_spacing = 10 # vertical spacing between layer diagram and its layer note
 layer_notes = { # Notes to be displayed for a given layer
-  "_BASE": "B+N = Space"
+  "_BASE": "B+N = Space",
 }
 
 # Advanced
@@ -157,6 +159,12 @@ svg_header = '''<svg width="100%" height="auto" viewBox="0 0 ${svg_width} ${svg_
 		font-size: 17px;
 		font-weight: bold;
 		fill: #777;
+    }
+
+    .layer_note {
+		font-size: 12px;
+		font-weight: bold;
+		fill: #09f;
     }
 
     .layer_bg {
@@ -276,6 +284,10 @@ svg_key = '''
 <foreignObject x="${key_x}" y="${key_y}" width="${key_width}" height="${key_height}" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" ${title_attr}class="${key_classes}"><div class="glyph">${key_label}</div>${annotation}</div>
 </foreignObject>
+'''
+
+svg_layer_note = '''
+<text x="${layer_note_x}" y="${layer_note_y}" class="layer_note">${layer_note}</text>
 '''
 
 # ============================================
@@ -441,6 +453,8 @@ layer_height = (num_rows * key_height) + ((num_rows + 1) * key_spacing) + last_r
 svg_height = (2 * diagram_inset) + (num_layers * layer_height) + ((num_layers - 1) * layer_spacing)
 if show_layer_titles:
     svg_height += num_layers * (layer_title_height + layer_title_spacing)
+if len(layer_notes) > 0:
+    svg_height += num_layers * (layer_note_height + layer_note_spacing)
 
 extra_css = ""
 from string import Template
@@ -487,6 +501,8 @@ if create_layer_diagrams:
     layer_diagram_height = layer_height + (2 * diagram_inset)
     if show_layer_titles_per_layer:
         layer_diagram_height += (layer_title_height + layer_title_spacing)
+    if len(layer_notes) > 0:
+        layer_diagram_height += (layer_note_height + layer_note_spacing)
     svg_layer_header = header_template.substitute({'svg_width': svg_width,
                                                    'svg_height': layer_diagram_height,
                                                    'svg_classes': " ".join(svg_classes),
@@ -503,6 +519,10 @@ if create_layer_diagrams:
 if show_layer_titles or show_layer_titles_per_layer:
     layer_title_template = Template(svg_layer_title)
     layer_title_x = float(svg_width) / 2.0; # SVG text boxes are positioned at their centre point
+
+if len(layer_notes) > 0:
+    layer_note_template = Template(svg_layer_note)
+    layer_note_x = float(svg_width) / 2.0; # SVG text boxes are positioned at their centre point
 
 layer_bg_template = Template(svg_layer_bg)
 key_template = Template(svg_key)
@@ -646,6 +666,17 @@ def svg_for_layer(layer_id, start_y, show_title):
                 cur_x += split_spacing
             elif output_key:
                 cur_x += key_spacing
+
+    # Layer note
+    if len(layer_notes) > 0:
+        cur_y += layer_note_spacing
+    if layer_id in layer_notes:
+        layer_note_text = layer_notes[layer_id]
+        layer_note_y = float(cur_y) + (float(layer_note_height) / 2.0)
+        svg_raw += layer_note_template.substitute({'layer_note_x': layer_note_x,
+                                                    'layer_note_y': layer_note_y,
+                                                    'layer_note': layer_note_text})
+    cur_y += layer_note_height
 
     return {'svg': svg_raw, 'delta_y': cur_y - start_y}
 
