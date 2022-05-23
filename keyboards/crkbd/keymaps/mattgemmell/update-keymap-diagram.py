@@ -30,18 +30,19 @@ layer_spacing = 30 # vertical spacing between each layer
 layout_keys_per_row = 12 # last row (only) can have fewer keys
 layout_num_edge_keys_ignored = 1 # first and last x keys per row won't be displayed in diagram
 # Note: layout_keys_per_row is the actual, real number of keys per row in the keymap structure. It includes ignored edge keys.
+max_keys_to_output = 36 # physical keys, including ignored edge keys. Zero to output all.
 key_width = 65
 key_height = 55
 key_radius = 6 # corner radius
 key_spacing = 4 # horizontal and vertical, both between keys and around entire layer
-last_row_pad = 20 # additional vertical spacing (added to key_spacing) for final row
+last_row_pad = 0 # additional vertical spacing (added to key_spacing) for final row
 
 # Split layout
 layout_split = True # expects an equal number of keys per half, and thus an even number of keys per row
 split_spacing = 40 # horizontal spacing between halves of a split layout (used instead of horizontal key_spacing if layout_split is True)
 
 # RGB LED colours
-show_led_colours = False # if True, sets "rgb" CSS class on the root <svg> element
+show_led_colours = True # if True, sets "rgb" CSS class on the root <svg> element
 led_colours_lightness = 0.85 # 0.0 to 1.0
 
 # Layers
@@ -56,8 +57,12 @@ keycode_transparent = "_______"
 transparent_css_class = "transparent" # as above, applied to transparent keys (falling through to base layer; i.e. keycode_transparent above).
 # Note: Transparent keys (on non-base layers) will be labelled identically to the corresponding key on the base layer.
 annotation_keycodes = { # keycodes with annotations
-    "layer": {"keycodes": ["NAV", "NUM", "B_NUM", "N_NAV"],
-              "label": "layer"},
+    #"layer": {"keycodes": ["NAV", "NUM", "B_NUM", "N_NAV"],
+    #          "label": "layer"},
+    "num": {"keycodes": ["NUM", "B_NUM"],
+              "label": "num"},
+    "nav": {"keycodes": ["NAV", "N_NAV"],
+              "label": "nav"},
     "one-shot": {"keycodes": ["OS_SHFT", "OS_CTRL", "OS_ALT", "OS_CMD", "OS_CAPS"],
                  "label": "one-shot"},
     held_css_class: {"keycodes": [], # special case, to provide label for held layer keys
@@ -67,6 +72,9 @@ layer_held_keycodes = { # keycodes whose keys are implicitly held down on a give
   "_NAV": ["NAV", "N_NAV"],
   "_NUM": ["NUM", "B_NUM"],
   "_ADJUST": ["NUM", "NAV", "N_NAV", "B_NUM"]
+}
+layer_notes = { # Notes to be displayed for a given layer
+  "_BASE": "B+N = Space"
 }
 
 # Advanced
@@ -245,7 +253,7 @@ svg_header = '''<svg width="100%" height="auto" viewBox="0 0 ${svg_width} ${svg_
 		background-color: #666;
     }
 
-    .${held_css_class} .annotation.layer {
+    .${held_css_class} .annotation {
         background-color: #00e;
     }
 ${extra_css}
@@ -341,8 +349,8 @@ key_names = {
     "APP_SWITCH_FRWD": {"label": "Switch App", "title": ""},
     "NAV": {"label": "Nav", "title": ""},
     "NUM": {"label": "Num", "title": ""},
-    "N_NAV": {"label": "N (Nav)", "title": ""},
-    "B_NUM": {"label": "B (Num)", "title": ""},
+    "N_NAV": {"label": "N", "title": ""},
+    "B_NUM": {"label": "B", "title": ""},
     "KC_AUDIO_VOL_DOWN": {"label": "&#128265;", "title": "Volume Down"},
     "KC_AUDIO_MUTE": {"label": "&#128263;", "title": "Mute"},
     "KC_AUDIO_VOL_UP": {"label": "&#128266;", "title": "Volume Up"},
@@ -408,6 +416,8 @@ for colour_match in colours_matches:
 
 # Ensure we have at least layout_keys_per_row keys on our base layer.
 num_keys = len(key_layers[layer_order[0]])
+if max_keys_to_output > 0 and num_keys > max_keys_to_output:
+    num_keys = max_keys_to_output
 if num_keys < layout_keys_per_row:
     layout_keys_per_row = num_keys
 
@@ -530,6 +540,9 @@ def svg_for_layer(layer_id, start_y, show_title):
     key_label = ""
     layer_keys = key_layers[layer_id]
     for key in layer_keys:
+        if max_keys_to_output > 0 and key_index >= max_keys_to_output:
+            break
+
         key_label = key
         key_classes = []
 
