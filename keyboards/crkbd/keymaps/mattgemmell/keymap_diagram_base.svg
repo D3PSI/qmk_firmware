@@ -306,11 +306,11 @@
 </foreignObject>
 
 <foreignObject x="290" y="132" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_B" class="kc_b"><div class="glyph">B</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="B_NUM" class="b_num"><div class="glyph">B (Num)</div><div class="annotation layer">layer</div></div>
 </foreignObject>
 
 <foreignObject x="395" y="132" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_N" class="kc_n"><div class="glyph">N</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="N_NAV" class="n_nav"><div class="glyph">N (Nav)</div><div class="annotation layer">layer</div></div>
 </foreignObject>
 
 <foreignObject x="464" y="132" width="65" height="55" class="text-container">
@@ -330,19 +330,19 @@
 </foreignObject>
 
 <foreignObject x="221.0" y="211" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="NUM" class="num"><div class="glyph">Num</div><div class="annotation layer">layer</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="XXXXXXX" class="blank"><div class="glyph"></div></div>
 </foreignObject>
 
 <foreignObject x="290.0" y="211" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Shift (OS_SHFT)" class="os_shft"><div class="glyph">&#8679;</div><div class="annotation one-shot">one-shot</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="XXXXXXX" class="blank"><div class="glyph"></div></div>
 </foreignObject>
 
 <foreignObject x="395.0" y="211" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Space (KC_SPC)" class="kc_spc"><div class="glyph">&#9251;</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="XXXXXXX" class="blank"><div class="glyph"></div></div>
 </foreignObject>
 
 <foreignObject x="464.0" y="211" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="NAV" class="nav"><div class="glyph">Nav</div><div class="annotation layer">layer</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="XXXXXXX" class="blank"><div class="glyph"></div></div>
 </foreignObject>
 
 </svg>

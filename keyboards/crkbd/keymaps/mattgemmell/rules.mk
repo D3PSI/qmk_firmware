@@ -14,7 +14,7 @@ OLED_ENABLE = no
 RGBLIGHT_ENABLE = no
 RGB_MATRIX_ENABLE = no # yes for per-key/layer RGB
 TAP_DANCE_ENABLE = no
-COMBO_ENABLE = no
+COMBO_ENABLE = yes
 
 SRC += oneshot.c
 SRC += swapper.c

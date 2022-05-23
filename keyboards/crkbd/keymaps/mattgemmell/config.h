@@ -46,7 +46,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define USB_SUSPEND_WAKEUP_DELAY 200
 #define AUTO_SHIFT_TIMEOUT 150
 #define NO_AUTO_SHIFT_TAB
-#define NO_AUTO_SHIFT_ALPHA
+//#define NO_AUTO_SHIFT_ALPHA
 #define RGB_MATRIX_STARTUP_SPD 60
 #define TAPPING_TERM 250 // default 200
 #define IGNORE_MOD_TAP_INTERRUPT
@@ -73,9 +73,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   #endif
 #endif
 
-//#define COMBO_COUNT 2
-//#define COMBO_TERM 50
-//#define EXTRA_SHORT_COMBOS // up to 6 keys per combo instead of 8
+#define COMBO_COUNT 1
+#define COMBO_TERM 50
+#define EXTRA_SHORT_COMBOS // up to 6 keys per combo instead of 8
 
 //#define RGB_DISABLE_WHEN_USB_SUSPENDED // turn off effects when suspended
 #undef RGB_DISABLE_WHEN_USB_SUSPENDED

@@ -70,33 +70,35 @@ enum my_keycodes {
 
 #define NAV MO(_NAV)
 #define NUM MO(_NUM)
+#define B_NUM LT(_NUM, KC_B)
+#define N_NAV LT(_NAV, KC_N)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_BASE] = LAYOUT_split_3x6_3(
        XXXXXXX, KC_Q, KC_W, KC_E,    KC_R, KC_T,         KC_Y,   KC_U, KC_I,    KC_O,   KC_P,    XXXXXXX,
        XXXXXXX, KC_A, KC_S, KC_D,    KC_F, KC_G,         KC_H,   KC_J, KC_K,    KC_L,   KC_QUOT, XXXXXXX,
-       XXXXXXX, KC_Z, KC_X, KC_C,    KC_V, KC_B,         KC_N,   KC_M, KC_COMM, KC_DOT, KC_SLSH, XXXXXXX,
-                            XXXXXXX, NUM,  OS_SHFT,      KC_SPC, NAV,  XXXXXXX
+       XXXXXXX, KC_Z, KC_X, KC_C,    KC_V, B_NUM,         N_NAV,   KC_M, KC_COMM, KC_DOT, KC_SLSH, XXXXXXX,
+                            XXXXXXX, XXXXXXX,  XXXXXXX,      XXXXXXX, XXXXXXX,  XXXXXXX
   ),
 
   [_NAV] = LAYOUT_split_3x6_3(
       XXXXXXX, KC_ESC,      XXXXXXX,    XXXXXXX,  XXXXXXX,  XXXXXXX,            KC_PGUP,   KC_MAC_PREV_TAB,  KC_UP,           KC_MAC_NEXT_TAB, KC_BSPC, XXXXXXX,
       XXXXXXX, OS_SHFT,      OS_CTRL,    OS_ALT,            OS_CMD,            OS_CAPS,            KC_PGDOWN, KC_LEFT,          KC_DOWN,         KC_RIGHT,        XXXXXXX, XXXXXXX,
-      XXXXXXX, KC_MAC_UNDO, KC_MAC_CUT, KC_MAC_COPY,       KC_MAC_PASTE,      KC_MAC_REDO,        XXXXXXX,   KC_MAC_SPOTLIGHT, APP_SWITCH_FRWD, XXXXXXX,         KC_ENT,  XXXXXXX,
+      XXXXXXX, KC_MAC_UNDO, KC_MAC_CUT, KC_MAC_COPY,       KC_MAC_PASTE,      _______,        _______,   KC_MAC_SPOTLIGHT, APP_SWITCH_FRWD, XXXXXXX,         KC_ENT,  XXXXXXX,
                                                          _______, _______, _______,             _______, _______, _______
   ),
 
   [_NUM] = LAYOUT_split_3x6_3(
      XXXXXXX, KC_TAB,     KC_SCLN,    KC_LPRN,     KC_RPRN,     KC_BSLASH,          KC_SLSH, KC_7, KC_8, KC_9, KC_MINUS,   XXXXXXX,
-     XXXXXXX, OS_SHFT,     OS_CTRL,    OS_ALT,      OS_CMD,      OS_CAPS,            KC_ASTR, KC_4, KC_5, KC_6, KC_EQUAL,   XXXXXXX,
-     XXXXXXX, KC_EN_DASH, KC_EM_DASH, KC_LBRACKET, KC_RBRACKET, KC_GRAVE,           KC_COMM, KC_1, KC_2, KC_3, KC_DOT,     XXXXXXX,
-                                           _______, _______, _______,            KC_0, _______, _______
+     XXXXXXX, OS_SHFT,     OS_CTRL,    OS_ALT,      OS_CMD,      OS_CAPS,            KC_0, KC_4, KC_5, KC_6, KC_EQUAL,   XXXXXXX,
+     XXXXXXX, KC_GRAVE, KC_EM_DASH, KC_LBRACKET, KC_RBRACKET, _______,           _______, KC_1, KC_2, KC_3, KC_DOT,     XXXXXXX,
+                                           _______, _______, _______,            _______, _______, _______
   ),
 
   [_ADJUST] = LAYOUT_split_3x6_3(
       XXXXXXX, XXXXXXX, KC_AUDIO_VOL_DOWN,   KC_AUDIO_MUTE,       KC_AUDIO_VOL_UP,     KC_MS_ACCEL2,            KC_MS_WH_DOWN,    KC_MS_BTN1, KC_MS_UP,   KC_MS_BTN2,  KC_MAC_LOCK_SCRN,   XXXXXXX,
-      XXXXXXX, OS_SHFT, OS_CTRL,             OS_ALT,              OS_CMD,              KC_MS_ACCEL1,            KC_MS_WH_UP,      KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT, KC_BRIGHTNESS_UP,   XXXXXXX,
-      XXXXXXX, XXXXXXX, KC_MEDIA_PREV_TRACK, KC_MEDIA_PLAY_PAUSE, KC_MEDIA_NEXT_TRACK, KC_MS_ACCEL0,            XXXXXXX,          XXXXXXX,    XXXXXXX,    XXXXXXX,     KC_BRIGHTNESS_DOWN, XXXXXXX,
+      XXXXXXX, OS_SHFT, OS_CTRL,             OS_ALT,              OS_CMD,              KC_MS_ACCEL1,            KC_MS_WH_UP,      KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT, XXXXXXX,   XXXXXXX,
+      XXXXXXX, XXXXXXX, KC_MEDIA_PREV_TRACK, KC_MEDIA_PLAY_PAUSE, KC_MEDIA_NEXT_TRACK, _______,            _______,          XXXXXXX,    XXXXXXX,    XXXXXXX,     XXXXXXX, XXXXXXX,
                                                                          _______, _______, _______,             _______, _______, _______
   )
 };
@@ -108,20 +110,20 @@ const uint8_t PROGMEM ledmap[][42][3] = {
 [_NAV] = {
 ___off___, MG____RED, ___off___, ___off___, ___off___, ___off___, 				MG_ORANGE, MG___PINK, MG__WHITE, MG___PINK, MG____RED, ___off___,
 ___off___, MG___BLUE, MG___BLUE, MG___BLUE, MG___BLUE, MG_PURPLE, 				MG_ORANGE, MG__WHITE, MG__WHITE, MG__WHITE, ___off___, ___off___,
-___off___, MG___PINK, ___off___, MG__GREEN, ___off___, ___off___, 				___off___, MG_YELLOW, MG_PURPLE, ___off___, MG___BLUE, ___off___,
-								 ___off___, ___off___, ___off___, 				___off___, MG_ORANGE, ___off___
+___off___, MG___PINK, ___off___, MG__GREEN, ___off___, ___off___, 				MG_ORANGE, MG_YELLOW, MG_PURPLE, ___off___, MG___BLUE, ___off___,
+								 ___off___, ___off___, ___off___, 				___off___, ___off___, ___off___
 			},
 [_NUM] = {
 ___off___, MG_ORANGE, MG_ORANGE, MG_YELLOW, MG_YELLOW, MG___PINK, 				MG___PINK, MG__GREEN, MG__GREEN, MG__GREEN, ___off___, ___off___,
-___off___, MG___BLUE, MG___BLUE, MG___BLUE, MG___BLUE, MG_PURPLE, 				___off___, MG__GREEN, MG__GREEN, MG__GREEN, ___off___, ___off___,
-___off___, ___off___, MG_PURPLE, MG_ORANGE, MG_ORANGE, ___off___, 				___off___, MG__GREEN, MG__GREEN, MG__GREEN, ___off___, ___off___,
-						   		 ___off___, MG__GREEN, ___off___, 				MG__GREEN, ___off___, ___off___
+___off___, MG___BLUE, MG___BLUE, MG___BLUE, MG___BLUE, MG_PURPLE, 				MG__GREEN, MG__GREEN, MG__GREEN, MG__GREEN, ___off___, ___off___,
+___off___, ___off___, MG_PURPLE, MG_ORANGE, MG_ORANGE, MG__GREEN, 				___off___, MG__GREEN, MG__GREEN, MG__GREEN, ___off___, ___off___,
+						   		 ___off___, ___off___, ___off___, 				___off___, ___off___, ___off___
 			},
 [_ADJUST] = {
 ___off___, ___off___, MG_PURPLE, MG____RED, MG_PURPLE, MG__GREEN, 				MG_ORANGE, MG___BLUE, MG__WHITE, MG___BLUE, MG____RED, ___off___,
-___off___, MG___BLUE, MG___BLUE, MG___BLUE, MG___BLUE, MG_YELLOW, 				MG_ORANGE, MG__WHITE, MG__WHITE, MG__WHITE, MG_YELLOW, ___off___,
-___off___, ___off___, MG_YELLOW, MG_YELLOW, MG_YELLOW, MG____RED, 				___off___, ___off___, ___off___, ___off___, MG_YELLOW, ___off___,
-						   		 ___off___, MG_PURPLE, ___off___, 				___off___, MG_PURPLE, ___off___
+___off___, MG___BLUE, MG___BLUE, MG___BLUE, MG___BLUE, MG_YELLOW, 				MG_ORANGE, MG__WHITE, MG__WHITE, MG__WHITE, ___off___, ___off___,
+___off___, ___off___, MG_YELLOW, MG_YELLOW, MG_YELLOW, MG_PURPLE, 				MG_PURPLE, ___off___, ___off___, ___off___, ___off___, ___off___,
+						   		 ___off___, ___off___, ___off___, 				___off___, ___off___, ___off___
 			},
 };
 
@@ -276,3 +278,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 layer_state_t layer_state_set_user(layer_state_t state) {
     return update_tri_layer_state(state, _NAV, _NUM, _ADJUST);
 }
+
+// ====================================================
+// Combos
+// ====================================================
+
+const uint16_t PROGMEM space_combo[] = {KC_B, KC_N, COMBO_END};
+
+combo_t key_combos[COMBO_COUNT] = {
+    COMBO(space_combo, KC_SPC),
+};

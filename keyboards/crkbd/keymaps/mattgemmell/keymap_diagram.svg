@@ -308,11 +308,11 @@
 </foreignObject>
 
 <foreignObject x="290" y="162" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_B" class="kc_b"><div class="glyph">B</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="B_NUM" class="b_num"><div class="glyph">B (Num)</div><div class="annotation layer">layer</div></div>
 </foreignObject>
 
 <foreignObject x="395" y="162" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_N" class="kc_n"><div class="glyph">N</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="N_NAV" class="n_nav"><div class="glyph">N (Nav)</div><div class="annotation layer">layer</div></div>
 </foreignObject>
 
 <foreignObject x="464" y="162" width="65" height="55" class="text-container">
@@ -332,19 +332,19 @@
 </foreignObject>
 
 <foreignObject x="221.0" y="241" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="NUM" class="num"><div class="glyph">Num</div><div class="annotation layer">layer</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="XXXXXXX" class="blank"><div class="glyph"></div></div>
 </foreignObject>
 
 <foreignObject x="290.0" y="241" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Shift (OS_SHFT)" class="os_shft"><div class="glyph">&#8679;</div><div class="annotation one-shot">one-shot</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="XXXXXXX" class="blank"><div class="glyph"></div></div>
 </foreignObject>
 
 <foreignObject x="395.0" y="241" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Space (KC_SPC)" class="kc_spc"><div class="glyph">&#9251;</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="XXXXXXX" class="blank"><div class="glyph"></div></div>
 </foreignObject>
 
 <foreignObject x="464.0" y="241" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="NAV" class="nav"><div class="glyph">Nav</div><div class="annotation layer">layer</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="XXXXXXX" class="blank"><div class="glyph"></div></div>
 </foreignObject>
 
 <text x="375.0" y="340.0" class="layer_title">Navigation &amp; Shortcuts</text>
@@ -448,11 +448,11 @@
 </foreignObject>
 
 <foreignObject x="290" y="482" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Redo (KC_MAC_REDO)" class="___off___ kc_mac_redo"><div class="glyph">&#10555;</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="_______" class="transparent ___off___ b_num"><div class="glyph">B (Num)</div><div class="annotation layer">layer</div></div>
 </foreignObject>
 
 <foreignObject x="395" y="482" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="XXXXXXX" class="blank ___off___"><div class="glyph"></div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="_______" class="transparent held mg_orange n_nav"><div class="glyph">N (Nav)</div><div class="annotation layer">held</div></div>
 </foreignObject>
 
 <foreignObject x="464" y="482" width="65" height="55" class="text-container">
@@ -472,19 +472,19 @@
 </foreignObject>
 
 <foreignObject x="221.0" y="561" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="_______" class="transparent ___off___ num"><div class="glyph">Num</div><div class="annotation layer">layer</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="_______" class="transparent blank ___off___"><div class="glyph"></div></div>
 </foreignObject>
 
 <foreignObject x="290.0" y="561" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Shift (_______)" class="transparent ___off___ os_shft"><div class="glyph">&#8679;</div><div class="annotation one-shot">one-shot</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="_______" class="transparent blank ___off___"><div class="glyph"></div></div>
 </foreignObject>
 
 <foreignObject x="395.0" y="561" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Space (_______)" class="transparent ___off___ kc_spc"><div class="glyph">&#9251;</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="_______" class="transparent blank ___off___"><div class="glyph"></div></div>
 </foreignObject>
 
 <foreignObject x="464.0" y="561" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="_______" class="transparent held mg_orange nav"><div class="glyph">Nav</div><div class="annotation layer">held</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="_______" class="transparent blank ___off___"><div class="glyph"></div></div>
 </foreignObject>
 
 <text x="375.0" y="660.0" class="layer_title">Numpad &amp; Symbols</text>
@@ -552,7 +552,7 @@
 </foreignObject>
 
 <foreignObject x="395" y="743" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_ASTR" class="___off___ kc_astr"><div class="glyph">*</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_0" class="mg__green kc_0"><div class="glyph">0</div></div>
 </foreignObject>
 
 <foreignObject x="464" y="743" width="65" height="55" class="text-container">
@@ -572,7 +572,7 @@
 </foreignObject>
 
 <foreignObject x="14" y="802" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_EN_DASH" class="___off___ kc_en_dash"><div class="glyph">En Dash</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_GRAVE" class="___off___ kc_grave"><div class="glyph">`</div></div>
 </foreignObject>
 
 <foreignObject x="83" y="802" width="65" height="55" class="text-container">
@@ -588,11 +588,11 @@
 </foreignObject>
 
 <foreignObject x="290" y="802" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_GRAVE" class="___off___ kc_grave"><div class="glyph">`</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="_______" class="transparent held mg__green b_num"><div class="glyph">B (Num)</div><div class="annotation layer">held</div></div>
 </foreignObject>
 
 <foreignObject x="395" y="802" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_COMM" class="___off___ kc_comm"><div class="glyph">,</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="_______" class="transparent ___off___ n_nav"><div class="glyph">N (Nav)</div><div class="annotation layer">layer</div></div>
 </foreignObject>
 
 <foreignObject x="464" y="802" width="65" height="55" class="text-container">
@@ -612,19 +612,19 @@
 </foreignObject>
 
 <foreignObject x="221.0" y="881" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="_______" class="transparent held mg__green num"><div class="glyph">Num</div><div class="annotation layer">held</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="_______" class="transparent blank ___off___"><div class="glyph"></div></div>
 </foreignObject>
 
 <foreignObject x="290.0" y="881" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Shift (_______)" class="transparent ___off___ os_shft"><div class="glyph">&#8679;</div><div class="annotation one-shot">one-shot</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="_______" class="transparent blank ___off___"><div class="glyph"></div></div>
 </foreignObject>
 
 <foreignObject x="395.0" y="881" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_0" class="mg__green kc_0"><div class="glyph">0</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="_______" class="transparent blank ___off___"><div class="glyph"></div></div>
 </foreignObject>
 
 <foreignObject x="464.0" y="881" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="_______" class="transparent ___off___ nav"><div class="glyph">Nav</div><div class="annotation layer">layer</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="_______" class="transparent blank ___off___"><div class="glyph"></div></div>
 </foreignObject>
 
 <text x="375.0" y="980.0" class="layer_title">Mouse &amp; Media</text>
@@ -708,7 +708,7 @@
 </foreignObject>
 
 <foreignObject x="671" y="1063" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Brightness Up (KC_BRIGHTNESS_UP)" class="mg_yellow kc_brightness_up"><div class="glyph">&#9728;</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="XXXXXXX" class="blank ___off___"><div class="glyph"></div></div>
 </foreignObject>
 
 <foreignObject x="14" y="1122" width="65" height="55" class="text-container">
@@ -728,11 +728,11 @@
 </foreignObject>
 
 <foreignObject x="290" y="1122" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_MS_ACCEL0" class="mg____red kc_ms_accel0"><div class="glyph">Mouse Accel 0</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="_______" class="transparent held mg_purple b_num"><div class="glyph">B (Num)</div><div class="annotation layer">held</div></div>
 </foreignObject>
 
 <foreignObject x="395" y="1122" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="XXXXXXX" class="blank ___off___"><div class="glyph"></div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="_______" class="transparent held mg_purple n_nav"><div class="glyph">N (Nav)</div><div class="annotation layer">held</div></div>
 </foreignObject>
 
 <foreignObject x="464" y="1122" width="65" height="55" class="text-container">
@@ -748,23 +748,23 @@
 </foreignObject>
 
 <foreignObject x="671" y="1122" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Brightness Down (KC_BRIGHTNESS_DOWN)" class="mg_yellow kc_brightness_down"><div class="glyph">&#9788;</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="XXXXXXX" class="blank ___off___"><div class="glyph"></div></div>
 </foreignObject>
 
 <foreignObject x="221.0" y="1201" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="_______" class="transparent held mg_purple num"><div class="glyph">Num</div><div class="annotation layer">held</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="_______" class="transparent blank ___off___"><div class="glyph"></div></div>
 </foreignObject>
 
 <foreignObject x="290.0" y="1201" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Shift (_______)" class="transparent ___off___ os_shft"><div class="glyph">&#8679;</div><div class="annotation one-shot">one-shot</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="_______" class="transparent blank ___off___"><div class="glyph"></div></div>
 </foreignObject>
 
 <foreignObject x="395.0" y="1201" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Space (_______)" class="transparent ___off___ kc_spc"><div class="glyph">&#9251;</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="_______" class="transparent blank ___off___"><div class="glyph"></div></div>
 </foreignObject>
 
 <foreignObject x="464.0" y="1201" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="_______" class="transparent held mg_purple nav"><div class="glyph">Nav</div><div class="annotation layer">held</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="_______" class="transparent blank ___off___"><div class="glyph"></div></div>
 </foreignObject>
 
 </svg>

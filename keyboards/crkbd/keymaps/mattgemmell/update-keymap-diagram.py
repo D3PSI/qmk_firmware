@@ -56,7 +56,7 @@ keycode_transparent = "_______"
 transparent_css_class = "transparent" # as above, applied to transparent keys (falling through to base layer; i.e. keycode_transparent above).
 # Note: Transparent keys (on non-base layers) will be labelled identically to the corresponding key on the base layer.
 annotation_keycodes = { # keycodes with annotations
-    "layer": {"keycodes": ["NAV", "NUM"],
+    "layer": {"keycodes": ["NAV", "NUM", "B_NUM", "N_NAV"],
               "label": "layer"},
     "one-shot": {"keycodes": ["OS_SHFT", "OS_CTRL", "OS_ALT", "OS_CMD", "OS_CAPS"],
                  "label": "one-shot"},
@@ -64,9 +64,9 @@ annotation_keycodes = { # keycodes with annotations
                      "label": "held"},
 }
 layer_held_keycodes = { # keycodes whose keys are implicitly held down on a given layer, gaining the held_css_class specified below
-  "_NAV": ["NAV"],
-  "_NUM": ["NUM"],
-  "_ADJUST": ["NUM", "NAV"]
+  "_NAV": ["NAV", "N_NAV"],
+  "_NUM": ["NUM", "B_NUM"],
+  "_ADJUST": ["NUM", "NAV", "N_NAV", "B_NUM"]
 }
 
 # Advanced
@@ -341,6 +341,8 @@ key_names = {
     "APP_SWITCH_FRWD": {"label": "Switch App", "title": ""},
     "NAV": {"label": "Nav", "title": ""},
     "NUM": {"label": "Num", "title": ""},
+    "N_NAV": {"label": "N (Nav)", "title": ""},
+    "B_NUM": {"label": "B (Num)", "title": ""},
     "KC_AUDIO_VOL_DOWN": {"label": "&#128265;", "title": "Volume Down"},
     "KC_AUDIO_MUTE": {"label": "&#128263;", "title": "Mute"},
     "KC_AUDIO_VOL_UP": {"label": "&#128266;", "title": "Volume Up"},
