@@ -6,13 +6,13 @@
 - One-shot mods that can be carried between layers (via [callum][])
 - Single-key Command-Tab (via [callum][])
 - No mods on the base layer
-- No Tap Dance, animations, OLED, or magic
+- No animations, OLED, or magic
 - 4 layers in the usual Planck momentary setup
 - Mostly for writing (what I do)
 - Autoshift enabled
 - Includes numpad, inverted-T cursors, mouse and scroll-wheel, media keys, and system shortcuts
 - Optional per-key, per-layer RGB LED colours, configured intuitively in the same layout as the keymap
-- Only 21kb or so
+- Small firmware size
 
 Talk to me about it if you like. I'm [@mattgemmell on Twitter][].
 

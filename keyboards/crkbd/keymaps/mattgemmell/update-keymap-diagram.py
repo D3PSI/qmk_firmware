@@ -26,7 +26,7 @@ create_layer_diagrams = True # also create one diagram per layer, named "[svg_fi
 
 # SVG Geometry
 diagram_inset = 10 # horizontal and vertical, around entire diagram
-layer_spacing = 20 # vertical spacing between each layer
+layer_spacing = 30 # vertical spacing between each layer
 layout_keys_per_row = 12 # last row (only) can have fewer keys
 layout_num_edge_keys_ignored = 1 # first and last x keys per row won't be displayed in diagram
 # Note: layout_keys_per_row is the actual, real number of keys per row in the keymap structure. It includes ignored edge keys.
@@ -73,10 +73,10 @@ layer_held_keycodes = { # keycodes whose keys are implicitly held down on a give
   "_NUM": ["NUM", "B_NUM"],
   "_ADJUST": ["NUM", "NAV", "N_NAV", "B_NUM"]
 }
-layer_note_height = 20 # text box height; set font attributes in CSS below
-layer_note_spacing = 10 # vertical spacing between layer diagram and its layer note
+layer_note_height = 0 # text box height; set font attributes in CSS below
+layer_note_spacing = 0 # vertical spacing between layer diagram and its layer note
 layer_notes = { # Notes to be displayed for a given layer
-  "_BASE": "B+N = Space",
+  #"_BASE": "B+N = Space",
 }
 
 # Advanced
@@ -387,6 +387,7 @@ key_names = {
     "KC_DOT": {"label": ".", "title": ""},
     "KC_SLSH": {"label": "/", "title": ""},
     "KC_SPC": {"label": "&#9251;", "title": "Space"},
+    "SPC_QSTN": {"label": "&#9251;", "title": "Space"},
     "KC_ESC": {"label": "&#9099;", "title": "Escape"},
     "KC_PGUP": {"label": "&#8670;", "title": "Page Up"},
     "KC_UP": {"label": "&#9650;", "title": "Up"},
