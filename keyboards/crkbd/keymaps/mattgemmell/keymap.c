@@ -351,9 +351,9 @@ void dance_spc_qstn_finished(qk_tap_dance_state_t *state, void *user_data) {
     switch (dance_state[0].step) {
         case SINGLE_TAP: register_code16(KC_SPC); break;
         case SINGLE_HOLD: register_code16(LSFT(KC_SLSH)); break;
-        case DOUBLE_TAP: register_code16(KC_M); register_code16(KC_SPC); break;
+        case DOUBLE_TAP: register_code16(KC_SPC); register_code16(KC_SPC); break;
         case DOUBLE_HOLD: register_code16(KC_SPC); break;
-        case DOUBLE_SINGLE_TAP: tap_code16(KC_M); register_code16(KC_SPC);
+        case DOUBLE_SINGLE_TAP: tap_code16(KC_SPC); register_code16(KC_SPC);
     }
 }
 
