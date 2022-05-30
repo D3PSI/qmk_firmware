@@ -23,7 +23,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "swapper.h"
 
 #define KC_MAC_UNDO LGUI(KC_Z)
-#define KC_MAC_REDO LSFT(LGUI(KC_Z))
+//#define KC_MAC_REDO LSFT(LGUI(KC_Z))
 #define KC_MAC_CUT LGUI(KC_X)
 #define KC_MAC_COPY LGUI(KC_C)
 #define KC_MAC_PASTE LGUI(KC_V)
@@ -68,8 +68,8 @@ enum my_keycodes {
     APP_SWITCH_FRWD, // cmd-tab but holds cmd between invocations
 };
 
-#define NAV MO(_NAV)
-#define NUM MO(_NUM)
+//#define NAV MO(_NAV)
+//#define NUM MO(_NUM)
 #define B_NUM LT(_NUM, KC_B)
 #define SPC_NAV LT(_NAV, KC_SPC)
 
@@ -213,10 +213,10 @@ void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
 
 bool is_oneshot_cancel_key(uint16_t keycode) {
     switch (keycode) {
-    case NAV:
-    case NUM:
+    //case NAV:
+    //case NUM:
     case B_NUM:
-    case SPC_NAV:
+    //case SPC_NAV:
         return true;
     default:
         return false;
@@ -225,8 +225,8 @@ bool is_oneshot_cancel_key(uint16_t keycode) {
 
 bool is_oneshot_ignored_key(uint16_t keycode) {
     switch (keycode) {
-    case NAV:
-    case NUM:
+    //case NAV:
+    //case NUM:
     case B_NUM:
     case SPC_NAV:
     case KC_LSFT:
