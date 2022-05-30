@@ -316,23 +316,23 @@
 </foreignObject>
 
 <foreignObject x="395" y="132" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="N_NAV" class="n_nav"><div class="glyph">N</div><div class="annotation nav">nav</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Space (SPC_NAV)" class="spc_nav"><div class="glyph">&#9251;</div><div class="annotation nav">nav</div></div>
 </foreignObject>
 
 <foreignObject x="464" y="132" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_M" class="kc_m"><div class="glyph">M</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_N" class="kc_n"><div class="glyph">N</div></div>
 </foreignObject>
 
 <foreignObject x="533" y="132" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_COMM" class="kc_comm"><div class="glyph">,</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_M" class="kc_m"><div class="glyph">M</div></div>
 </foreignObject>
 
 <foreignObject x="602" y="132" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_DOT" class="kc_dot"><div class="glyph">.</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_COMM" class="kc_comm"><div class="glyph">,</div></div>
 </foreignObject>
 
 <foreignObject x="671" y="132" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Space (SPC_QSTN)" class="spc_qstn"><div class="glyph">&#9251;</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="KC_DOT" class="kc_dot"><div class="glyph">.</div></div>
 </foreignObject>
 
 </svg>

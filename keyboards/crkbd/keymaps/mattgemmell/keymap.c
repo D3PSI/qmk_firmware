@@ -28,14 +28,14 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define KC_MAC_COPY LGUI(KC_C)
 #define KC_MAC_PASTE LGUI(KC_V)
 #define KC_MAC_LOCK_SCRN LCTL(LGUI(KC_Q))
-#define KC_MAC_SCRN_SHOT LGUI(LSFT(KC_3))
-#define KC_MAC_SCRN_MRKP LGUI(LSFT(KC_4))
+//#define KC_MAC_SCRN_SHOT LGUI(LSFT(KC_3))
+//#define KC_MAC_SCRN_MRKP LGUI(LSFT(KC_4))
 //#define KC_MAC_HOME LGUI(KC_UP)
 //#define KC_MAC_END LGUI(KC_DOWN)
 #define KC_MAC_PREV_TAB LGUI(LSFT(KC_LBRACKET))
 #define KC_MAC_NEXT_TAB LGUI(LSFT(KC_RBRACKET))
 #define KC_MAC_SPOTLIGHT LGUI(KC_SPC)
-#define KC_EN_DASH LALT(KC_MINUS)
+//#define KC_EN_DASH LALT(KC_MINUS)
 #define KC_EM_DASH LSFT(LALT(KC_MINUS))
 
 #ifdef RGB_MATRIX_ENABLE
@@ -68,21 +68,16 @@ enum my_keycodes {
     APP_SWITCH_FRWD, // cmd-tab but holds cmd between invocations
 };
 
-enum tap_dance_keycodes {
-  TD_SPC_QSTN,
-};
-
 #define NAV MO(_NAV)
 #define NUM MO(_NUM)
 #define B_NUM LT(_NUM, KC_B)
-#define N_NAV LT(_NAV, KC_N)
-#define SPC_QSTN TD(TD_SPC_QSTN)
+#define SPC_NAV LT(_NAV, KC_SPC)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_BASE] = LAYOUT_split_3x6_3(
        XXXXXXX, KC_Q, KC_W, KC_E,    KC_R, KC_T,         KC_Y,   KC_U, KC_I,    KC_O,   KC_P,    XXXXXXX,
        XXXXXXX, KC_A, KC_S, KC_D,    KC_F, KC_G,         KC_H,   KC_J, KC_K,    KC_L,   KC_QUOT, XXXXXXX,
-       XXXXXXX, KC_Z, KC_X, KC_C,    KC_V, B_NUM,         N_NAV,   KC_M, KC_COMM, KC_DOT, SPC_QSTN, XXXXXXX,
+       XXXXXXX, KC_Z, KC_X, KC_C,    KC_V, B_NUM,         SPC_NAV,   KC_N, KC_M, KC_COMM, KC_DOT, XXXXXXX,
                             XXXXXXX, XXXXXXX,  XXXXXXX,      XXXXXXX, XXXXXXX,  XXXXXXX
   ),
 
@@ -220,6 +215,8 @@ bool is_oneshot_cancel_key(uint16_t keycode) {
     switch (keycode) {
     case NAV:
     case NUM:
+    case B_NUM:
+    case SPC_NAV:
         return true;
     default:
         return false;
@@ -231,7 +228,7 @@ bool is_oneshot_ignored_key(uint16_t keycode) {
     case NAV:
     case NUM:
     case B_NUM:
-    case N_NAV:
+    case SPC_NAV:
     case KC_LSFT:
     case OS_SHFT:
     case OS_CTRL:
@@ -285,93 +282,3 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 layer_state_t layer_state_set_user(layer_state_t state) {
     return update_tri_layer_state(state, _NAV, _NUM, _ADJUST);
 }
-
-// ====================================================
-// Combos
-// ====================================================
-
-const uint16_t PROGMEM space_combo[] = {B_NUM, N_NAV, COMBO_END};
-
-combo_t key_combos[COMBO_COUNT] = {
-    COMBO(space_combo, KC_SPC),
-};
-
-// ====================================================
-// Tap Dance stuff, via Oryx template
-// ====================================================
-
-typedef struct {
-    bool is_press_action;
-    uint8_t step;
-} tap;
-
-enum {
-    SINGLE_TAP = 1,
-    SINGLE_HOLD,
-    DOUBLE_TAP,
-    DOUBLE_HOLD,
-    DOUBLE_SINGLE_TAP,
-    MORE_TAPS
-};
-
-static tap dance_state[1]; // Should be the number of Tap Dance routines defined.
-uint8_t dance_step(qk_tap_dance_state_t *state);
-
-uint8_t dance_step(qk_tap_dance_state_t *state) {
-    if (state->count == 1) {
-        if (state->interrupted || !state->pressed) return SINGLE_TAP;
-        else return SINGLE_HOLD;
-    } else if (state->count == 2) {
-        if (state->interrupted) return DOUBLE_SINGLE_TAP;
-        else if (state->pressed) return DOUBLE_HOLD;
-        else return DOUBLE_TAP;
-    }
-    return MORE_TAPS;
-}
-
-// End Tap Dance top boilerplate
-
-void on_dance_m_mute(qk_tap_dance_state_t *state, void *user_data);
-void dance_m_mute_finished(qk_tap_dance_state_t *state, void *user_data);
-void dance_m_mute_reset(qk_tap_dance_state_t *state, void *user_data);
-
-void on_dance_spc_qstn(qk_tap_dance_state_t *state, void *user_data) {
-    if(state->count == 3) {
-        tap_code16(KC_SPC);
-        tap_code16(KC_SPC);
-        tap_code16(KC_SPC);
-    }
-    if(state->count > 3) {
-        tap_code16(KC_SPC);
-    }
-}
-
-void dance_spc_qstn_finished(qk_tap_dance_state_t *state, void *user_data) {
-    dance_state[0].step = dance_step(state);
-    switch (dance_state[0].step) {
-        case SINGLE_TAP: register_code16(KC_SPC); break;
-        case SINGLE_HOLD: register_code16(LSFT(KC_SLSH)); break;
-        case DOUBLE_TAP: register_code16(KC_SPC); register_code16(KC_SPC); break;
-        case DOUBLE_HOLD: register_code16(KC_SPC); break;
-        case DOUBLE_SINGLE_TAP: tap_code16(KC_SPC); register_code16(KC_SPC);
-    }
-}
-
-void dance_spc_qstn_reset(qk_tap_dance_state_t *state, void *user_data) {
-    wait_ms(10);
-    switch (dance_state[0].step) {
-        case SINGLE_TAP: unregister_code16(KC_SPC); break;
-        case SINGLE_HOLD: unregister_code16(LSFT(KC_SLSH)); break;
-        case DOUBLE_TAP: unregister_code16(KC_SPC); break;
-        case DOUBLE_HOLD: unregister_code16(KC_SPC); break;
-        case DOUBLE_SINGLE_TAP: unregister_code16(KC_SPC); break;
-    }
-    dance_state[0].step = 0;
-}
-
-// Assign handlers to all Tap Dance actions.
-
-qk_tap_dance_action_t tap_dance_actions[] = {
-    /* Keys should match the Tap Dance keycodes */
-    [TD_SPC_QSTN] = ACTION_TAP_DANCE_FN_ADVANCED(on_dance_spc_qstn, dance_spc_qstn_finished, dance_spc_qstn_reset),
-};

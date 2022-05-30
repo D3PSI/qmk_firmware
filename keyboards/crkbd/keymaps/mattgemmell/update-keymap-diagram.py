@@ -57,11 +57,11 @@ keycode_transparent = "_______"
 transparent_css_class = "transparent" # as above, applied to transparent keys (falling through to base layer; i.e. keycode_transparent above).
 # Note: Transparent keys (on non-base layers) will be labelled identically to the corresponding key on the base layer.
 annotation_keycodes = { # keycodes with annotations
-    #"layer": {"keycodes": ["NAV", "NUM", "B_NUM", "N_NAV"],
+    #"layer": {"keycodes": ["NAV", "NUM", "B_NUM", "SPC_NAV"],
     #          "label": "layer"},
     "num": {"keycodes": ["NUM", "B_NUM"],
               "label": "num"},
-    "nav": {"keycodes": ["NAV", "N_NAV"],
+    "nav": {"keycodes": ["NAV", "SPC_NAV"],
               "label": "nav"},
     "one-shot": {"keycodes": ["OS_SHFT", "OS_CTRL", "OS_ALT", "OS_CMD", "OS_CAPS"],
                  "label": "one-shot"},
@@ -69,9 +69,9 @@ annotation_keycodes = { # keycodes with annotations
                      "label": "held"},
 }
 layer_held_keycodes = { # keycodes whose keys are implicitly held down on a given layer, gaining the held_css_class specified below
-  "_NAV": ["NAV", "N_NAV"],
+  "_NAV": ["NAV", "SPC_NAV"],
   "_NUM": ["NUM", "B_NUM"],
-  "_ADJUST": ["NUM", "NAV", "N_NAV", "B_NUM"]
+  "_ADJUST": ["NUM", "NAV", "SPC_NAV", "B_NUM"]
 }
 layer_note_height = 0 # text box height; set font attributes in CSS below
 layer_note_spacing = 0 # vertical spacing between layer diagram and its layer note
@@ -361,7 +361,7 @@ key_names = {
     "APP_SWITCH_FRWD": {"label": "Switch App", "title": ""},
     "NAV": {"label": "Nav", "title": ""},
     "NUM": {"label": "Num", "title": ""},
-    "N_NAV": {"label": "N", "title": ""},
+    "SPC_NAV": {"label": "&#9251;", "title": "Space"},
     "B_NUM": {"label": "B", "title": ""},
     "KC_AUDIO_VOL_DOWN": {"label": "&#128265;", "title": "Volume Down"},
     "KC_AUDIO_MUTE": {"label": "&#128263;", "title": "Mute"},
