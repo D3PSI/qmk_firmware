@@ -6,7 +6,7 @@
 - One-shot mods that can be carried between layers (via [callum][])
 - Single-key Command-Tab (via [callum][])
 - No mods on the base layer
-- No animations, OLED, or magic
+- No animations, OLED, tap-dance, or combos
 - 4 layers in the usual Planck momentary setup
 - Mostly for writing (what I do)
 - Autoshift enabled
