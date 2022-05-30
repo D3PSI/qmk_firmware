@@ -215,8 +215,9 @@ bool is_oneshot_cancel_key(uint16_t keycode) {
     switch (keycode) {
     //case NAV:
     //case NUM:
-    case B_NUM:
+    //case B_NUM:
     //case SPC_NAV:
+    case KC_ESC:
         return true;
     default:
         return false;
