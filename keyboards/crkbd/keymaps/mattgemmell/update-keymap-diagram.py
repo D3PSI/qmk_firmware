@@ -30,7 +30,7 @@ layer_spacing = 30 # vertical spacing between each layer
 layout_keys_per_row = 12 # last row (only) can have fewer keys
 layout_num_edge_keys_ignored = 1 # first and last x keys per row won't be displayed in diagram
 # Note: layout_keys_per_row is the actual, real number of keys per row in the keymap structure. It includes ignored edge keys.
-max_keys_to_output = 36 # physical keys, including ignored edge keys. Zero to output all.
+max_keys_to_output = 0 # physical keys, including ignored edge keys. Zero to output all.
 key_width = 65
 key_height = 55
 key_radius = 6 # corner radius
@@ -82,6 +82,7 @@ layer_notes = { # Notes to be displayed for a given layer
 # Advanced
 apply_keycode_class = True # applies the lowercase keycode name as a class to the key's DIV, to allow CSS customisation; for example, the "A" key would have class "kc_a" applied.
 apply_keycode_title = True # applies the keycode (as-is) as a "title" attribute to the key's DIV, allowing it to be shown in a tooltip upon hover etc.
+apply_layer_class = True # applies the lowercase layer ID as a class to each key's DIV on that layer, e.g. each key on the _BASE layer would have the "_base" class applied.
 
 # SVG template segments
 svg_header = '''<svg width="100%" height="auto" viewBox="0 0 ${svg_width} ${svg_height}" xmlns="http://www.w3.org/2000/svg" class="${svg_classes}">
@@ -148,11 +149,16 @@ svg_header = '''<svg width="100%" height="auto" viewBox="0 0 ${svg_width} ${svg_
     }
 
     .text-container > div.${blank_css_class} {
-
+        background-color: #fff6;
     }
 
     .text-container > div.${transparent_css_class} {
 
+    }
+
+    .text-container > div.${blank_css_class}.${transparent_css_class},
+    .text-container > div.${blank_css_class}._base {
+        display: none;
     }
 
     .layer_title {
@@ -604,6 +610,8 @@ def svg_for_layer(layer_id, start_y, show_title):
                 key_classes.append(led_layers[layer_id][key_index].lower())
             if apply_keycode_class and key not in [keycode_blank, keycode_transparent]:
                 key_classes.append(key.lower())
+            if apply_layer_class:
+                key_classes.append(layer_id.lower())
 
             # Title attribute
             title_attr = ""

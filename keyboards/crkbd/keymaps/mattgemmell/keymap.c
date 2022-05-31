@@ -23,7 +23,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "swapper.h"
 
 #define KC_MAC_UNDO LGUI(KC_Z)
-//#define KC_MAC_REDO LSFT(LGUI(KC_Z))
+#define KC_MAC_REDO LSFT(LGUI(KC_Z))
 #define KC_MAC_CUT LGUI(KC_X)
 #define KC_MAC_COPY LGUI(KC_C)
 #define KC_MAC_PASTE LGUI(KC_V)
@@ -35,7 +35,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define KC_MAC_PREV_TAB LGUI(LSFT(KC_LBRACKET))
 #define KC_MAC_NEXT_TAB LGUI(LSFT(KC_RBRACKET))
 #define KC_MAC_SPOTLIGHT LGUI(KC_SPC)
-//#define KC_EN_DASH LALT(KC_MINUS)
+#define KC_EN_DASH LALT(KC_MINUS)
 #define KC_EM_DASH LSFT(LALT(KC_MINUS))
 
 #ifdef RGB_MATRIX_ENABLE
@@ -69,36 +69,36 @@ enum my_keycodes {
 };
 
 //#define NAV MO(_NAV)
-//#define NUM MO(_NUM)
-#define B_NUM LT(_NUM, KC_B)
+#define NUM MO(_NUM)
+//#define B_NUM LT(_NUM, KC_B)
 #define SPC_NAV LT(_NAV, KC_SPC)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_BASE] = LAYOUT_split_3x6_3(
        XXXXXXX, KC_Q, KC_W, KC_E,    KC_R, KC_T,         KC_Y,   KC_U, KC_I,    KC_O,   KC_P,    XXXXXXX,
        XXXXXXX, KC_A, KC_S, KC_D,    KC_F, KC_G,         KC_H,   KC_J, KC_K,    KC_L,   KC_QUOT, XXXXXXX,
-       XXXXXXX, KC_Z, KC_X, KC_C,    KC_V, B_NUM,         SPC_NAV,   KC_N, KC_M, KC_COMM, KC_DOT, XXXXXXX,
-                            XXXXXXX, XXXXXXX,  XXXXXXX,      XXXXXXX, XXXXXXX,  XXXXXXX
+       XXXXXXX, KC_Z, KC_X, KC_C,    KC_V, KC_B,         KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, XXXXXXX,
+                            XXXXXXX, NUM, XXXXXXX,      XXXXXXX, SPC_NAV,  XXXXXXX
   ),
 
   [_NAV] = LAYOUT_split_3x6_3(
       XXXXXXX, KC_ESC,      XXXXXXX,    XXXXXXX,  XXXXXXX,  XXXXXXX,            KC_PGUP,   KC_MAC_PREV_TAB,  KC_UP,           KC_MAC_NEXT_TAB, KC_BSPC, XXXXXXX,
       XXXXXXX, OS_SHFT,      OS_CTRL,    OS_ALT,            OS_CMD,            OS_CAPS,            KC_PGDOWN, KC_LEFT,          KC_DOWN,         KC_RIGHT,        XXXXXXX, XXXXXXX,
-      XXXXXXX, KC_MAC_UNDO, KC_MAC_CUT, KC_MAC_COPY,       KC_MAC_PASTE,      _______,        _______,   KC_MAC_SPOTLIGHT, APP_SWITCH_FRWD, XXXXXXX,         KC_ENT,  XXXXXXX,
+      XXXXXXX, KC_MAC_UNDO, KC_MAC_CUT, KC_MAC_COPY,       KC_MAC_PASTE,      KC_MAC_REDO,        XXXXXXX,   KC_MAC_SPOTLIGHT, APP_SWITCH_FRWD, XXXXXXX,         KC_ENT,  XXXXXXX,
                                                          _______, _______, _______,             _______, _______, _______
   ),
 
   [_NUM] = LAYOUT_split_3x6_3(
      XXXXXXX, KC_TAB,     KC_SCLN,    KC_LPRN,     KC_RPRN,     KC_BSLASH,          KC_SLSH, KC_7, KC_8, KC_9, KC_MINUS,   XXXXXXX,
-     XXXXXXX, OS_SHFT,     OS_CTRL,    OS_ALT,      OS_CMD,      OS_CAPS,            KC_0, KC_4, KC_5, KC_6, KC_EQUAL,   XXXXXXX,
-     XXXXXXX, KC_GRAVE, KC_EM_DASH, KC_LBRACKET, KC_RBRACKET, _______,           _______, KC_1, KC_2, KC_3, KC_DOT,     XXXXXXX,
+     XXXXXXX, OS_SHFT,     OS_CTRL,    OS_ALT,      OS_CMD,      OS_CAPS,            KC_COMM, KC_4, KC_5, KC_6, KC_EQUAL,   XXXXXXX,
+     XXXXXXX, KC_EN_DASH, KC_GRAVE, KC_LBRACKET, KC_RBRACKET, KC_EM_DASH,           KC_0, KC_1, KC_2, KC_3, KC_DOT,     XXXXXXX,
                                            _______, _______, _______,            _______, _______, _______
   ),
 
   [_ADJUST] = LAYOUT_split_3x6_3(
       XXXXXXX, XXXXXXX, KC_AUDIO_VOL_DOWN,   KC_AUDIO_MUTE,       KC_AUDIO_VOL_UP,     KC_MS_ACCEL2,            KC_MS_WH_DOWN,    KC_MS_BTN1, KC_MS_UP,   KC_MS_BTN2,  KC_MAC_LOCK_SCRN,   XXXXXXX,
       XXXXXXX, OS_SHFT, OS_CTRL,             OS_ALT,              OS_CMD,              KC_MS_ACCEL1,            KC_MS_WH_UP,      KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT, XXXXXXX,   XXXXXXX,
-      XXXXXXX, XXXXXXX, KC_MEDIA_PREV_TRACK, KC_MEDIA_PLAY_PAUSE, KC_MEDIA_NEXT_TRACK, _______,            _______,          XXXXXXX,    XXXXXXX,    XXXXXXX,     XXXXXXX, XXXXXXX,
+      XXXXXXX, XXXXXXX, KC_MEDIA_PREV_TRACK, KC_MEDIA_PLAY_PAUSE, KC_MEDIA_NEXT_TRACK, XXXXXXX,            XXXXXXX,          XXXXXXX,    XXXXXXX,    XXXXXXX,     XXXXXXX, XXXXXXX,
                                                                          _______, _______, _______,             _______, _______, _______
   )
 };
@@ -110,20 +110,20 @@ const uint8_t PROGMEM ledmap[][42][3] = {
 [_NAV] = {
 ___off___, MG____RED, ___off___, ___off___, ___off___, ___off___, 				MG_ORANGE, MG___PINK, MG__WHITE, MG___PINK, MG____RED, ___off___,
 ___off___, MG___BLUE, MG___BLUE, MG___BLUE, MG___BLUE, MG_PURPLE, 				MG_ORANGE, MG__WHITE, MG__WHITE, MG__WHITE, ___off___, ___off___,
-___off___, MG___PINK, ___off___, MG__GREEN, ___off___, ___off___, 				MG_ORANGE, MG_YELLOW, MG_PURPLE, ___off___, MG___BLUE, ___off___,
-								 ___off___, ___off___, ___off___, 				___off___, ___off___, ___off___
+___off___, MG___PINK, ___off___, MG__GREEN, ___off___, ___off___, 				___off___, MG_YELLOW, MG_PURPLE, ___off___, MG___BLUE, ___off___,
+								 ___off___, ___off___, ___off___, 				___off___, MG_ORANGE, ___off___
 			},
 [_NUM] = {
 ___off___, MG_ORANGE, MG_ORANGE, MG_YELLOW, MG_YELLOW, MG___PINK, 				MG___PINK, MG__GREEN, MG__GREEN, MG__GREEN, ___off___, ___off___,
-___off___, MG___BLUE, MG___BLUE, MG___BLUE, MG___BLUE, MG_PURPLE, 				MG__GREEN, MG__GREEN, MG__GREEN, MG__GREEN, ___off___, ___off___,
-___off___, ___off___, MG_PURPLE, MG_ORANGE, MG_ORANGE, MG__GREEN, 				___off___, MG__GREEN, MG__GREEN, MG__GREEN, ___off___, ___off___,
-						   		 ___off___, ___off___, ___off___, 				___off___, ___off___, ___off___
+___off___, MG___BLUE, MG___BLUE, MG___BLUE, MG___BLUE, MG_PURPLE, 				___off___, MG__GREEN, MG__GREEN, MG__GREEN, ___off___, ___off___,
+___off___, ___off___, ___off___, MG_ORANGE, MG_ORANGE, MG_PURPLE, 				MG__GREEN, MG__GREEN, MG__GREEN, MG__GREEN, ___off___, ___off___,
+						   		 ___off___, MG__GREEN, ___off___, 				___off___, ___off___, ___off___
 			},
 [_ADJUST] = {
 ___off___, ___off___, MG_PURPLE, MG____RED, MG_PURPLE, MG__GREEN, 				MG_ORANGE, MG___BLUE, MG__WHITE, MG___BLUE, MG____RED, ___off___,
 ___off___, MG___BLUE, MG___BLUE, MG___BLUE, MG___BLUE, MG_YELLOW, 				MG_ORANGE, MG__WHITE, MG__WHITE, MG__WHITE, ___off___, ___off___,
-___off___, ___off___, MG_YELLOW, MG_YELLOW, MG_YELLOW, MG_PURPLE, 				MG_PURPLE, ___off___, ___off___, ___off___, ___off___, ___off___,
-						   		 ___off___, ___off___, ___off___, 				___off___, ___off___, ___off___
+___off___, ___off___, MG_YELLOW, MG_YELLOW, MG_YELLOW, ___off___, 				___off___, ___off___, ___off___, ___off___, ___off___, ___off___,
+						   		 ___off___, MG_PURPLE, ___off___, 				___off___, MG_PURPLE, ___off___
 			},
 };
 
@@ -214,7 +214,7 @@ void rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
 bool is_oneshot_cancel_key(uint16_t keycode) {
     switch (keycode) {
     //case NAV:
-    //case NUM:
+    case NUM:
     //case B_NUM:
     //case SPC_NAV:
     case KC_ESC:
@@ -227,8 +227,8 @@ bool is_oneshot_cancel_key(uint16_t keycode) {
 bool is_oneshot_ignored_key(uint16_t keycode) {
     switch (keycode) {
     //case NAV:
-    //case NUM:
-    case B_NUM:
+    case NUM:
+    //case B_NUM:
     case SPC_NAV:
     case KC_LSFT:
     case OS_SHFT:

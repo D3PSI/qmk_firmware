@@ -2,7 +2,7 @@
 
 ![](keymap_diagram.svg)
 
-- 30 keys (5x3 per half)
+- 32 keys (5x3 +1 per half)
 - One-shot mods that can be carried between layers (via [callum][])
 - Single-key Command-Tab (via [callum][])
 - No mods on the base layer
