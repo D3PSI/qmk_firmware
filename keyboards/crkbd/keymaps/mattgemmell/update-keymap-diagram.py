@@ -28,7 +28,7 @@ create_layer_diagrams = True # also create one diagram per layer, named "[svg_fi
 diagram_inset = 10 # horizontal and vertical, around entire diagram
 layer_spacing = 30 # vertical spacing between each layer
 layout_keys_per_row = 12 # last row (only) can have fewer keys
-layout_num_edge_keys_ignored = 1 # first and last x keys per row won't be displayed in diagram
+layout_num_edge_keys_ignored = 0 # first and last x keys per row won't be displayed in diagram
 # Note: layout_keys_per_row is the actual, real number of keys per row in the keymap structure. It includes ignored edge keys.
 max_keys_to_output = 0 # physical keys, including ignored edge keys. Zero to output all.
 key_width = 65
@@ -57,12 +57,12 @@ keycode_transparent = "_______"
 transparent_css_class = "transparent" # as above, applied to transparent keys (falling through to base layer; i.e. keycode_transparent above).
 # Note: Transparent keys (on non-base layers) will be labelled identically to the corresponding key on the base layer.
 annotation_keycodes = { # keycodes with annotations
-    #"layer": {"keycodes": ["NAV", "NUM", "B_NUM", "SPC_NAV"],
-    #          "label": "layer"},
-    "num": {"keycodes": ["NUM", "B_NUM"],
-              "label": "num"},
-    "nav": {"keycodes": ["NAV", "SPC_NAV"],
-              "label": "nav"},
+    "layer": {"keycodes": ["NAV", "NUM", "B_NUM", "SPC_NAV"],
+              "label": "layer"},
+    #"num": {"keycodes": ["NUM", "B_NUM"],
+    #          "label": "num"},
+    #"nav": {"keycodes": ["NAV", "SPC_NAV"],
+    #          "label": "nav"},
     "one-shot": {"keycodes": ["OS_SHFT", "OS_CTRL", "OS_ALT", "OS_CMD", "OS_CAPS"],
                  "label": "one-shot"},
     held_css_class: {"keycodes": [], # special case, to provide label for held layer keys
@@ -181,7 +181,7 @@ svg_header = '''<svg width="100%" height="auto" viewBox="0 0 ${svg_width} ${svg_
 
     .kc_up, .kc_down, .kc_left, .kc_right,
     .kc_ent, .kc_bspc, .os_caps, .kc_esc,
-    .os_shft, .os_ctrl, .os_alt, .os_cmd,
+    .kc_lsft, .os_shft, .os_ctrl, .os_alt, .os_cmd,
     .kc_mac_spotlight, .kc_pgup, .kc_pgdown,
     .kc_mac_undo, .kc_mac_redo, .kc_tab,
     .kc_mac_cut, .kc_spc, .kc_mac_lock_scrn,
@@ -359,6 +359,7 @@ key_names = {
     "KC_MAC_SPOTLIGHT": {"label": "&#8981;", "title": "Spotlight"},
     "KC_EN_DASH": {"label": "En Dash", "title": ""},
     "KC_EM_DASH": {"label": "Em Dash", "title": ""},
+    "KC_LSFT": {"label": "&#8679;", "title": "Shift"},
     "OS_SHFT": {"label": "&#8679;", "title": "Shift"},
     "OS_CTRL": {"label": "&#94;", "title": "Control"},
     "OS_ALT": {"label": "&#8997;", "title": "Option"},

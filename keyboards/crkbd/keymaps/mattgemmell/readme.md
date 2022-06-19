@@ -2,17 +2,17 @@
 
 ![](keymap_diagram.svg)
 
-- 32 keys (5x3 +1 per half)
+## Features
+
 - One-shot mods that can be carried between layers (via [callum][])
-- Single-key Command-Tab (via [callum][])
-- No mods on the base layer
+- Single-key Command-Tab with auto-held Command (via [callum][])
 - No animations, OLED, tap-dance, or combos
 - 4 layers in the usual Planck momentary setup
 - Mostly for writing (what I do)
 - Autoshift enabled
 - Includes numpad, inverted-T cursors, mouse and scroll-wheel, media keys, and system shortcuts
 - Optional per-key, per-layer RGB LED colours, configured intuitively in the same layout as the keymap
-- Small firmware size
+- Small firmware size; easily fits on a Pro Micro
 
 Talk to me about it if you like. I'm [@mattgemmell on Twitter][].
 

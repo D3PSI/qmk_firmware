@@ -74,9 +74,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   #endif
 #endif
 
-#define COMBO_COUNT 1
-#define COMBO_TERM 50
-#define EXTRA_SHORT_COMBOS // up to 6 keys per combo instead of 8
+//#define COMBO_COUNT 1
+//#define COMBO_TERM 50
+//#define EXTRA_SHORT_COMBOS // up to 6 keys per combo instead of 8
 
 //#define RGB_DISABLE_WHEN_USB_SUSPENDED // turn off effects when suspended
 #undef RGB_DISABLE_WHEN_USB_SUSPENDED
