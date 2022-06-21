@@ -317,7 +317,7 @@
 </foreignObject>
 
 <foreignObject x="14" y="132" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Mute (_______)" class="transparent ___off___ kc_audio_mute _nav"><div class="glyph">&#128263;</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Shift (_______)" class="transparent ___off___ kc_lsft _nav"><div class="glyph">&#8679;</div></div>
 </foreignObject>
 
 <foreignObject x="83" y="132" width="65" height="55" class="text-container">
@@ -361,11 +361,11 @@
 </foreignObject>
 
 <foreignObject x="809" y="132" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Enter (_______)" class="transparent ___off___ kc_ent _nav"><div class="glyph">&#9166;</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Enter (_______)" class="transparent ___off___ ent_shft _nav"><div class="glyph">&#9166;</div></div>
 </foreignObject>
 
 <foreignObject x="221.0" y="191" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Shift (_______)" class="transparent ___off___ os_shft _nav"><div class="glyph">&#8679;</div><div class="annotation one-shot">one-shot</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Mute (_______)" class="transparent ___off___ kc_audio_mute _nav"><div class="glyph">&#128263;</div></div>
 </foreignObject>
 
 <foreignObject x="290.0" y="191" width="65" height="55" class="text-container">

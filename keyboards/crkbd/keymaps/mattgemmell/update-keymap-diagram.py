@@ -405,6 +405,7 @@ key_names = {
     "KC_DOWN": {"label": "&#9660;", "title": "Down"},
     "KC_RIGHT": {"label": "&#9654;", "title": "Right"},
     "KC_ENT": {"label": "&#9166;", "title": "Enter"},
+    "ENT_SHFT": {"label": "&#9166;", "title": "Enter"},
     "KC_SCLN": {"label": ";", "title": ""},
     "KC_LPRN": {"label": "(", "title": ""},
     "KC_RPRN": {"label": ")", "title": ""},

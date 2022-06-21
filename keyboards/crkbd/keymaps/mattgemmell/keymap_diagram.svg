@@ -319,7 +319,7 @@
 </foreignObject>
 
 <foreignObject x="14" y="162" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Mute (KC_AUDIO_MUTE)" class="kc_audio_mute _base"><div class="glyph">&#128263;</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Shift (KC_LSFT)" class="kc_lsft _base"><div class="glyph">&#8679;</div></div>
 </foreignObject>
 
 <foreignObject x="83" y="162" width="65" height="55" class="text-container">
@@ -363,11 +363,11 @@
 </foreignObject>
 
 <foreignObject x="809" y="162" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Enter (KC_ENT)" class="kc_ent _base"><div class="glyph">&#9166;</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Enter (ENT_SHFT)" class="ent_shft _base"><div class="glyph">&#9166;</div></div>
 </foreignObject>
 
 <foreignObject x="221.0" y="221" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Shift (OS_SHFT)" class="os_shft _base"><div class="glyph">&#8679;</div><div class="annotation one-shot">one-shot</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Mute (KC_AUDIO_MUTE)" class="kc_audio_mute _base"><div class="glyph">&#128263;</div></div>
 </foreignObject>
 
 <foreignObject x="290.0" y="221" width="65" height="55" class="text-container">
@@ -491,7 +491,7 @@
 </foreignObject>
 
 <foreignObject x="14" y="462" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Mute (_______)" class="transparent ___off___ kc_audio_mute _nav"><div class="glyph">&#128263;</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Shift (_______)" class="transparent ___off___ kc_lsft _nav"><div class="glyph">&#8679;</div></div>
 </foreignObject>
 
 <foreignObject x="83" y="462" width="65" height="55" class="text-container">
@@ -535,11 +535,11 @@
 </foreignObject>
 
 <foreignObject x="809" y="462" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Enter (_______)" class="transparent ___off___ kc_ent _nav"><div class="glyph">&#9166;</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Enter (_______)" class="transparent ___off___ ent_shft _nav"><div class="glyph">&#9166;</div></div>
 </foreignObject>
 
 <foreignObject x="221.0" y="521" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Shift (_______)" class="transparent ___off___ os_shft _nav"><div class="glyph">&#8679;</div><div class="annotation one-shot">one-shot</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Mute (_______)" class="transparent ___off___ kc_audio_mute _nav"><div class="glyph">&#128263;</div></div>
 </foreignObject>
 
 <foreignObject x="290.0" y="521" width="65" height="55" class="text-container">
@@ -663,7 +663,7 @@
 </foreignObject>
 
 <foreignObject x="14" y="762" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Mute (_______)" class="transparent ___off___ kc_audio_mute _num"><div class="glyph">&#128263;</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Shift (_______)" class="transparent ___off___ kc_lsft _num"><div class="glyph">&#8679;</div></div>
 </foreignObject>
 
 <foreignObject x="83" y="762" width="65" height="55" class="text-container">
@@ -707,11 +707,11 @@
 </foreignObject>
 
 <foreignObject x="809" y="762" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Enter (_______)" class="transparent ___off___ kc_ent _num"><div class="glyph">&#9166;</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Enter (_______)" class="transparent ___off___ ent_shft _num"><div class="glyph">&#9166;</div></div>
 </foreignObject>
 
 <foreignObject x="221.0" y="821" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Shift (_______)" class="transparent ___off___ os_shft _num"><div class="glyph">&#8679;</div><div class="annotation one-shot">one-shot</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Mute (_______)" class="transparent ___off___ kc_audio_mute _num"><div class="glyph">&#128263;</div></div>
 </foreignObject>
 
 <foreignObject x="290.0" y="821" width="65" height="55" class="text-container">
@@ -835,7 +835,7 @@
 </foreignObject>
 
 <foreignObject x="14" y="1062" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Mute (_______)" class="transparent ___off___ kc_audio_mute _adjust"><div class="glyph">&#128263;</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Shift (_______)" class="transparent ___off___ kc_lsft _adjust"><div class="glyph">&#8679;</div></div>
 </foreignObject>
 
 <foreignObject x="83" y="1062" width="65" height="55" class="text-container">
@@ -879,11 +879,11 @@
 </foreignObject>
 
 <foreignObject x="809" y="1062" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Enter (_______)" class="transparent ___off___ kc_ent _adjust"><div class="glyph">&#9166;</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Enter (_______)" class="transparent ___off___ ent_shft _adjust"><div class="glyph">&#9166;</div></div>
 </foreignObject>
 
 <foreignObject x="221.0" y="1121" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Shift (_______)" class="transparent ___off___ os_shft _adjust"><div class="glyph">&#8679;</div><div class="annotation one-shot">one-shot</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Mute (_______)" class="transparent ___off___ kc_audio_mute _adjust"><div class="glyph">&#128263;</div></div>
 </foreignObject>
 
 <foreignObject x="290.0" y="1121" width="65" height="55" class="text-container">
