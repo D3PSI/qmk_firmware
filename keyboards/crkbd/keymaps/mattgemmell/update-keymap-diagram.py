@@ -181,13 +181,13 @@ svg_header = '''<svg width="100%" height="auto" viewBox="0 0 ${svg_width} ${svg_
 
     .kc_up, .kc_down, .kc_left, .kc_right,
     .kc_ent, .kc_bspc, .os_caps, .kc_esc,
-    .kc_lsft, .os_shft, .os_ctrl, .os_alt, .os_cmd,
+    .kc_lsft, .os_shft, .os_ctrl, .os_alt, .os_cmd, .kc_lcmd,
     .kc_mac_spotlight, .kc_pgup, .kc_pgdown,
     .kc_mac_undo, .kc_mac_redo, .kc_tab,
     .kc_mac_cut, .kc_spc, .kc_mac_lock_scrn,
-    .kc_brightness_up, .kc_brightness_down,
+    .kc_brightness_up, .kc_brightness_down/*,
     .kc_audio_vol_up, .kc_audio_vol_down, .kc_audio_mute,
-    .kc_media_play_pause, .kc_media_prev_track, .kc_media_next_track {
+    .kc_media_play_pause, .kc_media_prev_track, .kc_media_next_track*/ {
     	font-size: 18px;
     }
 
@@ -196,8 +196,8 @@ svg_header = '''<svg width="100%" height="auto" viewBox="0 0 ${svg_width} ${svg_
     }
 
     .os_caps {
-    	font-size: 19px;
-    	padding-top: 4px !important;
+    	font-size: 16px;
+    	padding-top: 1px !important;
     }
 
     .kc_mac_spotlight {
@@ -231,7 +231,7 @@ svg_header = '''<svg width="100%" height="auto" viewBox="0 0 ${svg_width} ${svg_
     .kc_brightness_down {
     	font-size: 32px;
     }
-
+/*
     .kc_audio_vol_down {
     	font-size: 22px;
     }
@@ -255,7 +255,7 @@ svg_header = '''<svg width="100%" height="auto" viewBox="0 0 ${svg_width} ${svg_
     .kc_media_next_track {
     	font-size: 26px;
     }
-
+*/
     .annotation {
         box-sizing: border-box;
         font-size: 11px;
@@ -365,14 +365,18 @@ key_names = {
     "OS_ALT": {"label": "&#8997;", "title": "Option"},
     "OS_CMD": {"label": "&#8984;", "title": "Command"},
     "OS_CAPS": {"label": "&#127760;", "title": "Globe"},
+    "KC_LCMD": {"label": "&#8984;", "title": "Command"},
     "APP_SWITCH_FRWD": {"label": "Switch App", "title": ""},
     "NAV": {"label": "Nav", "title": ""},
     "NUM": {"label": "Num", "title": ""},
     "SPC_NAV": {"label": "&#9251;", "title": "Space"},
     "B_NUM": {"label": "B", "title": ""},
-    "KC_AUDIO_VOL_DOWN": {"label": "&#128265;", "title": "Volume Down"},
-    "KC_AUDIO_MUTE": {"label": "&#128263;", "title": "Mute"},
-    "KC_AUDIO_VOL_UP": {"label": "&#128266;", "title": "Volume Up"},
+    #"KC_AUDIO_VOL_DOWN": {"label": "&#128265;", "title": "Volume Down"},
+    "KC_AUDIO_VOL_DOWN": {"label": "Volume Down", "title": "Volume Down"},
+    #"KC_AUDIO_MUTE": {"label": "&#128263;", "title": "Mute"},
+    "KC_AUDIO_MUTE": {"label": "Mute", "title": "Mute"},
+    #"KC_AUDIO_VOL_UP": {"label": "&#128266;", "title": "Volume Up"},
+    "KC_AUDIO_VOL_UP": {"label": "Volume Up", "title": "Volume Up"},
     "KC_MS_ACCEL2": {"label": "Mouse Accel 2", "title": ""},
     "KC_MS_WH_DOWN": {"label": "Mouse Wheel Down", "title": ""},
     "KC_MS_BTN1": {"label": "Left Click", "title": ""},
@@ -384,9 +388,12 @@ key_names = {
     "KC_MS_DOWN": {"label": "Mouse &#9660;", "title": ""},
     "KC_MS_RIGHT": {"label": "Mouse &#9654;", "title": ""},
     "KC_BRIGHTNESS_UP": {"label": "&#9728;", "title": "Brightness Up"},
-    "KC_MEDIA_PREV_TRACK": {"label": "&#9198;", "title": "Previous Track"},
-    "KC_MEDIA_PLAY_PAUSE": {"label": "&#9199;", "title": "Play/Pause"},
-    "KC_MEDIA_NEXT_TRACK": {"label": "&#9197;", "title": "Next Track"},
+    #"KC_MEDIA_PREV_TRACK": {"label": "&#9198;", "title": "Previous Track"},
+    "KC_MEDIA_PREV_TRACK": {"label": "Prev Track", "title": "Previous Track"},
+    #"KC_MEDIA_PLAY_PAUSE": {"label": "&#9199;", "title": "Play/Pause"},
+    "KC_MEDIA_PLAY_PAUSE": {"label": "Play Pause", "title": "Play/Pause"},
+    #"KC_MEDIA_NEXT_TRACK": {"label": "&#9197;", "title": "Next Track"},
+    "KC_MEDIA_NEXT_TRACK": {"label": "Next Track", "title": "Next Track"},
     "KC_MS_ACCEL0": {"label": "Mouse Accel 0", "title": ""},
     "KC_BRIGHTNESS_DOWN": {"label": "&#9788;", "title": "Brightness Down"},
     "KC_QUOT": {"label": "'", "title": ""},
