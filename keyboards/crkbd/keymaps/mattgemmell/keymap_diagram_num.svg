@@ -93,11 +93,11 @@
     }
 
     .kc_up, .kc_down, .kc_left, .kc_right,
-    .kc_ent, .kc_bspc, .os_caps, .kc_esc,
+    .kc_ent, .ent_shft, .kc_bspc, /*.os_caps,*/ .kc_esc,
     .kc_lsft, .os_shft, .os_ctrl, .os_alt, .os_cmd, .kc_lcmd,
     .kc_mac_spotlight, .kc_pgup, .kc_pgdown,
     .kc_mac_undo, .kc_mac_redo, .kc_tab,
-    .kc_mac_cut, .kc_spc, .kc_mac_lock_scrn,
+    /*.kc_mac_cut,*/ .kc_spc, .kc_mac_lock_scrn,
     .kc_brightness_up, .kc_brightness_down/*,
     .kc_audio_vol_up, .kc_audio_vol_down, .kc_audio_mute,
     .kc_media_play_pause, .kc_media_prev_track, .kc_media_next_track*/ {
@@ -108,11 +108,12 @@
     	font-size: 22px;
     }
 
+/*
     .os_caps {
     	font-size: 16px;
     	padding-top: 1px !important;
     }
-
+*/
     .kc_mac_spotlight {
     	font-size: 40px;
     }
@@ -124,11 +125,11 @@
     .kc_mac_redo {
     	font-size: 34px;
     }
-
+/*
     .kc_mac_cut {
     	font-size: 20px;
     }
-
+*/
     .kc_spc {
     	font-size: 24px;
     }
@@ -289,7 +290,7 @@
 </foreignObject>
 
 <foreignObject x="359" y="73" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Globe (OS_CAPS)" class="mg_purple os_caps _num"><div class="glyph">&#127760;</div><div class="annotation one-shot">one-shot</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Globe (OS_CAPS)" class="mg_purple os_caps _num"><div class="glyph">Globe</div><div class="annotation one-shot">one-shot</div></div>
 </foreignObject>
 
 <foreignObject x="464" y="73" width="65" height="55" class="text-container">

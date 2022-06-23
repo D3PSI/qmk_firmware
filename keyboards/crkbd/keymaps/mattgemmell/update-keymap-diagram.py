@@ -180,11 +180,11 @@ svg_header = '''<svg width="100%" height="auto" viewBox="0 0 ${svg_width} ${svg_
     }
 
     .kc_up, .kc_down, .kc_left, .kc_right,
-    .kc_ent, .kc_bspc, .os_caps, .kc_esc,
+    .kc_ent, .ent_shft, .kc_bspc, /*.os_caps,*/ .kc_esc,
     .kc_lsft, .os_shft, .os_ctrl, .os_alt, .os_cmd, .kc_lcmd,
     .kc_mac_spotlight, .kc_pgup, .kc_pgdown,
     .kc_mac_undo, .kc_mac_redo, .kc_tab,
-    .kc_mac_cut, .kc_spc, .kc_mac_lock_scrn,
+    /*.kc_mac_cut,*/ .kc_spc, .kc_mac_lock_scrn,
     .kc_brightness_up, .kc_brightness_down/*,
     .kc_audio_vol_up, .kc_audio_vol_down, .kc_audio_mute,
     .kc_media_play_pause, .kc_media_prev_track, .kc_media_next_track*/ {
@@ -195,11 +195,12 @@ svg_header = '''<svg width="100%" height="auto" viewBox="0 0 ${svg_width} ${svg_
     	font-size: 22px;
     }
 
+/*
     .os_caps {
     	font-size: 16px;
     	padding-top: 1px !important;
     }
-
+*/
     .kc_mac_spotlight {
     	font-size: 40px;
     }
@@ -211,11 +212,11 @@ svg_header = '''<svg width="100%" height="auto" viewBox="0 0 ${svg_width} ${svg_
     .kc_mac_redo {
     	font-size: 34px;
     }
-
+/*
     .kc_mac_cut {
     	font-size: 20px;
     }
-
+*/
     .kc_spc {
     	font-size: 24px;
     }
@@ -346,7 +347,8 @@ keycode_prefix = "KC_"
 key_names = {
     "KC_MAC_UNDO": {"label": "&#10554;", "title": "Undo"},
     "KC_MAC_REDO": {"label": "&#10555;", "title": "Redo"},
-    "KC_MAC_CUT": {"label": "&#9986;", "title": "Cut"},
+    #"KC_MAC_CUT": {"label": "&#9986;", "title": "Cut"},
+    "KC_MAC_CUT": {"label": "Cut", "title": "Cut"},
     "KC_MAC_COPY": {"label": "Copy", "title": ""},
     "KC_MAC_PASTE": {"label": "Paste", "title": ""},
     "KC_MAC_LOCK_SCRN": {"label": "&#9211;", "title": "Lock Screen"},
@@ -364,7 +366,8 @@ key_names = {
     "OS_CTRL": {"label": "&#94;", "title": "Control"},
     "OS_ALT": {"label": "&#8997;", "title": "Option"},
     "OS_CMD": {"label": "&#8984;", "title": "Command"},
-    "OS_CAPS": {"label": "&#127760;", "title": "Globe"},
+    #"OS_CAPS": {"label": "&#127760;", "title": "Globe"},
+    "OS_CAPS": {"label": "Globe", "title": "Globe"},
     "KC_LCMD": {"label": "&#8984;", "title": "Command"},
     "APP_SWITCH_FRWD": {"label": "Switch App", "title": ""},
     "NAV": {"label": "Nav", "title": ""},
