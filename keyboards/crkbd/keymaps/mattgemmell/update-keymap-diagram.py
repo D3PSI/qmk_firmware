@@ -123,6 +123,7 @@ svg_header = '''<svg width="100%" height="auto" viewBox="0 0 ${svg_width} ${svg_
         -moz-hyphens: auto;
         -ms-hyphens: auto;
 		flex: 1 0 auto;
+		color: black;
     }
 
     .text-container > div:after {
@@ -152,8 +153,12 @@ svg_header = '''<svg width="100%" height="auto" viewBox="0 0 ${svg_width} ${svg_
         background-color: #fff6;
     }
 
-    .text-container > div.${transparent_css_class} {
+    .text-container > div.${transparent_css_class} > .glyph {
+        color: #999;
+    }
 
+    .text-container > div.${held_css_class} > .glyph {
+        color: black;
     }
 
     .text-container > div.${blank_css_class}.${transparent_css_class},
@@ -181,7 +186,7 @@ svg_header = '''<svg width="100%" height="auto" viewBox="0 0 ${svg_width} ${svg_
 
     .kc_up, .kc_down, .kc_left, .kc_right,
     .kc_ent, .ent_shft, .kc_bspc, /*.os_caps,*/ .kc_esc,
-    .kc_lsft, .os_shft, .os_ctrl, .os_alt, .os_cmd, .kc_lcmd,
+    .kc_lsft, .os_shft, .os_ctrl, .os_alt, .os_cmd, .kc_lcmd, .kc_lalt,
     .kc_mac_spotlight, .kc_pgup, .kc_pgdown,
     .kc_mac_undo, .kc_mac_redo, .kc_tab,
     /*.kc_mac_cut,*/ .kc_spc, .kc_mac_lock_scrn,
@@ -369,6 +374,7 @@ key_names = {
     #"OS_CAPS": {"label": "&#127760;", "title": "Globe"},
     "OS_CAPS": {"label": "Globe", "title": "Globe"},
     "KC_LCMD": {"label": "&#8984;", "title": "Command"},
+    "KC_LALT": {"label": "&#8997;", "title": "Option"},
     "APP_SWITCH_FRWD": {"label": "Switch App", "title": ""},
     "NAV": {"label": "Nav", "title": ""},
     "NUM": {"label": "Num", "title": ""},
@@ -599,6 +605,7 @@ def svg_for_layer(layer_id, start_y, show_title):
         if output_key:
             # Key's human-readable label
             key_is_transparent = False
+            key_is_blank = False
             if key == keycode_transparent:
                 key_is_transparent = True
                 key_classes.append(transparent_css_class)
@@ -611,6 +618,7 @@ def svg_for_layer(layer_id, start_y, show_title):
             elif key.startswith(keycode_prefix):
                 key_label = key[len(keycode_prefix):]
             elif key == keycode_blank:
+                key_is_blank = True
                 key_classes.append(blank_css_class)
                 key_label = ""
 
@@ -632,7 +640,9 @@ def svg_for_layer(layer_id, start_y, show_title):
                 title_val = key_names[key]["title"]
             title_keycode = key
             if key_is_transparent:
-                title_keycode = keycode_transparent
+                title_keycode = transparent_css_class.capitalize() #keycode_transparent
+            elif key_is_blank:
+                title_keycode = blank_css_class.capitalize()
             if title_val != "" and apply_keycode_title:
                 title_attr = 'title="%s (%s)" ' % (title_val, title_keycode)
             elif title_val != "":

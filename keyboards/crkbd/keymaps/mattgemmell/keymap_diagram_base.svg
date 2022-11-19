@@ -36,6 +36,7 @@
         -moz-hyphens: auto;
         -ms-hyphens: auto;
 		flex: 1 0 auto;
+		color: black;
     }
 
     .text-container > div:after {
@@ -65,8 +66,12 @@
         background-color: #fff6;
     }
 
-    .text-container > div.transparent {
+    .text-container > div.transparent > .glyph {
+        color: #999;
+    }
 
+    .text-container > div.held > .glyph {
+        color: black;
     }
 
     .text-container > div.blank.transparent,
@@ -94,7 +99,7 @@
 
     .kc_up, .kc_down, .kc_left, .kc_right,
     .kc_ent, .ent_shft, .kc_bspc, /*.os_caps,*/ .kc_esc,
-    .kc_lsft, .os_shft, .os_ctrl, .os_alt, .os_cmd, .kc_lcmd,
+    .kc_lsft, .os_shft, .os_ctrl, .os_alt, .os_cmd, .kc_lcmd, .kc_lalt,
     .kc_mac_spotlight, .kc_pgup, .kc_pgdown,
     .kc_mac_undo, .kc_mac_redo, .kc_tab,
     /*.kc_mac_cut,*/ .kc_spc, .kc_mac_lock_scrn,
@@ -386,7 +391,7 @@
 </foreignObject>
 
 <foreignObject x="602.0" y="191" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Play/Pause (KC_MEDIA_PLAY_PAUSE)" class="kc_media_play_pause _base"><div class="glyph">Play Pause</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Option (KC_LALT)" class="kc_lalt _base"><div class="glyph">&#8997;</div></div>
 </foreignObject>
 
 </svg>
