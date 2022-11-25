@@ -28,7 +28,7 @@ create_layer_diagrams = True # also create one diagram per layer, named "[svg_fi
 diagram_inset = 10 # horizontal and vertical, around entire diagram
 layer_spacing = 30 # vertical spacing between each layer
 layout_keys_per_row = 12 # last row (only) can have fewer keys
-layout_num_edge_keys_ignored = 0 # first and last x keys per row won't be displayed in diagram
+layout_num_edge_keys_ignored = 1 # first and last x keys per row won't be displayed in diagram
 # Note: layout_keys_per_row is the actual, real number of keys per row in the keymap structure. It includes ignored edge keys.
 max_keys_to_output = 0 # physical keys, including ignored edge keys. Zero to output all.
 key_width = 65
