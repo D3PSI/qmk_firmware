@@ -1,4 +1,5 @@
-[Matt Gemmell][]'s ever-evolving keymap for the Corne, designed for use with iPadOS. I've written about its various iterations [on my blog](https://mattgemmell.com/category/tech/).
+[Matt Gemmell][]'s ever-evolving keymap for the Corne split keyboard, designed for use with iPadOS. I've written 
+about its various iterations [on my blog](https://mattgemmell.com/category/tech/).
 
 ![](keymap_diagram.svg)
 
