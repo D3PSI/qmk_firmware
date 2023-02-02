@@ -243,7 +243,7 @@
 </foreignObject>
 
 <foreignObject x="290" y="14" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Mouse Acceleration 2 (KC_MS_ACCEL2)" class="mg__green kc_ms_accel2 _adjust"><div class="glyph">Mouse Accel 2</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Blank" class="blank ___off___ _adjust"><div class="glyph"></div></div>
 </foreignObject>
 
 <foreignObject x="395" y="14" width="65" height="55" class="text-container">
@@ -283,7 +283,7 @@
 </foreignObject>
 
 <foreignObject x="290" y="73" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Mouse Acceleration 1 (KC_MS_ACCEL1)" class="mg_yellow kc_ms_accel1 _adjust"><div class="glyph">Mouse Accel 1</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Blank" class="blank ___off___ _adjust"><div class="glyph"></div></div>
 </foreignObject>
 
 <foreignObject x="395" y="73" width="65" height="55" class="text-container">

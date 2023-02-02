@@ -97,8 +97,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [_ADJUST] = LAYOUT_split_3x6_3(
-      _______, XXXXXXX, KC_AUDIO_VOL_DOWN,   KC_AUDIO_MUTE,       KC_AUDIO_VOL_UP,     KC_MS_ACCEL2,            KC_MS_WH_DOWN,    KC_MS_BTN1, KC_MS_UP,   KC_MS_BTN2,  KC_MAC_LOCK_SCRN,   _______,
-      _______, OS_SHFT, OS_CTRL,             OS_ALT,              OS_CMD,              KC_MS_ACCEL1,            KC_MS_WH_UP,      KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT, XXXXXXX,   _______,
+      _______, XXXXXXX, KC_AUDIO_VOL_DOWN,   KC_AUDIO_MUTE,       KC_AUDIO_VOL_UP,     XXXXXXX,            KC_MS_WH_DOWN,    KC_MS_BTN1, KC_MS_UP,   KC_MS_BTN2,  KC_MAC_LOCK_SCRN,   _______,
+      _______, OS_SHFT, OS_CTRL,             OS_ALT,              OS_CMD,              XXXXXXX,            KC_MS_WH_UP,      KC_MS_LEFT, KC_MS_DOWN, KC_MS_RIGHT, XXXXXXX,   _______,
       _______, XXXXXXX, KC_MEDIA_PREV_TRACK, KC_MEDIA_PLAY_PAUSE, KC_MEDIA_NEXT_TRACK, XXXXXXX,            XXXXXXX,          XXXXXXX,    XXXXXXX,    XXXXXXX,     XXXXXXX, _______,
                                                                          _______, _______, _______,             _______, _______, _______
   )
@@ -121,8 +121,8 @@ MG__GREEN, ___off___, ___off___, MG_ORANGE, MG_ORANGE, MG_PURPLE, 				MG__GREEN,
 						   		 MG__GREEN, MG__GREEN, ___off___, 				___off___, ___off___, MG__GREEN
 			},
 [_ADJUST] = {
-MG_PURPLE, ___off___, MG_PURPLE, MG____RED, MG_PURPLE, MG__GREEN, 				MG_ORANGE, MG___BLUE, MG__WHITE, MG___BLUE, MG____RED, MG_PURPLE,
-MG_PURPLE, MG___BLUE, MG___BLUE, MG___BLUE, MG___BLUE, MG_YELLOW, 				MG_ORANGE, MG__WHITE, MG__WHITE, MG__WHITE, ___off___, MG_PURPLE,
+MG_PURPLE, ___off___, MG_PURPLE, MG____RED, MG_PURPLE, ___off___, 				MG_ORANGE, MG___BLUE, MG__WHITE, MG___BLUE, MG____RED, MG_PURPLE,
+MG_PURPLE, MG___BLUE, MG___BLUE, MG___BLUE, MG___BLUE, ___off___, 				MG_ORANGE, MG__WHITE, MG__WHITE, MG__WHITE, ___off___, MG_PURPLE,
 MG_PURPLE, ___off___, MG_YELLOW, MG_YELLOW, MG_YELLOW, ___off___, 				___off___, ___off___, ___off___, ___off___, ___off___, MG_PURPLE,
 						   		 MG_PURPLE, MG_PURPLE, ___off___, 				___off___, MG_PURPLE, MG_PURPLE
 			},
