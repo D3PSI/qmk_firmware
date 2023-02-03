@@ -28,8 +28,9 @@ create_layer_diagrams = True # also create one diagram per layer, named "[svg_fi
 diagram_inset = 10 # horizontal and vertical, around entire diagram
 layer_spacing = 30 # vertical spacing between each layer
 layout_keys_per_row = 12 # last row (only) can have fewer keys
-layout_num_edge_keys_ignored = 1 # first and last x keys per row won't be displayed in diagram
 # Note: layout_keys_per_row is the actual, real number of keys per row in the keymap structure. It includes ignored edge keys.
+layout_num_edge_keys_ignored = 1 # first and last x keys per row won't be displayed in diagram
+ignored_keys_affects_final_row = False # whether the above layout_num_edge_keys_ignored setting also affects the final/lowest/thumb row
 max_keys_to_output = 0 # physical keys, including ignored edge keys. Zero to output all.
 key_width = 65
 key_height = 55
@@ -628,13 +629,14 @@ def svg_for_layer(layer_id, start_y, show_title):
         key_classes = []
 
         last_col_num = num_real_cols;
-        if row_num == num_rows - 1:
+        is_last_row = (row_num == num_rows - 1)
+        if is_last_row:
             # Last row may have fewer keys.
             last_col_num = num_keys % ((num_rows - 1) * num_real_cols)
 
         # Decide whether to output key
         output_key = True
-        if layout_num_edge_keys_ignored > 0:
+        if layout_num_edge_keys_ignored > 0 and (not is_last_row or (is_last_row and ignored_keys_affects_final_row)):
             if col_num < layout_num_edge_keys_ignored or (last_col_num - col_num) <= layout_num_edge_keys_ignored:
                 output_key = False
 
@@ -728,7 +730,10 @@ def svg_for_layer(layer_id, start_y, show_title):
                 last_col_num = num_keys % ((num_rows - 1) * num_real_cols)
                 if last_col_num < num_real_cols:
                     # Fewer keys in last row; indent them so they're still centred.
-                    cur_x += (((num_real_cols - last_col_num) / 2) * (key_spacing + key_width))
+                    indent_units = (num_real_cols - last_col_num)
+                    if not ignored_keys_affects_final_row:
+                        indent_units -= (layout_num_edge_keys_ignored * 2)
+                    cur_x += ((indent_units / 2) * (key_spacing + key_width))
         else:
             # Continue current row
             if output_key:

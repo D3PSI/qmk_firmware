@@ -348,6 +348,10 @@
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Forward Slash (KC_SLSH)" class="kc_slsh _base"><div class="glyph">/</div></div>
 </foreignObject>
 
+<foreignObject x="152.0" y="221" width="65" height="55" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Shift (KC_LSFT)" class="kc_lsft _base"><div class="glyph">&#8679;</div></div>
+</foreignObject>
+
 <foreignObject x="221.0" y="221" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Numpad &amp; Symbols Layer (NUM)" class="num _base"><div class="glyph">Num</div><div class="annotation layer">layer</div></div>
 </foreignObject>
@@ -362,6 +366,10 @@
 
 <foreignObject x="464.0" y="221" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Navigation &amp; Shortcuts Layer (NAV)" class="nav _base"><div class="glyph">Nav</div><div class="annotation layer">layer</div></div>
+</foreignObject>
+
+<foreignObject x="533.0" y="221" width="65" height="55" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Mute (KC_AUDIO_MUTE)" class="kc_audio_mute _base"><div class="glyph">Mute</div></div>
 </foreignObject>
 
 <text x="375.0" y="320.0" class="layer_title">Navigation &amp; Shortcuts</text>
@@ -425,7 +433,7 @@
 </foreignObject>
 
 <foreignObject x="290" y="403" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Globe — One-Shot (OS_CAPS)" class="mg_purple os_caps _nav"><div class="glyph">Globe</div><div class="annotation one-shot">one-shot</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Globe — One-Shot (OS_CAPS)" class="mg___blue os_caps _nav"><div class="glyph">Globe</div><div class="annotation one-shot">one-shot</div></div>
 </foreignObject>
 
 <foreignObject x="395" y="403" width="65" height="55" class="text-container">
@@ -488,6 +496,10 @@
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Enter (KC_ENT)" class="mg___blue kc_ent _nav"><div class="glyph">&#9166;</div></div>
 </foreignObject>
 
+<foreignObject x="152.0" y="521" width="65" height="55" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Shift (Transparent)" class="transparent ___off___ kc_lsft _nav"><div class="glyph">&#8679;</div></div>
+</foreignObject>
+
 <foreignObject x="221.0" y="521" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Numpad &amp; Symbols Layer (Transparent)" class="transparent ___off___ num _nav"><div class="glyph">Num</div><div class="annotation layer">layer</div></div>
 </foreignObject>
@@ -502,6 +514,10 @@
 
 <foreignObject x="464.0" y="521" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Navigation &amp; Shortcuts Layer (Transparent)" class="transparent held mg_orange nav _nav"><div class="glyph">Nav</div><div class="annotation layer">held</div></div>
+</foreignObject>
+
+<foreignObject x="533.0" y="521" width="65" height="55" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Mute (Transparent)" class="transparent ___off___ kc_audio_mute _nav"><div class="glyph">Mute</div></div>
 </foreignObject>
 
 <text x="375.0" y="620.0" class="layer_title">Numpad &amp; Symbols</text>
@@ -565,7 +581,7 @@
 </foreignObject>
 
 <foreignObject x="290" y="703" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Globe — One-Shot (OS_CAPS)" class="mg_purple os_caps _num"><div class="glyph">Globe</div><div class="annotation one-shot">one-shot</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Globe — One-Shot (OS_CAPS)" class="mg___blue os_caps _num"><div class="glyph">Globe</div><div class="annotation one-shot">one-shot</div></div>
 </foreignObject>
 
 <foreignObject x="395" y="703" width="65" height="55" class="text-container">
@@ -628,6 +644,10 @@
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Full Stop (KC_DOT)" class="___off___ kc_dot _num"><div class="glyph">.</div></div>
 </foreignObject>
 
+<foreignObject x="152.0" y="821" width="65" height="55" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Shift (Transparent)" class="transparent ___off___ kc_lsft _num"><div class="glyph">&#8679;</div></div>
+</foreignObject>
+
 <foreignObject x="221.0" y="821" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Numpad &amp; Symbols Layer (Transparent)" class="transparent held mg__green num _num"><div class="glyph">Num</div><div class="annotation layer">held</div></div>
 </foreignObject>
@@ -642,6 +662,10 @@
 
 <foreignObject x="464.0" y="821" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Navigation &amp; Shortcuts Layer (Transparent)" class="transparent ___off___ nav _num"><div class="glyph">Nav</div><div class="annotation layer">layer</div></div>
+</foreignObject>
+
+<foreignObject x="533.0" y="821" width="65" height="55" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Mute (Transparent)" class="transparent ___off___ kc_audio_mute _num"><div class="glyph">Mute</div></div>
 </foreignObject>
 
 <text x="375.0" y="920.0" class="layer_title">Mouse &amp; Media</text>
@@ -705,7 +729,7 @@
 </foreignObject>
 
 <foreignObject x="290" y="1003" width="65" height="55" class="text-container">
-	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Globe — One-Shot (OS_CAPS)" class="mg_purple os_caps _adjust"><div class="glyph">Globe</div><div class="annotation one-shot">one-shot</div></div>
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Globe — One-Shot (OS_CAPS)" class="mg___blue os_caps _adjust"><div class="glyph">Globe</div><div class="annotation one-shot">one-shot</div></div>
 </foreignObject>
 
 <foreignObject x="395" y="1003" width="65" height="55" class="text-container">
@@ -768,6 +792,10 @@
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Blank" class="blank ___off___ _adjust"><div class="glyph"></div></div>
 </foreignObject>
 
+<foreignObject x="152.0" y="1121" width="65" height="55" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Shift (Transparent)" class="transparent ___off___ kc_lsft _adjust"><div class="glyph">&#8679;</div></div>
+</foreignObject>
+
 <foreignObject x="221.0" y="1121" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Numpad &amp; Symbols Layer (Transparent)" class="transparent held mg_purple num _adjust"><div class="glyph">Num</div><div class="annotation layer">held</div></div>
 </foreignObject>
@@ -782,6 +810,10 @@
 
 <foreignObject x="464.0" y="1121" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Navigation &amp; Shortcuts Layer (Transparent)" class="transparent held mg_purple nav _adjust"><div class="glyph">Nav</div><div class="annotation layer">held</div></div>
+</foreignObject>
+
+<foreignObject x="533.0" y="1121" width="65" height="55" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Mute (Transparent)" class="transparent ___off___ kc_audio_mute _adjust"><div class="glyph">Mute</div></div>
 </foreignObject>
 
 </svg>

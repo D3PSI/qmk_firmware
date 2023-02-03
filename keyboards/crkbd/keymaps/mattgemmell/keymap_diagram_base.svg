@@ -346,6 +346,10 @@
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Forward Slash (KC_SLSH)" class="kc_slsh _base"><div class="glyph">/</div></div>
 </foreignObject>
 
+<foreignObject x="152.0" y="191" width="65" height="55" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Shift (KC_LSFT)" class="kc_lsft _base"><div class="glyph">&#8679;</div></div>
+</foreignObject>
+
 <foreignObject x="221.0" y="191" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Numpad &amp; Symbols Layer (NUM)" class="num _base"><div class="glyph">Num</div><div class="annotation layer">layer</div></div>
 </foreignObject>
@@ -360,6 +364,10 @@
 
 <foreignObject x="464.0" y="191" width="65" height="55" class="text-container">
 	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Navigation &amp; Shortcuts Layer (NAV)" class="nav _base"><div class="glyph">Nav</div><div class="annotation layer">layer</div></div>
+</foreignObject>
+
+<foreignObject x="533.0" y="191" width="65" height="55" class="text-container">
+	<div xmlns="http://www.w3.org/1999/xhtml" lang="en" title="Mute (KC_AUDIO_MUTE)" class="kc_audio_mute _base"><div class="glyph">Mute</div></div>
 </foreignObject>
 
 </svg>
